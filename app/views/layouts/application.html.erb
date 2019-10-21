@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Rails App Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-   
+
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <!-- LOAD FONTS -->
+    <%= preload_link_tag("fonts/Inter-UI-upright.var.woff2", as: "font", type:"font/woff2", crossorigin: "anonymous") %>
+    <%= preload_link_tag("fonts/Inter-UI.var.woff2", as: "font", type:"font/woff2", crossorigin: "anonymous") %>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,9 +25,9 @@
 
     <!-- Box Icon -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.3/css/boxicons.min.css' rel='stylesheet'>
-  </head>
+</head>
 
-  <body>
+<body data-smooth-scroll-offset="73" data-aos-easing="ease" data-aos-duration="600">
     <!-- Flash messages -->
     <%= render 'layouts/flash' %>
     <%= yield %>
@@ -36,6 +40,7 @@
     <!-- Box Icon JS -->
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 
+    <!-- Application.js -->
     <%= javascript_include_tag 'application' %>
-  </body>
+</body>
 </html>

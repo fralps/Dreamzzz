@@ -17,6 +17,9 @@ class User < ApplicationRecord
   uniqueness: true,
   format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: ' : Veuillez utiliser une adresse email valide' }
 
+  # Relations
+  has_many :dreams
+
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end
