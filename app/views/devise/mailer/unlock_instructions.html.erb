@@ -1,0 +1,7 @@
+<p>Bonjour <%= @resource.email %>!</p>
+
+<p>Votre compte vient d'être verrouillé à cause d'un trop grand nombre de connexion incorrectes.</p>
+
+<p>Veuillez cliquer sur le lien ci-dessous afinde debloquer votre compte :</p>
+
+<p><%= link_to 'Déverrouillé mon compte', unlock_url(@resource, unlock_token: @token) %></p>
