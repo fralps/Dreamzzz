@@ -83,7 +83,6 @@ GEM
     colorize (0.8.1)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
-    database_cleaner (1.7.0)
     debug_inspector (0.0.3)
     devise (4.7.1)
       bcrypt (~> 3.0)
@@ -298,7 +297,6 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   colorize (~> 0.8.1)
-  database_cleaner
   devise
   dotenv-rails
   faker
@@ -325,3 +323,6 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 2.5.1p57
+
+BUNDLED WITH
+   2.0.1

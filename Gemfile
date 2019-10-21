@@ -75,7 +75,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Useful gems
 gem 'colorize', '~> 0.8.1'
-gem 'database_cleaner'
+
 gem 'dotenv-rails'
 gem 'faker'
 gem 'friendly_id', '~> 5.2.4'
