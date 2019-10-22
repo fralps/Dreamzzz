@@ -1,13 +1,17 @@
-<h1>Homepage !</h1>
-
-<% if user_signed_in? %>
-	<%= link_to(destroy_user_session_path, method: 'delete', class: 'btn btn-danger') do %>
-		<i class="fas fa-sign-out-alt mr-2"></i>Se déconnecter
-	<% end %>
-	<%= link_to(edit_user_registration_path, class: 'btn btn-info') do %>
-		<i class="far fa-edit mr-2"></i>Éditer mon profil
-	<% end %>
-<% else %>
-	<%= link_to 'Se connecter', new_user_session_path, class: 'btn btn-primary' %>
-	<%= link_to 'S\'inscrire', new_user_registration_path, class: 'btn btn-primary' %>
-<% end %>
+<body>
+  <section id="section-1">
+    <div id="home-title">
+      <h1 id="main-title" class="display-2">DREAMZzz</h1>
+      <span class="scroll-btn mt-5">
+        <a href="#section-2" data-smooth-scroll>
+          <span class="mouse">
+            <span>
+            </span>
+          </span>
+        </a>
+      </span>
+    </div>
+  </section>
+  <section id="section-2">
+  </section>
+</body>
