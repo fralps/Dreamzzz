@@ -24,8 +24,7 @@
 
 body, html {
   height: 100%;
-  margin: 0;
-  
+  margin: 0;  
 }
 
 #section-1 {
@@ -49,79 +48,103 @@ body, html {
   align-items: center;
 }
 
-#home-title {
-
+.logo {
+    height: 80px;
+    margin-right: 20px; 
 }
 
 #main-title {
 	color: white;
+    text-shadow: 2px 2px #ffbffa;
 }
 
 /* Small screens */
-@media all and (max-width: 500px) {
+@media all and (max-width: 420px) {
+    #main-title{
+        /* When on small sized screens, we change font size */
+        font-size: 40px;
+    }
+
+    .logo {
+        height: 60px
+        margin-right: 10px;
+    }
+
+    #sign-in {
+        font-size: 20px;
+    }
+}
+
+/* Small screens */
+@media all and (max-width: 350px) {
   #main-title{
     /* When on small sized screens, we change font size */
     font-size: 40px;
-  }
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
 }
 
 /* ----------- SCROLL ME BUTTON -------------- */
 
 @-webkit-keyframes ani-mouse {
     0% {
-    opacity: 1;
-    top: 29%;
+        opacity: 1;
+        top: 29%;
     }
     15% {
-    opacity: 1;
-    top: 50%;
+        opacity: 1;
+        top: 50%;
     }
     50% {
-    opacity: 0;
-    top: 50%;
+        opacity: 0;
+        top: 50%;
     }
     100% {
-    opacity: 0;
-    top: 29%;
+        opacity: 0;
+        top: 29%;
     }
 }
 @-moz-keyframes ani-mouse {
     0% {
-    opacity: 1;
-    top: 29%;
+        opacity: 1;
+        top: 29%;
     }
     15% {
-    opacity: 1;
-    top: 50%;
+        opacity: 1;
+        top: 50%;
     }
     50% {
-    opacity: 0;
-    top: 50%;
+        opacity: 0;
+        top: 50%;
     }
     100% {
-    opacity: 0;
-    top: 29%;
+        opacity: 0;
+        top: 29%;
     }
 }
 @keyframes ani-mouse {
     0% {
-    opacity: 1;
-    top: 29%;
+        opacity: 1;
+        top: 29%;
     }
     15% {
-    opacity: 1;
-    top: 50%;
+        opacity: 1;
+        top: 50%;
     }
     50% {
-    opacity: 0;
-    top: 50%;
+        opacity: 0;
+        top: 50%;
     }
     100% {
-    opacity: 0;
-    top: 29%;
+        opacity: 0;
+        top: 29%;
     }
 }
- .scroll-btn {
+.scroll-btn {
     display: block;
     position: absolute;
     left: 0;
@@ -177,8 +200,98 @@ body, html {
 
 /* ----------- END SCROLL ME BUTTON -------------- */
 
+/*----------- SECTION 2 CSS -----------*/
 #section-2 {
 
-  /*Font family*/
-  font-family: 'Comfortaa', cursive;
+    /*Colors*/
+    background-color: #fba8a4;
+    background-image: linear-gradient(315deg, #dad2f3 0%, #fba8a4 74%);
+
+    /*Font family*/
+    font-family: 'Comfortaa', cursive;
+
+    /* Full height */
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+#section-2 h3 {
+    color: white;
+}
+
+/*BTN CSS*/
+
+.sign-btn:link,
+.sign-btn:visited {
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display:inline-block;
+  transition: all .5s;
+}
+
+.btn-white {
+  background:#8B52FF;
+  color: white;
+}
+
+.sign-btn:hover {
+   box-shadow:0px 10px 10px rgba(0,0,0,0.2);
+   transform : translateY(-3px);
+   color: #8B52FF;
+}
+
+.sign-btn:active {
+  box-shadow:0px 5px 10px rgba(0,0,0,0.2)
+  transform:translateY(-1px);
+}
+
+.btn-bottom-animation-1 {
+  animation:comeFromBottom 1s ease-out .8s;
+}
+
+.sign-btn::after {
+  content:"";
+  text-decoration: none;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  border-radius:30px;
+  display:inline-block;
+  z-index:-1;
+  transition: all .5s;
+}
+
+.btn-white::after {
+    background: #8B52FF;
+}
+
+.btn-animation-1:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    background: #8B52FF;
+}
+
+@keyframes comeFromBottom {
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  } 
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/*END BTN CSS*/
+
+
+
+/*----------- END SECTION 2 CSS -----------*/

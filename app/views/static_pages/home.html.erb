@@ -1,9 +1,10 @@
 <body>
   <section id="section-1">
     <div id="home-title">
-      <h1 id="main-title" class="display-2">DREAMZzz</h1>
+
+      <h1 id="main-title" class="display-3"><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'logo') %>DREAMZ<span style="font-size: 70px;">z</span><span style="font-size: 40px;">z</span></h1>
       <span class="scroll-btn mt-5">
-        <a href="#section-2" data-smooth-scroll>
+        <a href="#sign-in" data-smooth-scroll>
           <span class="mouse">
             <span>
             </span>
@@ -13,5 +14,12 @@
     </div>
   </section>
   <section id="section-2">
+    <h3 id="sign-in">Racontez-nous vos rêves...</h3>
+
+    <p>
+      <%= link_to "Connexion", new_user_session_path, class: 'sign-btn btn-white btn-animation-1 mr-3'  %>
+
+      <%= link_to "Inscription", new_user_registration_path, class: 'sign-btn btn-white btn-animation-1'  %>
+    </p>
   </section>
 </body>
