@@ -290,6 +290,21 @@ body, html {
 
 /*END BTN CSS*/
 
+#sign-in-modal, #sign-up-modal {
+  font-family: 'Comfortaa', cursive;
+}
 
+.sign-logo {
+  margin-bottom: 10px;
+  height: 60px;
+}
+
+.modal-body {
+  background-image: linear-gradient(315deg, #b0f3f1 0%, #ffcfdf 74%);
+}
+
+.modal-content {
+  border-radius: 40px;
+}
 
 /*----------- END SECTION 2 CSS -----------*/

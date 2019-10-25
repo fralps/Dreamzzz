@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   # We define permission to first_name, last_name
   # for the sign_up form in order to add users into our database
   def configure_permitted_parameters
-    added_attrs = %i[first_name last_name email password password_confirmation remember_me]
+    added_attrs = [:first_name, :last_name, :email, :password, :password_confirmation, :remember_me]
     devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
     devise_parameter_sanitizer.permit :account_update, keys: added_attrs
     devise_parameter_sanitizer.permit :login, keys: added_attrs
