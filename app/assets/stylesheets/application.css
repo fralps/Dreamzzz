@@ -308,3 +308,41 @@ body, html {
 }
 
 /*----------- END SECTION 2 CSS -----------*/
+
+/*----------- INDEX CSS -----------*/
+#index {
+
+    /*Colors*/
+    background-color: #fba8a4;
+    background-image: linear-gradient(315deg, #dad2f3 0%, #fba8a4 74%);
+
+    /*Font family*/
+    font-family: 'Comfortaa', cursive;
+}
+
+.hr {
+  border-bottom: 0.5px solid #8b52ff;
+  width: 60%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#index-card  {
+  border-radius: 10px;
+}
+
+#index-img {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.fa-eye {
+  color: #8b52ff; 
+}
+
+#dream-card:hover {
+  background-color: #ddeeff;
+}
+
+
+/*----------- End Index CSS -----------*/
