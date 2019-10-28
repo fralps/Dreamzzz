@@ -1,0 +1,30 @@
+<div class="container-fluid">
+        <div class="row">
+            <div class="col col-md-6 offset-md-3">
+                <!-- Errors partial -->
+                <%= render 'dreams/error_messages' %>
+                <h2 class="text-center text-success">Je rêve...</h2>
+                <hr>
+
+                <!-- Zone du formulaire -->
+                <%= form_tag url_for(action: 'create'), method: "post", class: "user" do %>
+                <div class="form-group">
+
+                    <%= text_field_tag 'title', @dream.title, placeholder: "Titre de mon rêve..", class: "form-control form-control-user" %>
+
+                    <%= datetime_field_tag 'date', @dream.date, class: "form-control mt-3" %>
+
+                    <%= select_tag 'category',options_for_select(["Rêve", "Cauchemar", "Rêve lucide"]), class: "form-control p-2 mt-3" %>
+
+                   <%= text_area_tag 'description', @dream.description, placeholder: "Description de mon rêve..", class: "form-control form-control-user mt-3" %>
+
+                    <%= text_field_tag 'emotion', @dream.emotion, placeholder: "Émotion(s) ressentie(s) lors du rêve..", class: "form-control form-control-user mt-3" %>
+
+
+                    <%= submit_tag "✅ Ajouter", class: "btn btn-primary form-control mt-3" %>
+
+                    <% end %>
+                </div>
+            </div>  
+        </div>
+    </div>

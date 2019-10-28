@@ -49,7 +49,7 @@ class DreamsController < ApplicationController
 		@dream = Dream.find(params[:id])
 
 		if @dream.destroy
-			redirect_to user_path(current_user)
+			redirect_to dreams_path(current_user)
 			flash[:success] = "Votre rêve a bien été supprimé"
 		else
 			flash[:alert] = "Un problème est survenu"

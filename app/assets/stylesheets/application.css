@@ -341,8 +341,28 @@ body, html {
 }
 
 #dream-card:hover {
-  background-color: #ddeeff;
+  background-color: #ddeeff; 
 }
 
+#dream-card {
+  justify-content: space-between;
+}
+
+#add-dream-icon {
+  color: #8b52ff;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.add-btn {
+  color: #8b52ff;
+  padding-bottom: 10px;
+}
+
+.custom {
+  border-bottom: 1px solid white;
+  width: 87%;
+  margin: auto;
+}
 
 /*----------- End Index CSS -----------*/
