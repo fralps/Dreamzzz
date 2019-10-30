@@ -320,6 +320,10 @@ body, html {
   font-family: 'Comfortaa', cursive;
 }
 
+.box {
+  margin: 30px;
+} 
+
 .hr {
   border-bottom: 0.5px solid #8b52ff;
   width: 60%;
@@ -337,15 +341,34 @@ body, html {
   height: 230px;
 }
 
-#edit {
+.edit {
   color: #8b52ff;
 }
 
 #dream-card:hover {
-  background-color: #ddeeff; 
+  background-color: #ddeeff;
+  border-color: white; 
 }
 
 #dream-card {
+  justify-content: space-between;
+}
+
+#nightmare-card:hover {
+  background-color: #aeb8c1;
+  border-color: white; 
+}
+
+#nightmare-card {
+  justify-content: space-between;
+}
+
+#lucid-card:hover {
+  background-color: #f4cdf2;
+  border-color: white; 
+}
+
+#lucid-card {
   justify-content: space-between;
 }
 
