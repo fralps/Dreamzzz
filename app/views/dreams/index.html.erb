@@ -26,7 +26,7 @@
 										<i class="fas fa-pencil-alt edit" id="edit"></i>
 									<% end %> 
 
-									<%= link_to(dream_path(d.id), method: :delete) do %>
+									<%= link_to(dream_path(d.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve, voulez-vous continuer ?'}) do %>
 										<i class="far fa-trash-alt text-danger"></i>
 									<% end %> 
 									
@@ -61,7 +61,7 @@
 										<i class="fas fa-pencil-alt edit"></i>
 									<% end %> 
 
-									<%= link_to(nightmare_path(n.id), method: :delete) do %>
+									<%= link_to(nightmare_path(n.id), method: :delete, data: { confirm: 'Vous allez supprimer votre cauchemar, voulez-vous continuer ?'}) do %>
 										<i class="far fa-trash-alt text-danger"></i>
 									<% end %> 
 									
@@ -97,7 +97,7 @@
 										<i class="fas fa-pencil-alt edit"></i>
 									<% end %> 
 
-									<%= link_to(lucid_path(l.id), method: :delete) do %>
+									<%= link_to(lucid_path(l.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve lucide, voulez-vous continuer ?'}) do %>
 										<i class="far fa-trash-alt text-danger"></i>
 									<% end %> 
 									
