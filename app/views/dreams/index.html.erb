@@ -12,7 +12,7 @@
 							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
 						<% end %>
 
-					<% current_user.dreams.each do |d| %>
+					<% current_user.dreams.reverse.each do |d| %>
 					<%= link_to(dream_path(d.id), style: 'text-decoration: none; color: black;') do %>
 						<div class="card-body align-items-start" style=" padding: 10px;">
 							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding: 15px;">
@@ -47,7 +47,7 @@
 							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
 						<% end %>
 
-					<% current_user.nightmares.each do |n| %>
+					<% current_user.nightmares.reverse.each do |n| %>
 					<%= link_to(nightmare_path(n.id), style: 'text-decoration: none; color: black;') do %>
 						<div class="card-body align-items-start" style=" padding: 10px;">
 							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding-bottom: 1rem;">
@@ -83,7 +83,7 @@
 							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
 						<% end %>
 
-					<% current_user.lucids.each do |l| %>
+					<% current_user.lucids.reverse.each do |l| %>
 					<%= link_to(lucid_path(l.id), style: 'text-decoration: none; color: black;') do %>
 						<div class="card-body align-items-start" style=" padding: 10px;">
 							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding-bottom: 1rem;">

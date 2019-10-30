@@ -1,28 +1,33 @@
-<div class="container-fluid">
+<section id="section-lucids">
+    <div class="container">
         <div class="row">
             <div class="col col-md-6 offset-md-3">
-                <!-- Errors partial -->
-                <%= render 'lucids/error_messages' %>
-                <h2 class="text-center text-success">Je rêve...</h2>
-                <hr>
+                <div class="create-form shadow">
+                    <!-- Errors partial -->
+                    <%= render 'lucids/error_messages' %>
+                    <h2 class="text-center"><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'form-logo') %>Je contrôle mon rêve...</h2>
+                    <hr>
 
-                <!-- Zone du formulaire -->
-                <%= form_tag url_for(action: 'create'), method: "post", class: "user" do %>
-                <div class="form-group">
+                    <!-- Zone du formulaire -->
+                    <%= form_tag url_for(action: 'create'), method: "post", class: "user" do %>
+                    <div class="form-group">
 
-                    <%= text_field_tag 'title', @lucid.title, placeholder: "Titre de mon rêve lucide..", class: "form-control form-control-user" %>
+                        <%= text_field_tag 'title', @lucid.title, placeholder: "Titre de mon rêve lucide..", class: "form-control form-control-user mb-3" %>
 
-                    <%= datetime_field_tag 'date', @lucid.date, class: "form-control mt-3" %>
+                        <span>Date de mon rêve lucide :</span>
+                        <%= date_field_tag 'date', @lucid.date, class: "form-control" %>
 
-                   <%= text_area_tag 'description', @lucid.description, placeholder: "Description de mon rêve lucide..", class: "form-control form-control-user mt-3" %>
+                        <%= text_area_tag 'description', @lucid.description, placeholder: "Description de mon rêve lucide.. 💤", class: "form-control form-control-user mt-3" %>
 
-                    <%= text_field_tag 'emotion', @lucid.emotion, placeholder: "Émotion(s) ressentie(s) lors du rêve lucide..", class: "form-control form-control-user mt-3" %>
+                        <%= text_field_tag 'emotion', @lucid.emotion, placeholder: "Émotion(s) ressentie(s) lors du rêve lucide..", class: "form-control form-control-user mt-3" %>
 
 
-                    <%= submit_tag "✅ Ajouter", class: "btn btn-primary form-control mt-3" %>
+                        <%= submit_tag "Ajouter", class: "create-btn mt-3" %>
 
-                    <% end %>
+                        <% end %>
+                    </div>
                 </div>
             </div>  
         </div>
     </div>
+</section>
