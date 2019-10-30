@@ -1,0 +1,70 @@
+<section id="index">
+	<h2 id="sign-in" class="text-center mb-5 text-light">Mon journal 💤</h2>
+	<hr class="custom mb-5">
+	<div class="container">
+		<div class="row">
+			<div class="col col-lg-4 col-md-12 col-sm-12">
+				<div class="card shadow" id="index-card">
+						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+						<p class="text-center mt-4">RÊVES</p>
+						<div class="hr"></div>
+						<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
+							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
+						<% end %>
+
+					<% current_user.dreams.each do |d| %>
+					<%= link_to(dream_path(d.id), style: 'text-decoration: none; color: black;') do %>
+						<div class="card-body align-items-start" style=" padding: 10px;">
+							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding-bottom: 1rem;">
+								<div>
+									<%= d.title.truncate(22) %> <br>
+									<span class="text-muted" style="font-size: 12px;"><%= d.date.strftime("%d/%m/%y") %></span>
+								</div>
+								<div>
+
+									<%= link_to(edit_dream_path(d.id), class: 'mr-1', style: 'text-decoration: none;') do %>
+										<i class="fas fa-pencil-alt text-primary"></i>
+									<% end %> 
+
+									<%= link_to(dream_path(d.id), method: :delete) do %>
+										<i class="far fa-trash-alt text-danger"></i>
+									<% end %> 
+									
+								</div>
+							</div>
+						</div>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+
+			<div class="col col-lg-4 col-md-12 col-sm-12">
+				<div class="card shadow" id="index-card">
+						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+						<p class="text-center mt-3">CAUCHEMARS</p>
+						<div class="hr"></div>
+					<div class="card-body align-items-start">
+						<p class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card">
+							<span class="mr-auto">Title</span>
+							<span><i class="far fa-eye mr-1"></i> <i class="fas fa-pencil-alt text-primary mr-1"></i> <i class="far fa-trash-alt text-danger"></i></span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col col-lg-4 col-md-12 col-sm-12">
+				<div class="card shadow" id="index-card">
+						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+						<p class="text-center mt-3">RÊVES LUCIDES</p>
+						<div class="hr"></div>
+					<div class="card-body align-items-start">
+						<p class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card">
+							<span class="mr-auto">Title</span>
+							<span><i class="far fa-eye mr-1"></i> <i class="fas fa-pencil-alt text-primary mr-1"></i> <i class="far fa-trash-alt text-danger"></i></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

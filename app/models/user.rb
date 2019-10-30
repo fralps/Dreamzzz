@@ -19,6 +19,8 @@ class User < ApplicationRecord
 
   # Relations
   has_many :dreams
+  has_many :nightmares
+  has_many :lucids
 
   def welcome_send
     UserMailer.welcome_email(self).deliver_now

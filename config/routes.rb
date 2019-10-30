@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   # ----------- Route declarations -----------
   resources :users, only: [:show, :destroy]
   resources :dreams
+  resources :nightmares
+  resources :lucids
 end

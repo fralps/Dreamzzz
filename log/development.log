@@ -32525,3 +32525,1690 @@ Processing by DreamsController#edit as HTML
 Completed 200 OK in 113ms (Views: 104.9ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/" for ::1 at 2019-10-30 14:15:27 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (418.3ms)
+  Rendered layouts/_loader.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (37.9ms)
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (6.2ms)
+Completed 200 OK in 660ms (Views: 642.8ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-10-30 14:15:46 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9hMIUSCYdjZzkpjEssGLCW3H4v8glBm1ExKo9c3pTDkRLwJxxw5qtSwVUFffgvzG9rkHXtSxU54aApHyJoXmMw==", "user"=>{"email"=>"admin@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Je me connecte"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@yopmail.com"], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 379ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-10-30 14:15:46 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/static_pages/home.html.erb:20
+  Rendered static_pages/home.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_loader.html.erb (0.6ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (4.6ms)
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (5.2ms)
+Completed 200 OK in 127ms (Views: 126.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dreams" for ::1 at 2019-10-30 14:15:50 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (2.0ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.3ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  Rendered dreams/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_loader.html.erb (0.7ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (4.6ms)
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.6ms)
+Completed 200 OK in 156ms (Views: 118.4ms | ActiveRecord: 12.6ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateDreams (20191021162011)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (5.9ms)[0m  [1m[35mDROP TABLE "dreams"[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191021162011"]]
+  ↳ bin/rails:11
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to AddLastNameToUsers (20191008123000)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "last_name"[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191008123000"]]
+  ↳ bin/rails:11
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to AddFirstNameToUsers (20191008122933)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "first_name"[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191008122933"]]
+  ↳ bin/rails:11
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to DeviseCreateUsers (20191008102413)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX  "index_users_on_reset_password_token"[0m
+  ↳ bin/rails:11
+  [1m[35m (0.3ms)[0m  [1m[35mDROP INDEX  "index_users_on_email"[0m
+  ↳ bin/rails:11
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191008102413"]]
+  ↳ bin/rails:11
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to DeviseCreateUsers (20191008102413)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (28.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "is_admin" boolean DEFAULT FALSE, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191008102413_devise_create_users.rb:5
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20191008102413_devise_create_users.rb:39
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20191008102413_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191008102413"]]
+  ↳ bin/rails:11
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+Migrating to AddFirstNameToUsers (20191008122933)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" character varying[0m
+  ↳ db/migrate/20191008122933_add_first_name_to_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191008122933"]]
+  ↳ bin/rails:11
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+Migrating to AddLastNameToUsers (20191008123000)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" character varying[0m
+  ↳ db/migrate/20191008123000_add_last_name_to_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191008123000"]]
+  ↳ bin/rails:11
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+Migrating to CreateDreams (20191021162011)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "dreams" ("id" bigserial primary key, "title" character varying, "date" timestamp, "description" text, "emotion" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191021162011_create_dreams.rb:3
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_dreams_on_user_id" ON "dreams"  ("user_id")[0m
+  ↳ db/migrate/20191021162011_create_dreams.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191021162011"]]
+  ↳ bin/rails:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+Migrating to CreateNightmares (20191030132302)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "nightmares" ("id" bigserial primary key, "title" character varying, "date" timestamp, "description" text, "emotion" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191030132302_create_nightmares.rb:3
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE  INDEX  "index_nightmares_on_user_id" ON "nightmares"  ("user_id")[0m
+  ↳ db/migrate/20191030132302_create_nightmares.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191030132302"]]
+  ↳ bin/rails:11
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+Migrating to CreateLucids (20191030132912)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "lucids" ("id" bigserial primary key, "title" character varying, "date" timestamp, "description" text, "emotion" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191030132912_create_lucids.rb:3
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE  INDEX  "index_lucids_on_user_id" ON "lucids"  ("user_id")[0m
+  ↳ db/migrate/20191030132912_create_lucids.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191030132912"]]
+  ↳ bin/rails:11
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5275552165138066875)[0m
+  ↳ bin/rails:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:22
+  [1m[36mDream Load (0.5ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lottie.reilly@lescherdman.name"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lottie.reilly@lescherdman.name"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "lottie.reilly@lescherdman.name"], ["encrypted_password", "$2a$11$.NqB0aq0Qs4YmyhgEUu1lemNhuqPf9faYg7Sg4xIhl638y7q0Wzcq"], ["created_at", "2019-10-30 13:38:17.100310"], ["updated_at", "2019-10-30 13:38:17.100310"], ["first_name", "Anaïs"], ["last_name", "Rolland"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (6.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marisela.kuhn@cartwrightzemlak.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marisela.kuhn@cartwrightzemlak.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "marisela.kuhn@cartwrightzemlak.biz"], ["encrypted_password", "$2a$11$SSdLUCIa0oIcGK.jv3CtcO5abz5366skVWIk0qUJojTkAfA4fhOQS"], ["created_at", "2019-10-30 13:38:17.285643"], ["updated_at", "2019-10-30 13:38:17.285643"], ["first_name", "Lisa"], ["last_name", "Joly"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "elnora.nader@friesen.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "elnora.nader@friesen.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "elnora.nader@friesen.net"], ["encrypted_password", "$2a$11$jG8DYg6IW0uzhxAYESANSe8KVw4VjWYLTPQUOQj8B.XZ48xlfISGe"], ["created_at", "2019-10-30 13:38:17.451230"], ["updated_at", "2019-10-30 13:38:17.451230"], ["first_name", "Romane"], ["last_name", "Jean"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sharonda.schiller@kuhlmanthompson.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sharonda.schiller@kuhlmanthompson.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "sharonda.schiller@kuhlmanthompson.biz"], ["encrypted_password", "$2a$11$/qUMSXVkLFc5/JtrXNDXNO78zHaONqLpO5BL9oD8okqM95DMbQfVu"], ["created_at", "2019-10-30 13:38:17.620404"], ["updated_at", "2019-10-30 13:38:17.620404"], ["first_name", "Zoe"], ["last_name", "Adam"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "emmitt@rippin.name"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "emmitt@rippin.name"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "emmitt@rippin.name"], ["encrypted_password", "$2a$11$d.T3Us28H5FsdwJTcQYuwOsNWZuZiQTTCdDCn/xEmOXn7AOMiCgFq"], ["created_at", "2019-10-30 13:38:17.789739"], ["updated_at", "2019-10-30 13:38:17.789739"], ["first_name", "Justine"], ["last_name", "Perez"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "miguel@kshlerin.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "miguel@kshlerin.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "miguel@kshlerin.biz"], ["encrypted_password", "$2a$11$woHwXBUaq1T6dtIDoZ1ZpOAOTSPSXpTXuJdU4mjdHvv98ftJcSxvq"], ["created_at", "2019-10-30 13:38:17.959435"], ["updated_at", "2019-10-30 13:38:17.959435"], ["first_name", "Anaïs"], ["last_name", "Meyer"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "deane.huels@zulaufpadberg.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "deane.huels@zulaufpadberg.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "deane.huels@zulaufpadberg.biz"], ["encrypted_password", "$2a$11$7O2L2MPm1wlJQaayF3cjl.cQa.zBAKYfY9SuOSyLIWJLbGYDAAKR."], ["created_at", "2019-10-30 13:38:18.127553"], ["updated_at", "2019-10-30 13:38:18.127553"], ["first_name", "Maxime"], ["last_name", "Caron"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leif.mckenzie@cummings.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leif.mckenzie@cummings.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "leif.mckenzie@cummings.org"], ["encrypted_password", "$2a$11$PsX9JOQjsgZp4G7GRlABIO6TxMTo3mqO9Cvq.qXPUs2b9baGyg9SC"], ["created_at", "2019-10-30 13:38:18.296795"], ["updated_at", "2019-10-30 13:38:18.296795"], ["first_name", "Evan"], ["last_name", "Gauthier"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jean.gaylord@hintz.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jean.gaylord@hintz.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "jean.gaylord@hintz.com"], ["encrypted_password", "$2a$11$x.oDsbNVFHBUXzDBh4wBTeEI2FYykuL/TPkNQ81fl5SSVhzUNQvg2"], ["created_at", "2019-10-30 13:38:18.465655"], ["updated_at", "2019-10-30 13:38:18.465655"], ["first_name", "Adrien"], ["last_name", "Dumont"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "annabel.cremin@mayert.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "annabel.cremin@mayert.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "annabel.cremin@mayert.biz"], ["encrypted_password", "$2a$11$VisnlW0IRkD7PzYCL/00B.3c5Mt/RQsKos3L1bTvEao4ZAdvQmBmO"], ["created_at", "2019-10-30 13:38:18.635952"], ["updated_at", "2019-10-30 13:38:18.635952"], ["first_name", "Maxime"], ["last_name", "Lefèvre"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.9ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Eaque sit pariatur. Vel fugiat est. Aut tenetur at. Dolorem quibusdam facere. Officiis odit rerum. Soluta necessitatibus at. Rerum repellat qui. Aut nulla ipsum. Omnis asperiores voluptatum. Maxime a."], ["emotion", "Tristesse"], ["user_id", 4], ["created_at", "2019-10-30 13:38:18.678691"], ["updated_at", "2019-10-30 13:38:18.678691"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Tempore quasi voluptas. Occaecati velit eligendi. Sapiente expedita ea. Commodi in modi. Qui similique dolorum. Ipsa mollitia explicabo. Quia omnis eligendi. Nisi rerum sint. Corrupti qui dolorum. Vo."], ["emotion", "Gaieté"], ["user_id", 8], ["created_at", "2019-10-30 13:38:18.691523"], ["updated_at", "2019-10-30 13:38:18.691523"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.4ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "In error iusto. Soluta labore qui. Est suscipit non. Non eos quo. Qui est veniam. Voluptas ut deleniti. Possimus unde consectetur. Unde perspiciatis velit. Cumque in perferendis. Accusantium quam per."], ["emotion", "Malheur"], ["user_id", 2], ["created_at", "2019-10-30 13:38:18.703087"], ["updated_at", "2019-10-30 13:38:18.703087"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fasten your seatbelts. It's going to be a bumpy night."], ["date", "2019-10-30 00:00:00"], ["description", "Sit laboriosam veritatis. Sit eos libero. Nihil quasi itaque. Reiciendis amet numquam. Dolores commodi velit. Ut quis quo. Beatae dolorum facere. Aut voluptatem vel. Molestias aliquam sed. Voluptatib."], ["emotion", "Tristesse"], ["user_id", 6], ["created_at", "2019-10-30 13:38:18.722855"], ["updated_at", "2019-10-30 13:38:18.722855"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Quaerat eligendi quod. Explicabo assumenda incidunt. Ut iure quia. In maiores consequatur. Qui qui quo. Quisquam in id. Nihil molestias at. Omnis accusantium qui. Consequatur a aut. Explicabo consequ."], ["emotion", "Satisfaction"], ["user_id", 3], ["created_at", "2019-10-30 13:38:18.734004"], ["updated_at", "2019-10-30 13:38:18.734004"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I'm going to make him an offer he can't refuse."], ["date", "2019-10-30 00:00:00"], ["description", "Iusto dolores qui. Et error fugit. Fuga sint autem. Quia repellat aspernatur. Ullam quo ipsa. Aut nam assumenda. Corrupti et et. Et dolores ipsam. Saepe qui consequatur. Est ipsam ex. Natus commodi i."], ["emotion", "Souffrance"], ["user_id", 6], ["created_at", "2019-10-30 13:38:18.744287"], ["updated_at", "2019-10-30 13:38:18.744287"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Minima amet tenetur. Sint voluptas necessitatibus. Quos aperiam ut. Consequatur aut omnis. Voluptatibus suscipit quidem. Molestiae est in. Tempore distinctio vel. Et magnam nisi. Id ea eaque. Animi m."], ["emotion", "Tourment"], ["user_id", 9], ["created_at", "2019-10-30 13:38:18.753205"], ["updated_at", "2019-10-30 13:38:18.753205"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Aut excepturi doloribus. Voluptas est nam. Enim tempora sit. Libero voluptates accusantium. Labore quasi fugiat. Natus omnis libero. Corrupti cumque in. Eaque non perferendis. Autem qui magni. Rerum ."], ["emotion", "Gaieté"], ["user_id", 9], ["created_at", "2019-10-30 13:38:18.763250"], ["updated_at", "2019-10-30 13:38:18.763250"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Officia aut quia. Quisquam eum nostrum. Porro qui unde. Accusamus dolores enim. Maiores accusamus in. Qui neque et. Nihil qui ut. Dolores totam veniam. Sed maiores id. Quas voluptates rem. Officiis a."], ["emotion", "Gaieté"], ["user_id", 5], ["created_at", "2019-10-30 13:38:18.773704"], ["updated_at", "2019-10-30 13:38:18.773704"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Quo voluptatem reiciendis. Quis architecto aut. Voluptatem aspernatur omnis. Quia adipisci voluptas. Nisi nam blanditiis. Inventore ullam est. Assumenda harum consectetur. Eius tempora nam. Magnam la."], ["emotion", "Tourment"], ["user_id", 8], ["created_at", "2019-10-30 13:38:18.782955"], ["updated_at", "2019-10-30 13:38:18.782955"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.4ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "In quia quo. Deserunt earum voluptas. Id voluptas harum. Fuga quibusdam necessitatibus. Cupiditate aliquid vel. Voluptas accusamus aut. Quibusdam repellat neque. Officiis reiciendis molestias. Conseq."], ["emotion", "Souffrance"], ["user_id", 10], ["created_at", "2019-10-30 13:38:18.793236"], ["updated_at", "2019-10-30 13:38:18.793236"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Suscipit similique nihil. Id dolorum laboriosam. Et quaerat non. Est enim numquam. Error placeat id. Ducimus aspernatur sapiente. Ut voluptatem vitae. Ducimus ipsam consequatur. Totam qui saepe. Corr."], ["emotion", "Excitation"], ["user_id", 1], ["created_at", "2019-10-30 13:38:18.808708"], ["updated_at", "2019-10-30 13:38:18.808708"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Eos dolorem ab. Iste dolores similique. Et cumque et. Sit accusantium iure. Sint laborum incidunt. Aut similique laboriosam. Aut quidem et. Expedita consequuntur quia. Eos dolor qui. Omnis dolore rem."], ["emotion", "Colère"], ["user_id", 7], ["created_at", "2019-10-30 13:38:18.821648"], ["updated_at", "2019-10-30 13:38:18.821648"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.4ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Quae sunt deleniti. Tenetur reiciendis labore. Rem assumenda ut. Et est facere. Deserunt eos sunt. Labore et unde. Sint est et. Et tenetur autem. Vel et porro. Tempore atque quia. Quisquam distinctio."], ["emotion", "Tourment"], ["user_id", 9], ["created_at", "2019-10-30 13:38:18.833009"], ["updated_at", "2019-10-30 13:38:18.833009"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Sit qui qui. Dolore officiis et. Adipisci porro nesciunt. Sapiente sint quisquam. Et libero officia. Dolorum eum ut. Soluta porro blanditiis. Et vel at. Temporibus ex minus. Laborum quas tempora. Quo."], ["emotion", "Tristesse"], ["user_id", 9], ["created_at", "2019-10-30 13:38:18.845037"], ["updated_at", "2019-10-30 13:38:18.845037"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fasten your seatbelts. It's going to be a bumpy night."], ["date", "2019-10-30 00:00:00"], ["description", "Molestiae vitae totam. Ut voluptas eos. Recusandae sunt et. Et eveniet sint. Ducimus aut in. Vel odit consectetur. Fugiat labore minima. Saepe architecto libero. Qui perferendis repudiandae. Consecte."], ["emotion", "Dégoût"], ["user_id", 9], ["created_at", "2019-10-30 13:38:18.855292"], ["updated_at", "2019-10-30 13:38:18.855292"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Accusamus sit aut. Earum tempora velit. Sit vel necessitatibus. Tenetur sit cumque. Et qui minima. Et quaerat ipsum. Doloremque accusamus dolore. Explicabo sed architecto. Laudantium nisi aut. Itaque."], ["emotion", "Joie"], ["user_id", 9], ["created_at", "2019-10-30 13:38:18.868163"], ["updated_at", "2019-10-30 13:38:18.868163"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.4ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I'm going to make him an offer he can't refuse."], ["date", "2019-10-30 00:00:00"], ["description", "Non rerum cumque. Ut at ratione. Qui eos rerum. Ipsa dolore similique. Incidunt ea harum. Ducimus repellat amet. Repudiandae ut et. Quasi sed perferendis. Magni sunt ipsam. Dolorum non architecto. Na."], ["emotion", "Souffrance"], ["user_id", 8], ["created_at", "2019-10-30 13:38:18.878835"], ["updated_at", "2019-10-30 13:38:18.878835"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.4ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Aut nemo eveniet. Dolorum dolor iure. Dolores culpa ipsam. Autem voluptas quos. Reprehenderit expedita dolores. Quaerat perspiciatis nisi. Ipsa eos praesentium. Eveniet incidunt mollitia. Sequi aut s."], ["emotion", "Optimiste"], ["user_id", 8], ["created_at", "2019-10-30 13:38:18.890162"], ["updated_at", "2019-10-30 13:38:18.890162"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "May the Force be with you."], ["date", "2019-10-30 00:00:00"], ["description", "Deserunt quia deleniti. Vero architecto id. Deleniti eos provident. Qui velit rerum. Omnis et qui. Et consectetur iste. Placeat qui dolorem. Adipisci voluptas quis. Assumenda dolor ut. Provident comm."], ["emotion", "Dégoût"], ["user_id", 2], ["created_at", "2019-10-30 13:38:18.902517"], ["updated_at", "2019-10-30 13:38:18.902517"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Nam quia sapiente. Et laboriosam unde. Rerum eos totam. Et esse odio. Est unde suscipit. Occaecati sunt animi. Tenetur ullam recusandae. Voluptas cupiditate ea. Ipsam est dolorem. Soluta iure porro. ."], ["emotion", "Gaieté"], ["user_id", 7], ["created_at", "2019-10-30 13:38:18.921724"], ["updated_at", "2019-10-30 13:38:18.921724"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I love the smell of napalm in the morning."], ["date", "2019-10-30 00:00:00"], ["description", "Et illo ullam. Amet deserunt tenetur. Consequatur omnis neque. Et dolorem fugit. Totam facere illum. Molestiae libero qui. Ea quas consequuntur. Illum voluptas voluptatem. Eos libero velit. Atque bla."], ["emotion", "Joie"], ["user_id", 4], ["created_at", "2019-10-30 13:38:18.934764"], ["updated_at", "2019-10-30 13:38:18.934764"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Molestias consequatur quia. Ipsam asperiores qui. Dolorem corrupti ipsum. Et fugit qui. Deserunt voluptas laboriosam. Omnis saepe voluptatibus. Similique autem qui. Ad molestiae maiores. Omnis itaque."], ["emotion", "Soulagement"], ["user_id", 2], ["created_at", "2019-10-30 13:38:18.943896"], ["updated_at", "2019-10-30 13:38:18.943896"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Reiciendis magni tenetur. Ut vel a. Hic perferendis numquam. Nihil fuga unde. Ex explicabo quis. Labore iste voluptatum. Officiis assumenda aliquam. Aut et sit. Aliquam reprehenderit et. Cum iure rei."], ["emotion", "Anxiété"], ["user_id", 1], ["created_at", "2019-10-30 13:38:18.957411"], ["updated_at", "2019-10-30 13:38:18.957411"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.5ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Perferendis vero dolore. Nulla voluptatum magni. Dolor harum blanditiis. Velit et quia. Et ipsam sapiente. Et nihil saepe. Omnis quisquam earum. Officia maiores nihil. Cumque vel voluptatem. Voluptat."], ["emotion", "Excitation"], ["user_id", 5], ["created_at", "2019-10-30 13:38:18.969706"], ["updated_at", "2019-10-30 13:38:18.969706"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.4ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I love the smell of napalm in the morning."], ["date", "2019-10-30 00:00:00"], ["description", "Recusandae vel ad. Quidem quia dolores. Necessitatibus commodi odio. Beatae dicta quidem. Voluptatem dolorem incidunt. Tempore voluptates consectetur. Eaque omnis laboriosam. Totam at accusantium. Po."], ["emotion", "Découragement"], ["user_id", 5], ["created_at", "2019-10-30 13:38:18.981515"], ["updated_at", "2019-10-30 13:38:18.981515"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.4ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I'm going to make him an offer he can't refuse."], ["date", "2019-10-30 00:00:00"], ["description", "Et natus consequatur. Facere voluptates id. Asperiores autem fugiat. Ex voluptas et. Et dolorum libero. Nostrum autem rem. Nostrum labore ipsum. Voluptas quae dolorum. Rem in dolores. Dignissimos ull."], ["emotion", "Souffrance"], ["user_id", 2], ["created_at", "2019-10-30 13:38:18.993345"], ["updated_at", "2019-10-30 13:38:18.993345"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Commodi et esse. Velit maxime laboriosam. Ad incidunt autem. Ut eius exercitationem. Voluptatibus perspiciatis et. Ut eius neque. Accusamus et voluptatem. Consequatur nesciunt inventore. Ratione prae."], ["emotion", "Optimiste"], ["user_id", 2], ["created_at", "2019-10-30 13:38:19.004947"], ["updated_at", "2019-10-30 13:38:19.004947"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Voluptatibus deleniti et. Accusamus sint ratione. Ut temporibus ut. Dolor atque molestiae. Blanditiis quo ullam. Quos fugiat debitis. Amet est sed. Rem non voluptatem. Est vel quo. Molestiae vel quia."], ["emotion", "Découragement"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.019546"], ["updated_at", "2019-10-30 13:38:19.019546"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mDream Create (0.4ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Here's looking at you, kid."], ["date", "2019-10-30 00:00:00"], ["description", "Dolores consequatur aliquid. Voluptatem qui enim. Doloremque vel hic. Laborum ut aliquid. Sunt esse libero. Dolor fuga sed. Ipsum earum ad. Perferendis sit qui. Officia blanditiis corporis. Voluptas ."], ["emotion", "Chagrin"], ["user_id", 3], ["created_at", "2019-10-30 13:38:19.029395"], ["updated_at", "2019-10-30 13:38:19.029395"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.6ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Here's looking at you, kid."], ["date", "2019-10-30 00:00:00"], ["description", "Modi aut et. Incidunt repudiandae maiores. Rerum totam ipsa. Aut qui nostrum. Voluptas mollitia temporibus. Et dolor vel. Assumenda reprehenderit velit. Esse cum vel. Praesentium voluptatem perferend."], ["emotion", "Dégoût"], ["user_id", 4], ["created_at", "2019-10-30 13:38:19.053740"], ["updated_at", "2019-10-30 13:38:19.053740"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fasten your seatbelts. It's going to be a bumpy night."], ["date", "2019-10-30 00:00:00"], ["description", "Molestiae unde dicta. Dolor dolore consequuntur. Nesciunt sunt dignissimos. Error exercitationem aliquam. Illum voluptatem debitis. Labore et minus. Et nobis consequatur. Eius omnis pariatur. Natus v."], ["emotion", "Optimiste"], ["user_id", 7], ["created_at", "2019-10-30 13:38:19.064470"], ["updated_at", "2019-10-30 13:38:19.064470"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Recusandae molestiae iure. Repudiandae saepe quidem. Quasi quas corrupti. Quas neque et. Voluptatem quam sed. Facilis recusandae ut. Ad doloremque quia. Officia nihil rerum. Nam ipsum cupiditate. Est."], ["emotion", "Tristesse"], ["user_id", 9], ["created_at", "2019-10-30 13:38:19.074659"], ["updated_at", "2019-10-30 13:38:19.074659"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Cum aut sunt. Non iure laboriosam. Quaerat est ullam. Nisi quam minus. Enim numquam repellendus. Quibusdam cum eligendi. Est ipsa deleniti. Tenetur eaque voluptate. Sint nulla explicabo. Eius reprehe."], ["emotion", "Tristesse"], ["user_id", 8], ["created_at", "2019-10-30 13:38:19.084291"], ["updated_at", "2019-10-30 13:38:19.084291"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Ut labore consequatur. Cumque laboriosam eum. Neque pariatur voluptate. At sint quisquam. Deserunt animi rerum. Porro ex rerum. Est doloremque inventore. Voluptatem nam accusantium. Enim dicta sit. R."], ["emotion", "Anxiété"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.094560"], ["updated_at", "2019-10-30 13:38:19.094560"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Voluptatum quam laboriosam. Facilis rem amet. Aut qui assumenda. Non corporis perferendis. Saepe et esse. Saepe hic quas. Asperiores fuga voluptates. Et unde asperiores. Totam et odio. Repellendus of."], ["emotion", "Tristesse"], ["user_id", 9], ["created_at", "2019-10-30 13:38:19.107155"], ["updated_at", "2019-10-30 13:38:19.107155"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fasten your seatbelts. It's going to be a bumpy night."], ["date", "2019-10-30 00:00:00"], ["description", "Atque necessitatibus molestias. Est magni inventore. Commodi et aut. Qui quos deserunt. Similique nihil possimus. Aut quisquam voluptas. Est et quidem. Earum iste vitae. Quibusdam dolor neque. Error ."], ["emotion", "Joie"], ["user_id", 5], ["created_at", "2019-10-30 13:38:19.120227"], ["updated_at", "2019-10-30 13:38:19.120227"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Consectetur in sapiente. Vitae fugit eos. Velit suscipit esse. Beatae consectetur facilis. Molestiae animi explicabo. Perspiciatis quibusdam aut. Quaerat ad culpa. Dolor nam eum. Architecto aut ut. E."], ["emotion", "Excitation"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.132504"], ["updated_at", "2019-10-30 13:38:19.132504"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "May the Force be with you."], ["date", "2019-10-30 00:00:00"], ["description", "Dicta neque et. Autem vel nulla. Perspiciatis aliquid consequatur. Et facilis laborum. Possimus consequuntur ea. Sapiente voluptas officiis. Ut quasi aliquam. Aliquam sunt eos. Voluptatem id voluptat."], ["emotion", "Anxiété"], ["user_id", 5], ["created_at", "2019-10-30 13:38:19.142324"], ["updated_at", "2019-10-30 13:38:19.142324"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Sit ab ut. Vitae illum consequuntur. Totam aut magnam. Labore quasi dolorum. Qui tempore suscipit. Ut ut consequatur. Voluptas ea qui. Fugit dolore ea. Et soluta eum. Qui sit minima. Inventore et tem."], ["emotion", "Tristesse"], ["user_id", 2], ["created_at", "2019-10-30 13:38:19.155260"], ["updated_at", "2019-10-30 13:38:19.155260"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Repellendus ab saepe. Excepturi voluptatibus dignissimos. Non quia excepturi. Voluptas ducimus ut. Quam consequatur sit. Facilis sequi reprehenderit. Quis nostrum neque. Natus sint quaerat. Blanditii."], ["emotion", "Chagrin"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.180204"], ["updated_at", "2019-10-30 13:38:19.180204"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.5ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Go ahead, make my day."], ["date", "2019-10-30 00:00:00"], ["description", "Blanditiis tempore veritatis. Voluptatem ipsa id. Quia qui architecto. Neque quo pariatur. Fugiat voluptate mollitia. Sapiente nobis delectus. Ratione et quos. Perspiciatis dolorem id. Odit praesenti."], ["emotion", "Dégoût"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.194495"], ["updated_at", "2019-10-30 13:38:19.194495"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "May the Force be with you."], ["date", "2019-10-30 00:00:00"], ["description", "Molestiae consectetur aut. Accusamus natus consectetur. Quis ipsum quia. Blanditiis sed neque. Doloremque delectus esse. Tenetur rerum facere. Nihil aut et. Impedit repellendus qui. Dolor eveniet seq."], ["emotion", "Satisfaction"], ["user_id", 4], ["created_at", "2019-10-30 13:38:19.208004"], ["updated_at", "2019-10-30 13:38:19.208004"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.7ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "In nam ea. Autem qui nemo. Voluptatem non minus. Qui quia dolor. Quia quos vel. Quos deleniti inventore. Aut et ut. Dolores in ex. Qui deleniti nobis. Inventore unde quasi. Aut vel enim. Sapiente exp."], ["emotion", "Anxiété"], ["user_id", 2], ["created_at", "2019-10-30 13:38:19.229007"], ["updated_at", "2019-10-30 13:38:19.229007"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I love the smell of napalm in the morning."], ["date", "2019-10-30 00:00:00"], ["description", "Deleniti et aliquid. Voluptatum eaque similique. Animi rerum quaerat. Voluptas rem quibusdam. Sapiente culpa optio. Temporibus quasi velit. Dignissimos ad dolorum. Itaque possimus velit. Laudantium q."], ["emotion", "Anxiété"], ["user_id", 6], ["created_at", "2019-10-30 13:38:19.264445"], ["updated_at", "2019-10-30 13:38:19.264445"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Here's looking at you, kid."], ["date", "2019-10-30 00:00:00"], ["description", "Odit ullam mollitia. Qui quod doloremque. Accusantium ut voluptatibus. Cumque voluptas aut. Cupiditate qui numquam. Ut perferendis quo. Consequatur debitis esse. Voluptas architecto porro. Impedit vo."], ["emotion", "Anxiété"], ["user_id", 3], ["created_at", "2019-10-30 13:38:19.273625"], ["updated_at", "2019-10-30 13:38:19.273625"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Veritatis omnis labore. Nihil et voluptatem. Unde quo fugit. Magnam dolorem dolore. Ipsum et nulla. Voluptas dicta ut. Tenetur voluptas porro. Numquam ea assumenda. Laudantium illo optio. Assumenda u."], ["emotion", "Tourment"], ["user_id", 7], ["created_at", "2019-10-30 13:38:19.286449"], ["updated_at", "2019-10-30 13:38:19.286449"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Delectus ratione omnis. Ullam corrupti deserunt. Ea ut totam. Quia iste tenetur. Fugiat rerum perspiciatis. Molestiae vel hic. Voluptas et sit. Ipsum labore atque. Enim voluptas sit. Mollitia magni s."], ["emotion", "Soulagement"], ["user_id", 9], ["created_at", "2019-10-30 13:38:19.297483"], ["updated_at", "2019-10-30 13:38:19.297483"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Aut rerum corporis. Vitae repudiandae id. Quia distinctio cupiditate. Quia maiores a. Atque voluptas magni. Inventore est et. Dignissimos impedit est. Possimus et ab. Numquam harum maiores. Accusamus."], ["emotion", "Gaieté"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.308273"], ["updated_at", "2019-10-30 13:38:19.308273"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Enim excepturi dolores. Et et qui. Occaecati sequi aut. Rerum debitis quod. Est sint temporibus. Totam id et. Et quidem ut. Quo ipsa aut. Vel dolores mollitia. Amet odit sit. Aut qui eligendi. Corpor."], ["emotion", "Découragement"], ["user_id", 2], ["created_at", "2019-10-30 13:38:19.321567"], ["updated_at", "2019-10-30 13:38:19.321567"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "May the Force be with you."], ["date", "2019-10-30 00:00:00"], ["description", "Qui eaque soluta. Sint est dignissimos. Asperiores ut facilis. Cumque minima quia. Omnis odit laboriosam. Aspernatur aut ipsa. Tempore quod explicabo. Corporis sed rerum. Odit libero quasi. Et illum ."], ["emotion", "Anxiété"], ["user_id", 9], ["created_at", "2019-10-30 13:38:19.332758"], ["updated_at", "2019-10-30 13:38:19.332758"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Repellendus non impedit. Atque ratione quos. Sequi culpa quasi. Voluptatem perspiciatis accusamus. Eius qui quis. Animi sunt eveniet. Laboriosam nemo quia. Neque cupiditate aut. Saepe voluptatem repr."], ["emotion", "Joie"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.343198"], ["updated_at", "2019-10-30 13:38:19.343198"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "May the Force be with you."], ["date", "2019-10-30 00:00:00"], ["description", "Voluptas dolores in. Voluptatem deleniti aliquam. Sit aut accusamus. Culpa eius et. Nemo sit aut. Enim molestias omnis. Aut ipsum occaecati. Accusamus ut nostrum. Tenetur voluptatem quae. Autem possi."], ["emotion", "Souffrance"], ["user_id", 2], ["created_at", "2019-10-30 13:38:19.354210"], ["updated_at", "2019-10-30 13:38:19.354210"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Go ahead, make my day."], ["date", "2019-10-30 00:00:00"], ["description", "Et voluptas non. Et voluptas sit. Ipsa minima repellat. Voluptas eum optio. Ea nam numquam. Ut distinctio est. Sed facere sit. Enim reprehenderit quasi. Est ducimus omnis. Commodi dolore nam. Fugiat ."], ["emotion", "Excitation"], ["user_id", 3], ["created_at", "2019-10-30 13:38:19.365170"], ["updated_at", "2019-10-30 13:38:19.365170"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I love the smell of napalm in the morning."], ["date", "2019-10-30 00:00:00"], ["description", "Iste libero optio. Omnis cum enim. Excepturi est sit. Est et vel. Quo quam laboriosam. Et hic facere. Aperiam libero vero. Nobis qui ratione. Voluptas aut corporis. Rem nam et. Delectus ut autem. Rer."], ["emotion", "Satisfaction"], ["user_id", 2], ["created_at", "2019-10-30 13:38:19.376840"], ["updated_at", "2019-10-30 13:38:19.376840"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Ex ut non. Iste atque aut. Et eum mollitia. Amet ad sit. Qui voluptas adipisci. Placeat blanditiis est. Consequatur et placeat. Quidem velit exercitationem. Ex et laborum. Id et ut. Id quis molestias."], ["emotion", "Soulagement"], ["user_id", 6], ["created_at", "2019-10-30 13:38:19.386873"], ["updated_at", "2019-10-30 13:38:19.386873"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I love the smell of napalm in the morning."], ["date", "2019-10-30 00:00:00"], ["description", "Reprehenderit sed delectus. Aut porro reiciendis. Reprehenderit rerum aliquid. Porro ea ut. Dolores quasi sunt. Sit commodi deserunt. Magnam autem minima. Voluptates quibusdam quas. Reiciendis molest."], ["emotion", "Tristesse"], ["user_id", 2], ["created_at", "2019-10-30 13:38:19.397572"], ["updated_at", "2019-10-30 13:38:19.397572"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Quasi dolores officiis. Sunt temporibus quae. Reiciendis libero in. Ipsa reiciendis facere. Animi ducimus beatae. Aliquid non doloribus. Maxime numquam consequatur. Expedita corrupti dicta. Modi vero."], ["emotion", "Découragement"], ["user_id", 3], ["created_at", "2019-10-30 13:38:19.418766"], ["updated_at", "2019-10-30 13:38:19.418766"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.4ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Nesciunt omnis dignissimos. Consequuntur dolores aut. Amet a adipisci. Qui est voluptatibus. Vero sint voluptatem. Itaque asperiores qui. Ratione quaerat voluptatem. Earum eos optio. Necessitatibus v."], ["emotion", "Joie"], ["user_id", 3], ["created_at", "2019-10-30 13:38:19.433155"], ["updated_at", "2019-10-30 13:38:19.433155"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mNightmare Create (0.3ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Adipisci qui quaerat. Nulla ut iusto. Esse qui laborum. Dolorum perferendis repellendus. Velit rerum veritatis. Quis et assumenda. Est voluptatum et. Voluptatibus voluptatem sunt. Alias fugiat qui. P."], ["emotion", "Souffrance"], ["user_id", 4], ["created_at", "2019-10-30 13:38:19.447945"], ["updated_at", "2019-10-30 13:38:19.447945"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.7ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Go ahead, make my day."], ["date", "2019-10-30 00:00:00"], ["description", "Laudantium nihil facere. Enim voluptatem reprehenderit. Ut ratione officia. Nostrum saepe aut. Modi numquam natus. Nihil sint soluta. Voluptas sed rerum. Magni quia doloribus. Dolor quis ullam. Ut et."], ["emotion", "Satisfaction"], ["user_id", 4], ["created_at", "2019-10-30 13:38:19.479190"], ["updated_at", "2019-10-30 13:38:19.479190"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.5ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Accusantium qui ab. Dolor accusantium et. Molestiae sint sunt. Tempore quod facere. Omnis consequatur occaecati. Similique ullam deleniti. Quae blanditiis odit. Unde voluptatem itaque. Totam dolor qu."], ["emotion", "Gaieté"], ["user_id", 6], ["created_at", "2019-10-30 13:38:19.489046"], ["updated_at", "2019-10-30 13:38:19.489046"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Sit quisquam qui. Asperiores qui aliquam. Voluptatem fugiat minus. Nemo autem ut. Quasi qui officiis. Similique eos dolores. Delectus et eaque. A et ducimus. Rerum eum reiciendis. Et id in. Quo dolor."], ["emotion", "Joie"], ["user_id", 7], ["created_at", "2019-10-30 13:38:19.501575"], ["updated_at", "2019-10-30 13:38:19.501575"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "May the Force be with you."], ["date", "2019-10-30 00:00:00"], ["description", "Rerum ea voluptatem. Natus minus voluptatum. Quia consequuntur id. Exercitationem modi veritatis. Minima dolor saepe. Dolor doloribus suscipit. Qui quisquam iusto. Maiores ex architecto. Et placeat l."], ["emotion", "Chagrin"], ["user_id", 7], ["created_at", "2019-10-30 13:38:19.512985"], ["updated_at", "2019-10-30 13:38:19.512985"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.4ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I'm going to make him an offer he can't refuse."], ["date", "2019-10-30 00:00:00"], ["description", "Vel minus eos. Nihil facere incidunt. Aut dolorem non. Quae qui tenetur. Quis aut vel. Repellendus doloremque voluptates. Expedita quasi dolore. Dolore non ut. Velit consequuntur tenetur. Eveniet vol."], ["emotion", "Tristesse"], ["user_id", 6], ["created_at", "2019-10-30 13:38:19.523324"], ["updated_at", "2019-10-30 13:38:19.523324"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Deleniti voluptate est. Quaerat dolores sit. Omnis iure reprehenderit. Est dolor sed. Ut sed praesentium. Amet aut eveniet. Eligendi et dolores. Consequatur excepturi natus. Enim nihil dolorem. Sit a."], ["emotion", "Souffrance"], ["user_id", 8], ["created_at", "2019-10-30 13:38:19.533429"], ["updated_at", "2019-10-30 13:38:19.533429"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.4ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Here's looking at you, kid."], ["date", "2019-10-30 00:00:00"], ["description", "Quos exercitationem est. Molestias quibusdam impedit. Aut laboriosam rerum. In nobis et. Inventore numquam quia. Maxime assumenda provident. Omnis cumque commodi. Non minus officia. Non dolorum quo. ."], ["emotion", "Anxiété"], ["user_id", 3], ["created_at", "2019-10-30 13:38:19.545101"], ["updated_at", "2019-10-30 13:38:19.545101"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I love the smell of napalm in the morning."], ["date", "2019-10-30 00:00:00"], ["description", "Deleniti aut tempore. Commodi possimus aspernatur. Sint laudantium ab. A qui explicabo. Velit consectetur impedit. Enim officiis non. Optio accusamus aperiam. Laudantium est praesentium. Qui mollitia."], ["emotion", "Gaieté"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.553949"], ["updated_at", "2019-10-30 13:38:19.553949"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fasten your seatbelts. It's going to be a bumpy night."], ["date", "2019-10-30 00:00:00"], ["description", "Sed laborum ut. Ab mollitia aut. Et suscipit est. Voluptatem dolores omnis. Saepe consequatur qui. Natus omnis architecto. Reprehenderit quis sed. Et ratione ea. Corporis neque qui. Veniam nihil corp."], ["emotion", "Anxiété"], ["user_id", 8], ["created_at", "2019-10-30 13:38:19.564385"], ["updated_at", "2019-10-30 13:38:19.564385"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Veritatis nihil ipsum. Dolore consequatur ut. Natus velit dignissimos. In laboriosam est. Ad est laborum. Sit voluptatibus dolore. Asperiores expedita non. Ratione ipsum expedita. Temporibus rem recu."], ["emotion", "Gaieté"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.572230"], ["updated_at", "2019-10-30 13:38:19.572230"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Go ahead, make my day."], ["date", "2019-10-30 00:00:00"], ["description", "Fuga corrupti quis. Est dolorum omnis. Recusandae enim voluptatibus. Velit voluptatibus iusto. Maiores aut eum. Sunt saepe voluptas. Cumque repudiandae non. Nostrum sed reiciendis. Molestias voluptat."], ["emotion", "Souffrance"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.581688"], ["updated_at", "2019-10-30 13:38:19.581688"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Quia voluptatem quo. Aut ipsa odio. Soluta quas commodi. Rerum quo quis. Aut vel molestias. Et aut molestiae. Autem ea non. Qui earum fugiat. Placeat vel ipsum. Consequatur aliquid vitae. Et exercita."], ["emotion", "Souffrance"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.591917"], ["updated_at", "2019-10-30 13:38:19.591917"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Quia dolore cumque. Qui ipsa et. Nisi enim doloribus. Rerum dolor ut. Commodi a sit. Unde sint sed. Magni veniam distinctio. Et rerum dolores. Sed inventore culpa. Possimus dolorem voluptates. Distin."], ["emotion", "Dégoût"], ["user_id", 2], ["created_at", "2019-10-30 13:38:19.601772"], ["updated_at", "2019-10-30 13:38:19.601772"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.4ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Fasten your seatbelts. It's going to be a bumpy night."], ["date", "2019-10-30 00:00:00"], ["description", "Laboriosam quaerat in. Ratione reiciendis iure. Neque laudantium sint. Culpa possimus commodi. Aut repellendus omnis. Suscipit rerum quo. Officiis nisi veniam. Officia dolores itaque. Et et quis. Ani."], ["emotion", "Anxiété"], ["user_id", 6], ["created_at", "2019-10-30 13:38:19.613197"], ["updated_at", "2019-10-30 13:38:19.613197"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Rerum non dolores. Ut eveniet illum. Facilis ut et. Voluptate autem pariatur. Voluptatem fuga labore. Vel deleniti ut. Quia sit quisquam. Voluptates possimus qui. Aut quia est. Iusto numquam vel. Fug."], ["emotion", "Soulagement"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.625208"], ["updated_at", "2019-10-30 13:38:19.625208"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.4ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Totam rem eum. Alias omnis eos. Rerum quo eum. Culpa ab molestiae. Voluptatem incidunt et. Labore adipisci numquam. Nostrum dolorem at. Et in est. Aut ut dolores. Sit vel sed. Perferendis eveniet vel."], ["emotion", "Satisfaction"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.640279"], ["updated_at", "2019-10-30 13:38:19.640279"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.4ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Incidunt quia laborum. Odit sit est. Fugiat voluptatum et. Recusandae et aut. Ab sunt minima. Eos magnam pariatur. Aspernatur id unde. Corrupti consectetur distinctio. Nostrum vitae rerum. Exercitati."], ["emotion", "Dégoût"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.655959"], ["updated_at", "2019-10-30 13:38:19.655959"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.5ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "May the Force be with you."], ["date", "2019-10-30 00:00:00"], ["description", "Eligendi tenetur sit. Doloremque soluta est. Est doloribus distinctio. Delectus et eos. Voluptas dolor beatae. Odio sit rem. Iusto ratione aut. Atque quia ducimus. Et dolores ut. Et est commodi. Corp."], ["emotion", "Tristesse"], ["user_id", 9], ["created_at", "2019-10-30 13:38:19.677919"], ["updated_at", "2019-10-30 13:38:19.677919"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.5ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Frankly, my dear, I don’t give a damn."], ["date", "2019-10-30 00:00:00"], ["description", "Vero iste mollitia. Voluptatibus eos optio. Voluptatibus sit doloribus. Cumque sed facilis. Eos omnis omnis. Nihil consequatur nisi. Aspernatur vitae velit. Maiores rerum praesentium. Ut beatae et. Q."], ["emotion", "Chagrin"], ["user_id", 9], ["created_at", "2019-10-30 13:38:19.690341"], ["updated_at", "2019-10-30 13:38:19.690341"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I love the smell of napalm in the morning."], ["date", "2019-10-30 00:00:00"], ["description", "Quia ut suscipit. Eos aut consectetur. Sint veritatis nisi. Unde magni ut. Voluptas dolores dolores. Ut et dolor. Magnam ullam temporibus. Autem maxime qui. Omnis est voluptatibus. Nulla aliquid qui.."], ["emotion", "Excitation"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.704650"], ["updated_at", "2019-10-30 13:38:19.704650"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I'm going to make him an offer he can't refuse."], ["date", "2019-10-30 00:00:00"], ["description", "Provident repellat qui. Recusandae iste velit. Nam dolores animi. Dolore harum repellendus. Recusandae voluptatem perferendis. Dolor similique iste. Ut id odio. Dolores ut mollitia. Autem ullam quia.."], ["emotion", "Satisfaction"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.717032"], ["updated_at", "2019-10-30 13:38:19.717032"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.4ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Est laboriosam blanditiis. Quis beatae et. Et non molestiae. Necessitatibus eius totam. Maiores neque architecto. Voluptate illo et. Distinctio accusamus earum. Quo ut deleniti. Laboriosam eos iste. ."], ["emotion", "Satisfaction"], ["user_id", 10], ["created_at", "2019-10-30 13:38:19.726464"], ["updated_at", "2019-10-30 13:38:19.726464"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "What we've got here is failure to communicate."], ["date", "2019-10-30 00:00:00"], ["description", "Odit at porro. Praesentium ipsa natus. Totam dolor est. Temporibus quos ab. Enim quia omnis. Eum alias sapiente. Quia sed quod. Dolor neque quis. Repellat voluptatem dolores. Officiis id est. Assumen."], ["emotion", "Découragement"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.739629"], ["updated_at", "2019-10-30 13:38:19.739629"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Here's looking at you, kid."], ["date", "2019-10-30 00:00:00"], ["description", "Eos odit a. Totam qui aut. Recusandae sed minus. Ut minus eligendi. Neque dolores rerum. Est sed quisquam. Provident quam inventore. Sit rerum animi. Velit excepturi odio. Veritatis ipsam voluptatem.."], ["emotion", "Excitation"], ["user_id", 3], ["created_at", "2019-10-30 13:38:19.750887"], ["updated_at", "2019-10-30 13:38:19.750887"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.9ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "You talking to me?"], ["date", "2019-10-30 00:00:00"], ["description", "Amet quidem et. Odio autem temporibus. Asperiores facilis deleniti. Numquam voluptate autem. Voluptate voluptas adipisci. Voluptas reprehenderit quis. Nisi quia vitae. Quo magni perferendis. Quibusda."], ["emotion", "Tristesse"], ["user_id", 1], ["created_at", "2019-10-30 13:38:19.777819"], ["updated_at", "2019-10-30 13:38:19.777819"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (1.7ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "I love the smell of napalm in the morning."], ["date", "2019-10-30 00:00:00"], ["description", "In voluptatem consequuntur. Aut aliquam et. Soluta dolor magni. Vitae hic voluptas. Hic distinctio commodi. Voluptates non maiores. Vitae est voluptatem. Explicabo qui et. Ut molestiae dolorem. Quis ."], ["emotion", "Joie"], ["user_id", 7], ["created_at", "2019-10-30 13:38:19.791984"], ["updated_at", "2019-10-30 13:38:19.791984"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Quam dolorum ex. Asperiores error aut. Assumenda debitis eius. Est nobis corporis. Voluptatem aut repellendus. Qui voluptatum facilis. Eius sint et. Sed veritatis ut. Nesciunt sed similique. Impedit ."], ["emotion", "Malheur"], ["user_id", 9], ["created_at", "2019-10-30 13:38:19.804995"], ["updated_at", "2019-10-30 13:38:19.804995"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Dolorem culpa in. Fugit voluptatum et. Atque distinctio quasi. Doloremque dolores dolor. Quae amet enim. Excepturi dolorum nostrum. Consequatur enim ut. Odit officiis doloribus. Dolores quaerat quas.."], ["emotion", "Dégoût"], ["user_id", 5], ["created_at", "2019-10-30 13:38:19.817824"], ["updated_at", "2019-10-30 13:38:19.817824"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.4ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Toto, I've got a feeling we're not in Kansas anymore."], ["date", "2019-10-30 00:00:00"], ["description", "Molestiae molestias animi. Expedita sequi cumque. Minima tempore debitis. Tempora quaerat aliquid. Laborum iure adipisci. Ipsum consequatur porro. Vel et aut. Sit ut fugiat. Aspernatur sint ut. Sed q."], ["emotion", "Tourment"], ["user_id", 4], ["created_at", "2019-10-30 13:38:19.830411"], ["updated_at", "2019-10-30 13:38:19.830411"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:92
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mLucid Create (0.3ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "All right, Mr. DeMille, I'm ready for my closeup."], ["date", "2019-10-30 00:00:00"], ["description", "Non delectus enim. Dolor perferendis molestiae. Officiis quo quidem. Omnis cumque adipisci. Est sit et. Minima ut voluptatem. Accusamus qui numquam. Pariatur maiores cum. Sit neque natus. Dolorem a q."], ["emotion", "Dégoût"], ["user_id", 8], ["created_at", "2019-10-30 13:38:19.840926"], ["updated_at", "2019-10-30 13:38:19.840926"]]
+  ↳ db/seeds.rb:92
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:92
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:112
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@yopmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:112
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@yopmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:112
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "is_admin", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "admin@yopmail.com"], ["encrypted_password", "$2a$11$NvTLdhAftHCdX2cNtJogMuaj.pYzy4U5diRfBWAxhKt4sKgsgtS9y"], ["is_admin", true], ["created_at", "2019-10-30 13:38:20.008628"], ["updated_at", "2019-10-30 13:38:20.008628"], ["first_name", "John"], ["last_name", "Doe"]]
+  ↳ db/seeds.rb:112
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:112
+  [1m[36mLucid Load (1.1ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids"[0m
+Started GET "/dreams" for ::1 at 2019-10-30 14:38:58 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.7ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  Rendered dreams/index.html.erb within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 11.3ms)
+
+
+
+NoMethodError - undefined method `dreams' for nil:NilClass:
+  app/views/dreams/index.html.erb:15:in `_app_views_dreams_index_html_erb__909126157545814781_70343693551740'
+
+Started POST "/__better_errors/328f38f1320e3731/variables" for ::1 at 2019-10-30 14:38:58 +0100
+Started GET "/" for ::1 at 2019-10-30 14:39:27 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (819.3ms)
+  Rendered layouts/_loader.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (34.1ms)
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (5.8ms)
+Completed 200 OK in 1212ms (Views: 1203.4ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-10-30 14:39:44 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UfeGxjch/wYo5kwMokyZ5cIMOqJXK8v5WSOYZd1UCgOvU6QjcuNMYWzpAGl9ds/a9z7dVZPNNfXwiWNrZzwgFA==", "user"=>{"email"=>"admin@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Je me connecte"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@yopmail.com"], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 271ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-10-30 14:39:44 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/static_pages/home.html.erb:20
+  Rendered static_pages/home.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_loader.html.erb (0.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (3.8ms)
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.6ms)
+Completed 200 OK in 107ms (Views: 105.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dreams" for ::1 at 2019-10-30 14:39:50 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (1.8ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.2ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  Rendered dreams/index.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_loader.html.erb (1.0ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (3.2ms)
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.6ms)
+Completed 200 OK in 141ms (Views: 113.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/dreams/new" for ::1 at 2019-10-30 14:40:14 +0100
+Processing by DreamsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering dreams/new.html.erb within layouts/application
+  Rendered dreams/_error_messages.html.erb (0.3ms)
+  Rendered dreams/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (2.9ms)
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.6ms)
+Completed 200 OK in 83ms (Views: 80.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/dreams" for ::1 at 2019-10-30 14:40:33 +0100
+Processing by DreamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ywLJEfHyqO6gNjtaxQoK7oDdA8wEekLHRgPL5vHE7zvVSYv+rttMofVgYdnjY4xucPNDx/hRFmDZ3wSJT7FBw==", "title"=>"jsqhfkqjgfjkqgfkq", "date"=>"2019-10-19T01:01", "description"=>"xwc,xwnc,bwcbxwncbwxncbwx,bn", "emotion"=>"bdwvbxwvbwx,vbx", "commit"=>"✅ Ajouter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/dreams_controller.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:19
+  [1m[36mDream Create (0.3ms)[0m  [1m[32mINSERT INTO "dreams" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "jsqhfkqjgfjkqgfkq"], ["date", "2019-10-19 01:01:00"], ["description", "xwc,xwnc,bwcbxwncbwxncbwx,bn"], ["emotion", "bdwvbxwvbwx,vbx"], ["user_id", 11], ["created_at", "2019-10-30 13:40:33.999704"], ["updated_at", "2019-10-30 13:40:33.999704"]]
+  ↳ app/controllers/dreams_controller.rb:19
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/dreams_controller.rb:19
+Redirected to http://localhost:3000/dreams
+Completed 302 Found in 25ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/dreams" for ::1 at 2019-10-30 14:40:34 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.5ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.2ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  Rendered dreams/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (3.4ms)
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (6.6ms)
+Completed 200 OK in 108ms (Views: 103.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dreams" for ::1 at 2019-10-30 14:50:48 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.6ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.6ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  Rendered dreams/index.html.erb within layouts/application (327.9ms)
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 1.9ms)
+
+
+
+NameError - undefined local variable or method `new_nightmare_path' for #<#<Class:0x00007f31f820ccc8>:0x00007f31f87fdda8>
+Did you mean?  new_dream_path:
+  app/views/dreams/index.html.erb:46:in `_app_views_dreams_index_html_erb__864230634921092435_69926299628380'
+
+Started POST "/__better_errors/5adec909ca63ceaf/variables" for ::1 at 2019-10-30 14:50:48 +0100
+Started GET "/dreams" for ::1 at 2019-10-30 14:51:34 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.3ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  [1m[36mLucid Load (0.4ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids" WHERE "lucids"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:86
+  Rendered dreams/index.html.erb within layouts/application (43.0ms)
+  Rendered layouts/_loader.html.erb (0.5ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (5.4ms)
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (4.4ms)
+Completed 200 OK in 170ms (Views: 138.0ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/nightmares/new" for ::1 at 2019-10-30 14:51:58 +0100
+Processing by NightmaresController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering nightmares/new.html.erb within layouts/application
+  Rendered nightmares/_error_messages.html.erb (0.4ms)
+  Rendered nightmares/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (7.2ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.8ms)
+Completed 200 OK in 135ms (Views: 106.1ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/nightmares" for ::1 at 2019-10-30 14:52:16 +0100
+Processing by NightmaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PJX75TEtpk0jHt3kdNaBHlPxhtN040lS2R4XTtuZfXAi3rkKbgRCAnZIh2dSvweeo9/G2IjIHfVGwtghZezTg==", "title"=>"qsdsqdsqdsqdsqdsq", "date"=>"2019-10-09T01:01", "description"=>"qsfsdfqd,gksjgksljgkldjgklj", "emotion"=>"skdjgkldsjgds", "commit"=>"✅ Ajouter"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nightmares_controller.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:19
+  [1m[36mNightmare Create (0.5ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "qsdsqdsqdsqdsqdsq"], ["date", "2019-10-09 01:01:00"], ["description", "qsfsdfqd,gksjgksljgkldjgklj"], ["emotion", "skdjgkldsjgds"], ["user_id", 11], ["created_at", "2019-10-30 13:52:17.018738"], ["updated_at", "2019-10-30 13:52:17.018738"]]
+  ↳ app/controllers/nightmares_controller.rb:19
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nightmares_controller.rb:19
+Redirected to http://localhost:3000/nightmares
+Completed 302 Found in 22ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/nightmares" for ::1 at 2019-10-30 14:52:17 +0100
+Processing by NightmaresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mNightmare Load (0.4ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares"[0m
+  ↳ app/controllers/nightmares_controller.rb:5
+  Rendering nightmares/index.html.erb within layouts/application
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/nightmares/index.html.erb:15
+  Rendered nightmares/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (6.7ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.9ms)
+Completed 200 OK in 120ms (Views: 114.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/nightmares" for ::1 at 2019-10-30 14:53:33 +0100
+Processing by NightmaresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mNightmare Load (0.4ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares"[0m
+  ↳ app/controllers/nightmares_controller.rb:5
+  Rendering nightmares/index.html.erb within layouts/application
+  [1m[36mDream Load (0.3ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/nightmares/index.html.erb:15
+  Rendered nightmares/index.html.erb within layouts/application (23.9ms)
+  Rendered layouts/_loader.html.erb (0.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (3.7ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.8ms)
+Completed 200 OK in 150ms (Views: 110.8ms | ActiveRecord: 9.7ms)
+
+
+Started POST "/nightmares" for ::1 at 2019-10-30 14:53:43 +0100
+Processing by NightmaresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PJX75TEtpk0jHt3kdNaBHlPxhtN040lS2R4XTtuZfXAi3rkKbgRCAnZIh2dSvweeo9/G2IjIHfVGwtghZezTg==", "title"=>"qsdsqdsqdsqdsqdsq", "date"=>"2019-10-09T01:01", "description"=>"qsfsdfqd,gksjgksljgkldjgklj", "emotion"=>"skdjgkldsjgds", "commit"=>"✅ Ajouter"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nightmares_controller.rb:19
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:19
+  [1m[36mNightmare Create (0.9ms)[0m  [1m[32mINSERT INTO "nightmares" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "qsdsqdsqdsqdsqdsq"], ["date", "2019-10-09 01:01:00"], ["description", "qsfsdfqd,gksjgksljgkldjgklj"], ["emotion", "skdjgkldsjgds"], ["user_id", 11], ["created_at", "2019-10-30 13:53:43.359084"], ["updated_at", "2019-10-30 13:53:43.359084"]]
+  ↳ app/controllers/nightmares_controller.rb:19
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nightmares_controller.rb:19
+Redirected to http://localhost:3000/dreams
+Completed 302 Found in 15ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/dreams" for ::1 at 2019-10-30 14:53:43 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.5ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.3ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.4ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  Rendered dreams/index.html.erb within layouts/application (679.8ms)
+Completed 500 Internal Server Error in 687ms (ActiveRecord: 1.4ms)
+
+
+
+NameError - undefined local variable or method `d' for #<#<Class:0x00007f31f66d1af8>:0x00007f31f66cbb30>:
+  app/views/dreams/index.html.erb:51:in `block in _app_views_dreams_index_html_erb__864230634921092435_69926282236280'
+  app/views/dreams/index.html.erb:50:in `_app_views_dreams_index_html_erb__864230634921092435_69926282236280'
+
+Started POST "/__better_errors/330edc1d0e74f8e4/variables" for ::1 at 2019-10-30 14:53:44 +0100
+Started GET "/dreams" for ::1 at 2019-10-30 14:54:07 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.3ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  Rendered dreams/index.html.erb within layouts/application (649.6ms)
+Completed 500 Internal Server Error in 655ms (ActiveRecord: 1.4ms)
+
+
+
+NameError - undefined local variable or method `d' for #<#<Class:0x00007f31f66d1af8>:0x00007f31ec5fa260>:
+  app/views/dreams/index.html.erb:60:in `block (2 levels) in _app_views_dreams_index_html_erb__864230634921092435_69926197909260'
+  app/views/dreams/index.html.erb:51:in `block in _app_views_dreams_index_html_erb__864230634921092435_69926197909260'
+  app/views/dreams/index.html.erb:50:in `_app_views_dreams_index_html_erb__864230634921092435_69926197909260'
+
+Started POST "/__better_errors/b3f4d54691ea32cd/variables" for ::1 at 2019-10-30 14:54:08 +0100
+Started GET "/dreams" for ::1 at 2019-10-30 14:54:48 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.9ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.2ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.4ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  [1m[36mLucid Load (0.3ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids" WHERE "lucids"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:86
+  Rendered dreams/index.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_loader.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (5.4ms)
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.7ms)
+Completed 200 OK in 122ms (Views: 116.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/lucids/new" for ::1 at 2019-10-30 14:55:14 +0100
+Processing by LucidsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering lucids/new.html.erb within layouts/application
+  Rendered lucids/_error_messages.html.erb (0.4ms)
+  Rendered lucids/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (2.9ms)
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (3.3ms)
+Completed 200 OK in 99ms (Views: 78.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/lucids" for ::1 at 2019-10-30 14:55:30 +0100
+Processing by LucidsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6d8Q+kciVFA0HDil/ENrVOXJrODO0YoCrQXcMdhUKyX9pj3x+l7zwQlJYc/w2s1O5gkV4OEhJ1Azeq8MZq39ng==", "title"=>"reve de ouf", "date"=>"2019-10-12T00:01", "description"=>"sdfdjsfkjdshfkjhdskjfhdskjh", "emotion"=>"dgjkdhkjshkjd", "commit"=>"✅ Ajouter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lucids_controller.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/lucids_controller.rb:19
+  [1m[36mLucid Create (0.4ms)[0m  [1m[32mINSERT INTO "lucids" ("title", "date", "description", "emotion", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "reve de ouf"], ["date", "2019-10-12 00:01:00"], ["description", "sdfdjsfkjdshfkjhdskjfhdskjh"], ["emotion", "dgjkdhkjshkjd"], ["user_id", 11], ["created_at", "2019-10-30 13:55:30.634594"], ["updated_at", "2019-10-30 13:55:30.634594"]]
+  ↳ app/controllers/lucids_controller.rb:19
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lucids_controller.rb:19
+Redirected to http://localhost:3000/dreams
+Completed 302 Found in 21ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/dreams" for ::1 at 2019-10-30 14:55:30 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.5ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.2ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.2ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  [1m[36mLucid Load (0.2ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids" WHERE "lucids"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:86
+  Rendered dreams/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (2.8ms)
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (5.5ms)
+Completed 200 OK in 115ms (Views: 110.8ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/lucids/31" for ::1 at 2019-10-30 14:55:41 +0100
+Processing by LucidsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ymoKRCOfN2gns9nkW2SfrE8sO65PlRmTDhtHe8FwwV3eEydPnuOQ+RrmgI5X/Tm2TOyCrmBltMGQZDRGf4kX5g==", "id"=>"31"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLucid Load (0.3ms)[0m  [1m[34mSELECT  "lucids".* FROM "lucids" WHERE "lucids"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/lucids_controller.rb:49
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/lucids_controller.rb:51
+  [1m[36mLucid Destroy (0.6ms)[0m  [1m[31mDELETE FROM "lucids" WHERE "lucids"."id" = $1[0m  [["id", 31]]
+  ↳ app/controllers/lucids_controller.rb:51
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/lucids_controller.rb:51
+Redirected to http://localhost:3000/dreams.11
+Completed 302 Found in 18ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/dreams.11" for ::1 at 2019-10-30 14:55:41 +0100
+Processing by DreamsController#index as 
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.2ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.3ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  [1m[36mLucid Load (0.3ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids" WHERE "lucids"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:86
+  Rendered dreams/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_loader.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (11.2ms)
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (9.2ms)
+Completed 200 OK in 144ms (Views: 135.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/nightmares/31/edit" for ::1 at 2019-10-30 14:55:45 +0100
+Processing by NightmaresController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mNightmare Load (0.6ms)[0m  [1m[34mSELECT  "nightmares".* FROM "nightmares" WHERE "nightmares"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:28
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:29
+  Rendering nightmares/edit.html.erb within layouts/application
+  Rendered nightmares/edit.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (3.8ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (3.2ms)
+Completed 200 OK in 110ms (Views: 98.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dreams/31/edit" for ::1 at 2019-10-30 14:55:53 +0100
+Processing by DreamsController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT  "dreams".* FROM "dreams" WHERE "dreams"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:28
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:29
+  Rendering dreams/edit.html.erb within layouts/application
+  Rendered dreams/edit.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_loader.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (3.5ms)
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (5.3ms)
+Completed 200 OK in 109ms (Views: 98.7ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/nightmares/31" for ::1 at 2019-10-30 14:56:00 +0100
+Processing by NightmaresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7FE58xt/WS9Qj1WXxYtnJgKGbnFTa43Y6AcUJz9loZn4KBT4pgP+vm3aDP3JEsE8AUbXcXybIIp2eGcagZx3Ig==", "id"=>"31"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mNightmare Load (0.3ms)[0m  [1m[34mSELECT  "nightmares".* FROM "nightmares" WHERE "nightmares"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nightmares_controller.rb:51
+  [1m[36mNightmare Destroy (0.3ms)[0m  [1m[31mDELETE FROM "nightmares" WHERE "nightmares"."id" = $1[0m  [["id", 31]]
+  ↳ app/controllers/nightmares_controller.rb:51
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nightmares_controller.rb:51
+Redirected to http://localhost:3000/dreams.11
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/dreams.11" for ::1 at 2019-10-30 14:56:00 +0100
+Processing by DreamsController#index as 
+  [1m[36mDream Load (0.3ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.3ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.2ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  [1m[36mLucid Load (0.3ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids" WHERE "lucids"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:86
+  Rendered dreams/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_loader.html.erb (0.5ms)
+  Rendered layouts/_flash.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (7.3ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (6.9ms)
+Completed 200 OK in 174ms (Views: 167.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/nightmares/32" for ::1 at 2019-10-30 14:56:03 +0100
+Processing by NightmaresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lVM5RNvdVtHwKHrr2JTDIBOE2jpm4NXIeB4nAcvVT4iBKhRPZqHxQM19I4HUDWU6EERjOkkQeJrmYVQ8dSyZMw==", "id"=>"32"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mNightmare Load (0.3ms)[0m  [1m[34mSELECT  "nightmares".* FROM "nightmares" WHERE "nightmares"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nightmares_controller.rb:51
+  [1m[36mNightmare Destroy (0.5ms)[0m  [1m[31mDELETE FROM "nightmares" WHERE "nightmares"."id" = $1[0m  [["id", 32]]
+  ↳ app/controllers/nightmares_controller.rb:51
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nightmares_controller.rb:51
+Redirected to http://localhost:3000/dreams.11
+Completed 302 Found in 13ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/dreams.11" for ::1 at 2019-10-30 14:56:04 +0100
+Processing by DreamsController#index as 
+  [1m[36mDream Load (0.5ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.2ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.2ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  [1m[36mLucid Load (0.2ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids" WHERE "lucids"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:86
+  Rendered dreams/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (7.4ms)
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (9.3ms)
+Completed 200 OK in 130ms (Views: 120.4ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/dreams/31" for ::1 at 2019-10-30 14:56:07 +0100
+Processing by DreamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dndEUEovyqy0jhbBKyl9WDK6/f4+FTgeyIfjGfRu+WFiDmlb91NtPYnbT6snsNtCMXpE/hHllUxW+JAkSpcv2g==", "id"=>"31"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mDream Load (0.3ms)[0m  [1m[34mSELECT  "dreams".* FROM "dreams" WHERE "dreams"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/dreams_controller.rb:51
+  [1m[36mDream Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dreams" WHERE "dreams"."id" = $1[0m  [["id", 31]]
+  ↳ app/controllers/dreams_controller.rb:51
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/dreams_controller.rb:51
+Redirected to http://localhost:3000/dreams.11
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/dreams.11" for ::1 at 2019-10-30 14:56:07 +0100
+Processing by DreamsController#index as 
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mDream Load (0.2ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:15
+  [1m[36mNightmare Load (0.2ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:50
+  [1m[36mLucid Load (0.3ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids" WHERE "lucids"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:86
+  Rendered dreams/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (6.8ms)
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (9.1ms)
+Completed 200 OK in 119ms (Views: 112.8ms | ActiveRecord: 1.3ms)
+
+

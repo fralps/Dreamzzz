@@ -50,7 +50,6 @@ puts "------------------------"
   dream = Dream.create!(
     title: Faker::Movie.quote,
     date: Date.today,
-    category: ["Rêve", "Cauchemar", "Rêve lucide"].sample,
     description: Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false),
     emotion: ["Joie", "Gaieté", "Colère", "Excitation", "Dégoût", "Tourment", "Tristesse", "Découragement", "Souffrance", "Malheur", "Chagrin", "Anxiété", "Optimiste", "Satisfaction", "Soulagement"].sample,
     user_id: rand(1..10)
@@ -62,6 +61,48 @@ end
 
 puts "------------------------"
 puts "30 rêves ont été crées"
+puts "------------------------\n\n"
+
+# Create 30 nightmares for development
+puts "------------------------"
+puts "Création des cauchemars"
+puts "------------------------"
+30.times do
+  nightmare = Nightmare.create!(
+    title: Faker::Movie.quote,
+    date: Date.today,
+    description: Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false),
+    emotion: ["Joie", "Gaieté", "Colère", "Excitation", "Dégoût", "Tourment", "Tristesse", "Découragement", "Souffrance", "Malheur", "Chagrin", "Anxiété", "Optimiste", "Satisfaction", "Soulagement"].sample,
+    user_id: rand(1..10)
+  )
+
+  # Puts to show every time a dream is created
+  puts 'Nightmare created'.light_blue
+end
+
+puts "------------------------"
+puts "30 cuachemars ont été crées"
+puts "------------------------\n\n"
+
+# Create 30 lucids for development
+puts "------------------------"
+puts "Création des rêves lucides"
+puts "------------------------"
+30.times do
+  lucid = Lucid.create!(
+    title: Faker::Movie.quote,
+    date: Date.today,
+    description: Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false),
+    emotion: ["Joie", "Gaieté", "Colère", "Excitation", "Dégoût", "Tourment", "Tristesse", "Découragement", "Souffrance", "Malheur", "Chagrin", "Anxiété", "Optimiste", "Satisfaction", "Soulagement"].sample,
+    user_id: rand(1..10)
+  )
+
+  # Puts to show every time a dream is created
+  puts 'Lucid created'.light_blue
+end
+
+puts "------------------------"
+puts "30 rêves lucides ont été crées"
 puts "------------------------\n\n"
 
 # Create Admin

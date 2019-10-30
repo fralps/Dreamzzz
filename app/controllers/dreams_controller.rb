@@ -14,11 +14,11 @@ class DreamsController < ApplicationController
 	end
 
 	def create
-		@dream = Dream.new(user_id: current_user.id, title: params[:title], date: params[:date], category: [:category], description: params[:description], emotion: params[:emotion])
+		@dream = Dream.new(user_id: current_user.id, title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
 
 		if @dream.save
 			redirect_to dreams_path
-			flash[:success] = "Votre rêves a bien été crée 💤"
+			flash[:success] = "Votre rêve a bien été crée 💤"
 		else
 			render :new
 		end
@@ -33,7 +33,7 @@ class DreamsController < ApplicationController
 		@dream = Dream.find(params[:id])
 
 		if @dream.user == current_user
-			if @dream.update(title: params[:title], date: params[:date], category: [:category], description: params[:description], emotion: params[:emotion])
+			if @dream.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
 				redirect_to dream_path(@dream)
 				flash[:success] = "Votre rêve a bien été modifié"
 			else
@@ -41,7 +41,7 @@ class DreamsController < ApplicationController
 				render edit
 			end
 		else
-			redirect_to root_path, notice: "Vous ne pouvez aps éditer le rêve d'une autre personne !"
+			redirect_to root_path, notice: "Vous ne pouvez pas éditer le rêve d'une autre personne !"
 		end
 	end
 

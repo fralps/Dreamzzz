@@ -3,7 +3,6 @@ class CreateDreams < ActiveRecord::Migration[5.2]
     create_table :dreams do |t|
       t.string :title
       t.datetime :date
-      t.string :category
       t.text :description
       t.string :emotion
       t.belongs_to :user, index: true

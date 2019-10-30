@@ -14,8 +14,6 @@
 
                     <%= datetime_field_tag 'date', @dream.date, class: "form-control mt-3" %>
 
-                    <%= select_tag 'category',options_for_select(["Rêve", "Cauchemar", "Rêve lucide"]), class: "form-control p-2 mt-3" %>
-
                    <%= text_area_tag 'description', @dream.description, placeholder: "Description de mon rêve..", class: "form-control form-control-user mt-3" %>
 
                     <%= text_field_tag 'emotion', @dream.emotion, placeholder: "Émotion(s) ressentie(s) lors du rêve..", class: "form-control form-control-user mt-3" %>

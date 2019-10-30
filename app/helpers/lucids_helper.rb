@@ -1,0 +1,2 @@
+module LucidsHelper
+end
