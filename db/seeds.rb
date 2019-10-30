@@ -81,7 +81,7 @@ puts "------------------------"
 end
 
 puts "------------------------"
-puts "30 cuachemars ont été crées"
+puts "30 cauchemars ont été crées"
 puts "------------------------\n\n"
 
 # Create 30 lucids for development
@@ -118,3 +118,66 @@ admin = User.create!(
 	)
 # Puts to show when the admin is created
 puts 'Admin created'.light_green
+
+# Create 30 dreams for development admin
+puts "------------------------"
+puts "Création des rêves pour l'admin"
+puts "------------------------"
+15.times do
+  dream = Dream.create!(
+    title: Faker::Movie.quote,
+    date: Date.today,
+    description: Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false),
+    emotion: ["Joie", "Gaieté", "Colère", "Excitation", "Dégoût", "Tourment", "Tristesse", "Découragement", "Souffrance", "Malheur", "Chagrin", "Anxiété", "Optimiste", "Satisfaction", "Soulagement"].sample,
+    user_id: 11
+  )
+
+  # Puts to show every time a dream is created
+  puts 'Dream created'.light_blue
+end
+
+puts "------------------------"
+puts "15 rêves ont été crées pour l'admin"
+puts "------------------------\n\n"
+
+# Create 20 nightmares for development admin
+puts "------------------------"
+puts "Création des cauchemars pour l'admin"
+puts "------------------------"
+20.times do
+  nightmare = Nightmare.create!(
+    title: Faker::Movie.quote,
+    date: Date.today,
+    description: Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false),
+    emotion: ["Joie", "Gaieté", "Colère", "Excitation", "Dégoût", "Tourment", "Tristesse", "Découragement", "Souffrance", "Malheur", "Chagrin", "Anxiété", "Optimiste", "Satisfaction", "Soulagement"].sample,
+    user_id: 11
+  )
+
+  # Puts to show every time a dream is created
+  puts 'Nightmare created'.light_blue
+end
+
+puts "------------------------"
+puts "20 cauchemars ont été crées pour l'admin"
+puts "------------------------\n\n"
+
+# Create 10 lucids for development admin
+puts "------------------------"
+puts "Création des rêves lucides pour l'admin"
+puts "------------------------"
+10.times do
+  lucid = Lucid.create!(
+    title: Faker::Movie.quote,
+    date: Date.today,
+    description: Faker::Lorem.paragraph_by_chars(number: 200, supplemental: false),
+    emotion: ["Joie", "Gaieté", "Colère", "Excitation", "Dégoût", "Tourment", "Tristesse", "Découragement", "Souffrance", "Malheur", "Chagrin", "Anxiété", "Optimiste", "Satisfaction", "Soulagement"].sample,
+    user_id: 11
+  )
+
+  # Puts to show every time a dream is created
+  puts 'Lucids created'.light_blue
+end
+
+puts "------------------------"
+puts "10 rêves lucides ont été crées pour l'admin"
+puts "------------------------\n\n"

@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col col-lg-4 col-md-12 col-sm-12">
 				<div class="card shadow" id="index-card">
-						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+						<img src="https://media.giphy.com/media/d2Z7wetTpiqlmjq8/giphy.gif" alt="Image" class="card-img-top" id="index-img">
 						<p class="text-center mt-4">RÊVES</p>
 						<div class="hr"></div>
 						<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
@@ -15,7 +15,7 @@
 					<% current_user.dreams.each do |d| %>
 					<%= link_to(dream_path(d.id), style: 'text-decoration: none; color: black;') do %>
 						<div class="card-body align-items-start" style=" padding: 10px;">
-							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding-bottom: 1rem;">
+							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding: 15px;">
 								<div>
 									<%= d.title.truncate(22) %> <br>
 									<span class="text-muted" style="font-size: 12px;"><%= d.date.strftime("%d/%m/%y") %></span>
@@ -23,7 +23,7 @@
 								<div>
 
 									<%= link_to(edit_dream_path(d.id), class: 'mr-1', style: 'text-decoration: none;') do %>
-										<i class="fas fa-pencil-alt text-primary"></i>
+										<i class="fas fa-pencil-alt" id="edit"></i>
 									<% end %> 
 
 									<%= link_to(dream_path(d.id), method: :delete) do %>
@@ -40,7 +40,7 @@
 
 			<div class="col col-lg-4 col-md-12 col-sm-12">
 				<div class="card shadow" id="index-card">
-						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+						<img src="https://media.giphy.com/media/26gsvCk59AwGX28XS/giphy.gif" alt="Image" class="card-img-top" id="index-img">
 						<p class="text-center mt-4">CAUCHEMARS</p>
 						<div class="hr"></div>
 						<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>

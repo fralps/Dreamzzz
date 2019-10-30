@@ -334,10 +334,11 @@ body, html {
 
 #index-img {
   border-radius: 10px 10px 0px 0px;
+  height: 230px;
 }
 
-.fa-eye {
-  color: #8b52ff; 
+#edit {
+  color: #8b52ff;
 }
 
 #dream-card:hover {
