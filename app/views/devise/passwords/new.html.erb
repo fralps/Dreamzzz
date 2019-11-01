@@ -1,20 +1,22 @@
-<section>
+<section id="section-password">
 	<div class="container">
 		<div class="row">
 			<div class="col col-6 mx-auto">
-				<h2 class="text-center mb-3 mt-5">Mot de passe oublié</h2>
+				<div class="create-form shadow">
+					<h2 class="text-center mb-5"><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'form-logo') %>Mot de passe oublié</h2>
 
-				<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-				<%= render "devise/shared/error_messages", resource: resource %>
+					<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+					<%= render "devise/shared/error_messages", resource: resource %>
 
-				<div class="field">
-					<%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'form-control mb-3' %>
+					<div class="field">
+						<%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'form-control mb-3' %>
+					</div>
+
+					<div class="actions">
+						<%= f.submit "Envoyer les instructions de changement de mot de passe", class: 'create-btn' %>
+					</div>
+					<% end %>
 				</div>
-
-				<div class="actions">
-					<%= f.submit "Envoyer les instructions de changement de mot de passe", class: 'btn btn-primary form-control mb-3' %>
-				</div>
-				<% end %>
 			</div>
 		</div>
 	</div>

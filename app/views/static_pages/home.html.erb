@@ -20,6 +20,8 @@
       <% if user_signed_in? %>
         <%= link_to "Déconnexion", destroy_user_session_path, method: 'delete',class: 'sign-btn btn-white btn-animation-1 mr-3'%>
 
+         <%= link_to "Mon compte", edit_user_registration_path, class: 'sign-btn btn-white btn-animation-1 mr-3'  %>
+
         <%= link_to "Mon journal", dreams_path, class: 'sign-btn btn-white btn-animation-1 mr-3'  %>
 
       <% else %>

@@ -309,6 +309,18 @@ body, html {
 
 /*----------- END SECTION 2 CSS -----------*/
 
+/*------------- Modal CSS --------------*/
+
+.link {
+  color: #8b52ff;
+}
+
+.link:hover {
+  color: #793ef9;
+}
+
+/*--------------- End modal CSS ------------*/
+
 /*----------- INDEX CSS -----------*/
 #index {
 
@@ -446,8 +458,6 @@ body, html {
   background-color: #b3cdd1;
   background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
 
-
-
   /*Font family*/
   font-family: 'Comfortaa', cursive;
 
@@ -481,6 +491,10 @@ body, html {
   width: 100%;
 }
 
+.create-btn i {
+  color: white;
+}
+
 .create-btn:hover {
  box-shadow:0px 10px 10px rgba(139, 82, 255,0.2);
  transform : translateY(-3px);
@@ -489,9 +503,151 @@ body, html {
  border: 0.5px solid #8B52FF;
 }
 
+.delete-btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #f46e6e;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all .3s;
+  width: 100%;
+}
+
+.delete-btn:hover {
+ box-shadow:0px 10px 10px rgba(244, 110, 110,0.5);
+ transform : translateY(-3px);
+ text-decoration: none;
+ color: white
+}
+
+.edit-btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #8B52FF;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all .3s;
+  width: 100%;
+}
+
+.edit-btn:hover {
+ box-shadow:0px 10px 10px rgba(139, 82, 255,0.5);
+ transform : translateY(-3px);
+ text-decoration: none;
+ color: white
+}
+
 .form-logo {
   height: 38px;
   margin-right: 10px;
 }
 
 /*----------- End create dream CSS -----------*/
+
+
+/*----------- Edit User CSS -----------*/
+#section-edit {
+
+  /*Colors*/
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section-edit, #section-password, #section-show h2 {
+  color: #8b52ff;
+}
+
+#section-password {
+
+  /*Colors*/
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+ /*--------------- End edit user CSS ---------------*/
+
+  /*---------------- Show dreams CSS ------------------*/
+
+#section-show {
+
+  /*Colors*/
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+#section-show-nightmare {
+
+  /*Colors*/
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+#section-show-lucid {
+
+  /*Colors*/
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Small screens */
+@media all and (max-width: 420px) {
+
+}
+
+ /*------------------ End show dreams CSS ---------------*/
