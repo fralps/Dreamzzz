@@ -7,6 +7,4 @@ class Post < ApplicationRecord
 	# Relations
 	has_many :comments
 	belongs_to :user
-
-
 end

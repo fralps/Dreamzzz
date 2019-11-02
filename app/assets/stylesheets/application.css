@@ -649,3 +649,26 @@ body, html {
 }
 
  /*------------------ End show dreams CSS ---------------*/
+
+
+/* -------------------- Blog CSS -------------------*/
+
+#blog {
+  /*Colors*/
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+}
+
+#post-card {
+  border-radius: 20px;
+}
+
+#card-img {
+  border-radius: 20px 20px 0px 0px;
+}
+  
+/* -------------------- End Blog CSS -------------------*/

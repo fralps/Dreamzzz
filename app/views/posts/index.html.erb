@@ -1,7 +1,39 @@
-
-<% @posts.each do |p| %>
-<p>
-	<%= p.title %><br>
-	<%= p.content %>
-	</p>
-<% end %>
+<section id="blog">
+	<div class="container">
+		<div class="row">
+			<%= @posts.each do |p| %>
+			<div class="col-md-6 col-lg-4 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+				<div class="card shadow" id="post-card">
+					<a href="#">
+						<img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&ixid=eyJ"%d/%m/%y"hcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1071&q=80" alt="Image" class="card-img-top" id="card-img">
+					</a>
+					<div class="card-body d-flex flex-column">
+						<div class="d-flex justify-content-between mb-3">
+							<div class="text-small d-flex">
+								<span class="text-muted"><%= p.created_at.strftime("%d/%m/%y") %></span>
+							</div>
+							<span class="badge bg-primary-alt text-primary">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon icon-sm bg-primary" data-src="assets/img/icons/interface/heart.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<path d="M16.5 5C14.8905 5 13.0082 6.82463 12 8C10.9918 6.82463 9.1095 5 7.5 5C4.651 5 3 7.22218 3 10.0504C3 13.1835 6 16.5 12 20C18 16.5 21 13.25 21 10.25C21 7.42177 19.349 5 16.5 5Z" fill="#212529"></path>
+								</svg><%= p.like %>
+							</span>
+						</div>
+						<a href="#">
+							<h4><%= p.title %></h4>
+						</a>
+						<p class="flex-grow-1">
+							<%= p.content.truncate(100) %>
+						</p>
+						<div class="d-flex align-items-center mt-3">
+							<div class="ml-1">
+								<span class="text-small text-muted">By</span>
+								<span class="text-small"><%= p.user.first_name %> <%= p.user.last_name %></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</section>
