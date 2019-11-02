@@ -52,7 +52,7 @@
 					<% current_user.nightmares.reverse.each do |n| %>
 					<%= link_to(nightmare_path(n.id), style: 'text-decoration: none; color: black;') do %>
 						<div class="card-body align-items-start" style=" padding: 10px;">
-							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="nightmare-card" style="margin-bottom: 0; padding-bottom: 1rem;">
+							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="nightmare-card" style="margin-bottom: 0; padding: 15px;">
 								<div>
 									<%= n.title.truncate(22) %> <br>
 									<span class="text-muted" style="font-size: 12px;"><%= n.date.strftime("%d/%m/%y") %></span>
@@ -87,7 +87,7 @@
 					<% current_user.lucids.reverse.each do |l| %>
 					<%= link_to(lucid_path(l.id), style: 'text-decoration: none; color: black;') do %>
 						<div class="card-body align-items-start" style=" padding: 10px;">
-							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="lucid-card" style="margin-bottom: 0; padding-bottom: 1rem;">
+							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="lucid-card" style="margin-bottom: 0; padding: 15px;">
 								<div>
 									<%= l.title.truncate(22) %> <br>
 									<span class="text-muted" style="font-size: 12px;"><%= l.date.strftime("%d/%m/%y") %></span>
