@@ -48991,3 +48991,162 @@ Processing by DreamsController#index as HTML
 Completed 200 OK in 327ms (Views: 319.3ms | ActiveRecord: 5.1ms)
 
 
+Started GET "/dreams/50" for ::1 at 2019-11-02 18:04:13 +0100
+Processing by DreamsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mDream Load (2.8ms)[0m  [1m[34mSELECT  "dreams".* FROM "dreams" WHERE "dreams"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:9
+  Rendering dreams/show.html.erb within layouts/application
+  Rendered dreams/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_loader.html.erb (0.4ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (4.5ms)
+  Rendered devise/shared/_error_messages.html.erb (1.3ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (7.5ms)
+Completed 200 OK in 149ms (Views: 139.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/dreams/50/edit" for ::1 at 2019-11-02 18:04:16 +0100
+Processing by DreamsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mDream Load (0.3ms)[0m  [1m[34mSELECT  "dreams".* FROM "dreams" WHERE "dreams"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:28
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:29
+  Rendering dreams/edit.html.erb within layouts/application
+  Rendered dreams/edit.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.7ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_class, expecting ')'
+...voulez-vous continuer ?'} class: "delete-btn" );@output_buff...
+...                          ^~~~~:
+  app/views/dreams/edit.html.erb:40:in `'
+
+Started POST "/__better_errors/58b87394f13717c9/variables" for ::1 at 2019-11-02 18:04:17 +0100
+Started GET "/dreams/50/edit" for ::1 at 2019-11-02 18:04:57 +0100
+Processing by DreamsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT  "dreams".* FROM "dreams" WHERE "dreams"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:28
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/dreams_controller.rb:29
+  Rendering dreams/edit.html.erb within layouts/application
+  Rendered dreams/_error_messages.html.erb (0.5ms)
+  Rendered dreams/edit.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (3.5ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (2.7ms)
+Completed 200 OK in 93ms (Views: 85.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dreams" for ::1 at 2019-11-02 18:05:01 +0100
+Processing by DreamsController#index as HTML
+  [1m[36mDream Load (0.6ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams"[0m
+  ↳ app/controllers/dreams_controller.rb:5
+  Rendering dreams/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/dreams/index.html.erb:17
+  [1m[36mDream Load (0.4ms)[0m  [1m[34mSELECT "dreams".* FROM "dreams" WHERE "dreams"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:17
+  [1m[36mNightmare Load (0.8ms)[0m  [1m[34mSELECT "nightmares".* FROM "nightmares" WHERE "nightmares"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:52
+  [1m[36mLucid Load (0.8ms)[0m  [1m[34mSELECT "lucids".* FROM "lucids" WHERE "lucids"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/views/dreams/index.html.erb:87
+  Rendered dreams/index.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (11.7ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (14.4ms)
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (5.8ms)
+Completed 200 OK in 140ms (Views: 133.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/nightmares/48" for ::1 at 2019-11-02 18:05:05 +0100
+Processing by NightmaresController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mNightmare Load (0.4ms)[0m  [1m[34mSELECT  "nightmares".* FROM "nightmares" WHERE "nightmares"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:9
+  Rendering nightmares/show.html.erb within layouts/application
+  Rendered nightmares/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (7.7ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (4.6ms)
+Completed 200 OK in 145ms (Views: 137.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/nightmares/48/edit" for ::1 at 2019-11-02 18:05:08 +0100
+Processing by NightmaresController#edit as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mNightmare Load (0.4ms)[0m  [1m[34mSELECT  "nightmares".* FROM "nightmares" WHERE "nightmares"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/nightmares_controller.rb:29
+  Rendering nightmares/edit.html.erb within layouts/application
+  Rendered nightmares/_error_messages.html.erb (0.8ms)
+  Rendered nightmares/edit.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_loader.html.erb (1.1ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (5.1ms)
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (3.1ms)
+Completed 200 OK in 166ms (Views: 158.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/lucids/37" for ::1 at 2019-11-02 18:05:14 +0100
+Processing by LucidsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLucid Load (0.6ms)[0m  [1m[34mSELECT  "lucids".* FROM "lucids" WHERE "lucids"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/lucids_controller.rb:9
+  Rendering lucids/show.html.erb within layouts/application
+  Rendered lucids/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_loader.html.erb (0.6ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (4.8ms)
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (4.3ms)
+Completed 200 OK in 109ms (Views: 101.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/lucids/37/edit" for ::1 at 2019-11-02 18:05:16 +0100
+Processing by LucidsController#edit as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /home/francois/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLucid Load (0.3ms)[0m  [1m[34mSELECT  "lucids".* FROM "lucids" WHERE "lucids"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/lucids_controller.rb:28
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/lucids_controller.rb:29
+  Rendering lucids/edit.html.erb within layouts/application
+  Rendered lucids/_error_messages.html.erb (0.9ms)
+  Rendered lucids/edit.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_loader.html.erb (0.3ms)
+  Rendered layouts/_flash.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/_sign_in_modal.html.erb (3.6ms)
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/_sign_up_modal.html.erb (6.6ms)
+Completed 200 OK in 124ms (Views: 118.1ms | ActiveRecord: 0.9ms)
+
+
