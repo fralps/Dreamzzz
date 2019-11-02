@@ -1,21 +1,23 @@
 <section id="index">
 	<h2 id="sign-in" class="text-center mb-5 text-light">Mon journal 💤</h2>
 	<hr class="custom mb-5">
-	<div class="container">
+	<div class="box">
 		<div class="row">
 			<div class="col col-lg-4 col-md-12 col-sm-12">
 				<div class="card shadow" id="index-card">
-						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+
+					<%= image_tag("sleep.gif", alt: "Sleep GIF", class: 'card-img-top', id: 'index-img') %>
+
 						<p class="text-center mt-4">RÊVES</p>
 						<div class="hr"></div>
 						<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
 							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
 						<% end %>
 
-					<% current_user.dreams.each do |d| %>
+					<% current_user.dreams.reverse.each do |d| %>
 					<%= link_to(dream_path(d.id), style: 'text-decoration: none; color: black;') do %>
 						<div class="card-body align-items-start" style=" padding: 10px;">
-							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding-bottom: 1rem;">
+							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding: 15px;">
 								<div>
 									<%= d.title.truncate(22) %> <br>
 									<span class="text-muted" style="font-size: 12px;"><%= d.date.strftime("%d/%m/%y") %></span>
@@ -23,10 +25,10 @@
 								<div>
 
 									<%= link_to(edit_dream_path(d.id), class: 'mr-1', style: 'text-decoration: none;') do %>
-										<i class="fas fa-pencil-alt text-primary"></i>
+										<i class="fas fa-pencil-alt edit" id="edit"></i>
 									<% end %> 
 
-									<%= link_to(dream_path(d.id), method: :delete) do %>
+									<%= link_to(dream_path(d.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve, voulez-vous continuer ?'}) do %>
 										<i class="far fa-trash-alt text-danger"></i>
 									<% end %> 
 									
@@ -40,31 +42,74 @@
 
 			<div class="col col-lg-4 col-md-12 col-sm-12">
 				<div class="card shadow" id="index-card">
-						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
-						<p class="text-center mt-3">CAUCHEMARS</p>
+						<%= image_tag("wood.gif", alt: "Wood GIF", class: 'card-img-top', id: 'index-img') %>
+						<p class="text-center mt-4">CAUCHEMARS</p>
 						<div class="hr"></div>
-					<div class="card-body align-items-start">
-						<p class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card">
-							<span class="mr-auto">Title</span>
-							<span><i class="far fa-eye mr-1"></i> <i class="fas fa-pencil-alt text-primary mr-1"></i> <i class="far fa-trash-alt text-danger"></i></span>
-						</p>
-					</div>
+						<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>
+							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
+						<% end %>
+
+					<% current_user.nightmares.reverse.each do |n| %>
+					<%= link_to(nightmare_path(n.id), style: 'text-decoration: none; color: black;') do %>
+						<div class="card-body align-items-start" style=" padding: 10px;">
+							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="nightmare-card" style="margin-bottom: 0; padding-bottom: 1rem;">
+								<div>
+									<%= n.title.truncate(22) %> <br>
+									<span class="text-muted" style="font-size: 12px;"><%= n.date.strftime("%d/%m/%y") %></span>
+								</div>
+								<div>
+
+									<%= link_to(edit_nightmare_path(n.id), class: 'mr-1', style: 'text-decoration: none;') do %>
+										<i class="fas fa-pencil-alt edit"></i>
+									<% end %> 
+
+									<%= link_to(nightmare_path(n.id), method: :delete, data: { confirm: 'Vous allez supprimer votre cauchemar, voulez-vous continuer ?'}) do %>
+										<i class="far fa-trash-alt text-danger"></i>
+									<% end %> 
+									
+								</div>
+							</div>
+						</div>
+						<% end %>
+					<% end %>
 				</div>
 			</div>
 
 			<div class="col col-lg-4 col-md-12 col-sm-12">
 				<div class="card shadow" id="index-card">
-						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
-						<p class="text-center mt-3">RÊVES LUCIDES</p>
+						<%= image_tag("cloud.gif", alt: "Cloud GIF", class: 'card-img-top', id: 'index-img') %>
+						<p class="text-center mt-4">RÊVES LUCIDES</p>
 						<div class="hr"></div>
-					<div class="card-body align-items-start">
-						<p class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card">
-							<span class="mr-auto">Title</span>
-							<span><i class="far fa-eye mr-1"></i> <i class="fas fa-pencil-alt text-primary mr-1"></i> <i class="far fa-trash-alt text-danger"></i></span>
-						</p>
-					</div>
+						<%= link_to(new_lucid_path, class: "text-center mb-2 btn") do %>
+							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
+						<% end %>
+
+					<% current_user.lucids.reverse.each do |l| %>
+					<%= link_to(lucid_path(l.id), style: 'text-decoration: none; color: black;') do %>
+						<div class="card-body align-items-start" style=" padding: 10px;">
+							<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="lucid-card" style="margin-bottom: 0; padding-bottom: 1rem;">
+								<div>
+									<%= l.title.truncate(22) %> <br>
+									<span class="text-muted" style="font-size: 12px;"><%= l.date.strftime("%d/%m/%y") %></span>
+								</div>
+								<div>
+
+									<%= link_to(edit_lucid_path(l.id), class: 'mr-1', style: 'text-decoration: none;') do %>
+										<i class="fas fa-pencil-alt edit"></i>
+									<% end %> 
+
+									<%= link_to(lucid_path(l.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve lucide, voulez-vous continuer ?'}) do %>
+										<i class="far fa-trash-alt text-danger"></i>
+									<% end %> 
+									
+								</div>
+							</div>
+						</div>
+						<% end %>
+					<% end %>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </section>

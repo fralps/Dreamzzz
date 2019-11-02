@@ -5,7 +5,9 @@
 		<div class="row">
 			<div class="col col-lg-4 col-md-12 col-sm-12">
 				<div class="card shadow" id="index-card">
-						<img src="https://media.giphy.com/media/d2Z7wetTpiqlmjq8/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+
+					<%= image_tag("sleep.gif", alt: "Sleep GIF", class: 'card-img-top', id: 'index-img') %>
+
 						<p class="text-center mt-4">RÊVES</p>
 						<div class="hr"></div>
 						<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
@@ -40,7 +42,7 @@
 
 			<div class="col col-lg-4 col-md-12 col-sm-12">
 				<div class="card shadow" id="index-card">
-						<img src="https://media.giphy.com/media/26gsvCk59AwGX28XS/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+						<%= image_tag("wood.gif", alt: "Wood GIF", class: 'card-img-top', id: 'index-img') %>
 						<p class="text-center mt-4">CAUCHEMARS</p>
 						<div class="hr"></div>
 						<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>
@@ -73,10 +75,9 @@
 				</div>
 			</div>
 
-
 			<div class="col col-lg-4 col-md-12 col-sm-12">
 				<div class="card shadow" id="index-card">
-						<img src="https://media.giphy.com/media/uozJs7kR6J98k/giphy.gif" alt="Image" class="card-img-top" id="index-img">
+						<%= image_tag("cloud.gif", alt: "Cloud GIF", class: 'card-img-top', id: 'index-img') %>
 						<p class="text-center mt-4">RÊVES LUCIDES</p>
 						<div class="hr"></div>
 						<%= link_to(new_lucid_path, class: "text-center mb-2 btn") do %>
