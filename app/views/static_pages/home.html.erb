@@ -24,11 +24,18 @@
 
         <%= link_to "Mon journal", dreams_path, class: 'sign-btn btn-white btn-animation-1 mr-3'  %>
 
+        <%= link_to "Blog des rêves", posts_path, class: 'sign-btn btn-white btn-animation-1 mr-3'  %>
+
+
       <% else %>
 
         <%= link_to "Connexion", '#sign-in-modal', 'data-toggle' => 'modal', class: 'sign-btn btn-white btn-animation-1 mr-3'  %>
 
         <%= link_to "Inscription", '#sign-up-modal', 'data-toggle' => 'modal', class: 'sign-btn btn-white btn-animation-1'  %>
+        
+      <div>
+        <%= link_to "Blog des rêves", posts_path, class: 'sign-btn btn-white btn-animation-1'  %>
+      </div>
 
       <% end %>
     </p>

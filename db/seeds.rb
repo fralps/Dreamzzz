@@ -181,3 +181,23 @@ end
 puts "------------------------"
 puts "10 rêves lucides ont été crées pour l'admin"
 puts "------------------------\n\n"
+
+# Create 10 posts for development admin
+puts "------------------------"
+puts "Création des articles pour l'admin"
+puts "------------------------"
+10.times do
+  post = Post.create!(
+    title: Faker::Movie.quote,
+    content: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
+    like: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sample,
+    user_id: 11
+  )
+
+  # Puts to show every time a dream is created
+  puts 'Posts created'.light_blue
+end
+
+puts "------------------------"
+puts "10 rêves articles ont été crées pour l'admin"
+puts "------------------------\n\n"
