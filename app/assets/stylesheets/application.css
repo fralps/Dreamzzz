@@ -31,7 +31,7 @@ body, html {
   font-family: 'Comfortaa', cursive;
 
   /* The image used */
-  background-image: url('/assets/index.gif');
+  background-image: url('https://media.giphy.com/media/7zebYfu1nq91u/giphy.gif');
 
   /* Full height */
   height: 100%;

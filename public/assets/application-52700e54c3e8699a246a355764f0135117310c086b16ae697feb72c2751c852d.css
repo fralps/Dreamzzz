@@ -22034,7 +22034,7 @@ body, html {
   font-family: 'Comfortaa', cursive;
 
   /* The image used */
-  background-image: url("https://media.giphy.com/media/7zebYfu1nq91u/giphy.gif");
+  background-image: url('https://media.giphy.com/media/7zebYfu1nq91u/giphy.gif');
 
   /* Full height */
   height: 100%;
@@ -22050,30 +22050,30 @@ body, html {
 }
 
 .logo {
-    height: 80px;
-    margin-right: 20px; 
+  height: 80px;
+  margin-right: 20px; 
 }
 
 #main-title {
 	color: white;
-    text-shadow: 2px 2px #ffbffa;
+  text-shadow: 2px 2px #ffbffa;
 }
 
 /* Small screens */
 @media all and (max-width: 420px) {
-    #main-title{
-        /* When on small sized screens, we change font size */
-        font-size: 40px;
-    }
+  #main-title{
+    /* When on small sized screens, we change font size */
+    font-size: 40px;
+  }
 
-    .logo {
-        height: 60px
-        margin-right: 10px;
-    }
+  .logo {
+    height: 60px
+    margin-right: 10px;
+  }
 
-    #sign-in {
-        font-size: 20px;
-    }
+  #sign-in {
+    font-size: 20px;
+  }
 }
 
 /* Small screens */
@@ -22081,122 +22081,122 @@ body, html {
   #main-title{
     /* When on small sized screens, we change font size */
     font-size: 40px;
-}
+  }
 
-.logo {
+  .logo {
     height: 50px;
     margin-right: 10px;
-}
+  }
 }
 
 /* ----------- SCROLL ME BUTTON -------------- */
 
 @-webkit-keyframes ani-mouse {
-    0% {
-        opacity: 1;
-        top: 29%;
-    }
-    15% {
-        opacity: 1;
-        top: 50%;
-    }
-    50% {
-        opacity: 0;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 29%;
-    }
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
 }
 @-moz-keyframes ani-mouse {
-    0% {
-        opacity: 1;
-        top: 29%;
-    }
-    15% {
-        opacity: 1;
-        top: 50%;
-    }
-    50% {
-        opacity: 0;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 29%;
-    }
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
 }
 @keyframes ani-mouse {
-    0% {
-        opacity: 1;
-        top: 29%;
-    }
-    15% {
-        opacity: 1;
-        top: 50%;
-    }
-    50% {
-        opacity: 0;
-        top: 50%;
-    }
-    100% {
-        opacity: 0;
-        top: 29%;
-    }
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
 }
 .scroll-btn {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 .scroll-btn > * {
-    display: inline-block;
-    line-height: 18px;
-    font-size: 13px;
-    font-weight: normal;
-    color: #ffffff;
-    letter-spacing: 2px;
+  display: inline-block;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #ffffff;
+  letter-spacing: 2px;
 }
 .scroll-btn > *:hover,
 .scroll-btn > *:focus,
 .scroll-btn > *.active {
-    color: #ffffff;
+  color: #ffffff;
 }
 .scroll-btn > *:hover,
 .scroll-btn > *:focus,
 .scroll-btn > *:active,
 .scroll-btn > *.active {
-    opacity: 0.8;
-    filter: alpha(opacity=80);
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 .scroll-btn .mouse {
-    position: relative;
-    display: block;
-    width: 35px;
-    height: 55px;
-    margin: 0 auto 20px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 3px solid white;
-    border-radius: 23px;
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 55px;
+  margin: 0 auto 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid white;
+  border-radius: 23px;
 }
 .scroll-btn .mouse > * {
-    position: absolute;
-    display: block;
-    top: 29%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    margin: -4px 0 0 -4px;
-    background: white;
-    border-radius: 50%;
-    -webkit-animation: ani-mouse 2.5s linear infinite;
-    -moz-animation: ani-mouse 2.5s linear infinite;
-    animation: ani-mouse 2.5s linear infinite;
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: white;
+  border-radius: 50%;
+  -webkit-animation: ani-mouse 2.5s linear infinite;
+  -moz-animation: ani-mouse 2.5s linear infinite;
+  animation: ani-mouse 2.5s linear infinite;
 }
 
 /* ----------- END SCROLL ME BUTTON -------------- */
@@ -22204,24 +22204,24 @@ body, html {
 /*----------- SECTION 2 CSS -----------*/
 #section-2 {
 
-    /*Colors*/
-    background-color: #fba8a4;
-    background-image: linear-gradient(315deg, #dad2f3 0%, #fba8a4 74%);
+  /*Colors*/
+  background-color: #fba8a4;
+  background-image: linear-gradient(315deg, #dad2f3 0%, #fba8a4 74%);
 
-    /*Font family*/
-    font-family: 'Comfortaa', cursive;
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
 
-    /* Full height */
-    height: 100%;
+  /* Full height */
+  height: 100%;
 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #section-2 h3 {
-    color: white;
+  color: white;
 }
 
 /*BTN CSS*/
@@ -22242,9 +22242,9 @@ body, html {
 }
 
 .sign-btn:hover {
-   box-shadow:0px 10px 10px rgba(0,0,0,0.2);
-   transform : translateY(-3px);
-   color: #8B52FF;
+ box-shadow:0px 10px 10px rgba(0,0,0,0.2);
+ transform : translateY(-3px);
+ color: #8B52FF;
 }
 
 .sign-btn:active {
@@ -22271,13 +22271,13 @@ body, html {
 }
 
 .btn-white::after {
-    background: #8B52FF;
+  background: #8B52FF;
 }
 
 .btn-animation-1:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-    background: #8B52FF;
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+  background: #8B52FF;
 }
 
 @keyframes comeFromBottom {
@@ -22312,16 +22312,34 @@ body, html {
 
 /*----------- END SECTION 2 CSS -----------*/
 
+/*------------- Modal CSS --------------*/
+
+.link {
+  color: #8b52ff;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #793ef9;
+  text-decoration: none;
+}
+
+/*--------------- End modal CSS ------------*/
+
 /*----------- INDEX CSS -----------*/
 #index {
 
-    /*Colors*/
-    background-color: #fba8a4;
-    background-image: linear-gradient(315deg, #dad2f3 0%, #fba8a4 74%);
+  /*Colors*/
+  background-color: #fba8a4;
+  background-image: linear-gradient(315deg, #dad2f3 0%, #fba8a4 74%);
 
-    /*Font family*/
-    font-family: 'Comfortaa', cursive;
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
 }
+
+.box {
+  margin: 30px;
+} 
 
 .hr {
   border-bottom: 0.5px solid #8b52ff;
@@ -22337,17 +22355,37 @@ body, html {
 
 #index-img {
   border-radius: 10px 10px 0px 0px;
+  height: 230px;
 }
 
-.fa-eye {
-  color: #8b52ff; 
+.edit {
+  color: #8b52ff;
 }
 
 #dream-card:hover {
-  background-color: #ddeeff; 
+  background-color: #ddeeff;
+  border-color: white; 
 }
 
 #dream-card {
+  justify-content: space-between;
+}
+
+#nightmare-card:hover {
+  background-color: #aeb8c1;
+  border-color: white; 
+}
+
+#nightmare-card {
+  justify-content: space-between;
+}
+
+#lucid-card:hover {
+  background-color: #f4cdf2;
+  border-color: white; 
+}
+
+#lucid-card {
   justify-content: space-between;
 }
 
@@ -22364,8 +22402,253 @@ body, html {
 
 .custom {
   border-bottom: 1px solid white;
-  width: 87%;
+  width: 94%;
   margin: auto;
 }
 
 /*----------- End Index CSS -----------*/
+
+
+/*----------- Create dream CSS -----------*/
+#section-dreams {
+
+  /*Colors*/
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section-dreams h2 {
+  color: #8b52ff;
+}
+
+#section-nightmares {
+
+  /*Colors*/
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section-nightmares h2 {
+  color: #8b52ff;
+}
+
+#section-lucids {
+
+  /*Colors*/
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section-lucids h2 {
+  color: #8b52ff;
+}
+
+.create-form {
+  background-color: #fcfcfc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.create-btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #8b52ff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all .3s;
+  width: 100%;
+}
+
+.create-btn i {
+  color: white;
+}
+
+.create-btn:hover {
+ box-shadow:0px 10px 10px rgba(139, 82, 255,0.2);
+ transform : translateY(-3px);
+ background-color: white;
+ color: #8B52FF;
+ border: 0.5px solid #8B52FF;
+}
+
+.delete-btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #f46e6e;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all .3s;
+  width: 100%;
+}
+
+.delete-btn:hover {
+ box-shadow:0px 10px 10px rgba(244, 110, 110,0.5);
+ transform : translateY(-3px);
+ text-decoration: none;
+ color: white
+}
+
+.edit-btn {
+  border: none;
+  border-radius: 30px;
+  background-color: #8B52FF;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all .3s;
+  width: 100%;
+}
+
+.edit-btn:hover {
+ box-shadow:0px 10px 10px rgba(139, 82, 255,0.5);
+ transform : translateY(-3px);
+ text-decoration: none;
+ color: white
+}
+
+.form-logo {
+  height: 38px;
+  margin-right: 10px;
+}
+
+/*----------- End create dream CSS -----------*/
+
+
+/*----------- Edit User CSS -----------*/
+#section-edit {
+
+  /*Colors*/
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section-edit, #section-password, #section-show h2 {
+  color: #8b52ff;
+}
+
+#section-password {
+
+  /*Colors*/
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+ /*--------------- End edit user CSS ---------------*/
+
+  /*---------------- Show dreams CSS ------------------*/
+
+#section-show {
+
+  /*Colors*/
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+}
+
+#section-show-nightmare {
+
+  /*Colors*/
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+#section-show-lucid {
+
+  /*Colors*/
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+ /*------------------ End show dreams CSS ---------------*/
