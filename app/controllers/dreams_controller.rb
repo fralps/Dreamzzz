@@ -34,8 +34,8 @@ class DreamsController < ApplicationController
 
 		if @dream.user == current_user
 			if @dream.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
-				redirect_to dream_path(@dream)
-				flash[:success] = "Votre rêve a bien été modifié"
+				redirect_to dreams_path
+				flash[:success] = "Votre rêve a bien été modifié 👍🏽"
 			else
 				flash[:alert] = "Vous n'avez pas rempli tous les champs, veuillez réessayez s'il vous plaît"
 				render edit
@@ -50,7 +50,7 @@ class DreamsController < ApplicationController
 
 		if @dream.destroy
 			redirect_to dreams_path(current_user)
-			flash[:success] = "Votre rêve a bien été supprimé"
+			flash[:success] = "Votre rêve a bien été supprimé 👍🏽"
 		else
 			flash[:alert] = "Un problème est survenu"
 			render :edit

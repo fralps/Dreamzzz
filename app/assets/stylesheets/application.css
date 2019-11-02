@@ -313,10 +313,12 @@ body, html {
 
 .link {
   color: #8b52ff;
+  text-decoration: none;
 }
 
 .link:hover {
   color: #793ef9;
+  text-decoration: none;
 }
 
 /*--------------- End modal CSS ------------*/
@@ -643,11 +645,6 @@ body, html {
 
   display: flex;
   align-items: center;
-}
-
-/* Small screens */
-@media all and (max-width: 420px) {
-
 }
 
  /*------------------ End show dreams CSS ---------------*/

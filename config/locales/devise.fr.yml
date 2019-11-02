@@ -26,7 +26,7 @@ fr:
       email_changed:
         subject: "Email modifié"
       password_change:
-        subject: "Votre mot de passe a été modifié avec succés 👍"
+        subject: "Votre mot de passe a été modifié avec succés 👍🏽"
     omniauth_callbacks:
       failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
       success: "Authentifié avec succès via %{kind}."
@@ -37,8 +37,8 @@ fr:
       updated: "Votre mot de passe a été édité avec succès, vous êtes maintenant connecté."
       updated_not_active: "Votre mot de passe a été changé avec succès "
     registrations:
-      destroyed: "Votre compte a été supprimé avec succès. Nous espérons vous revoir bientôt 👋"
-      signed_up: "Bienvenue ! 👋"
+      destroyed: "Votre compte a été supprimé avec succès. Nous espérons vous revoir bientôt 👋🏼"
+      signed_up: "Bienvenue ! 👋🏼"
       signed_up_but_inactive: "Vous êtes bien enregistré. Vous ne pouvez cependant pas vous connecter car votre compte n'est pas encore activé."
       signed_up_but_locked: "Vous êtes bien enregistré. Vous ne pouvez cependant pas vous connecter car votre compte est verrouillé."
       signed_up_but_unconfirmed: "Un message contenant un lien de confirmation a été envoyé à votre adresse email. Ouvrez ce lien pour activer votre compte."
@@ -46,8 +46,8 @@ fr:
       updated: "Votre compte a été modifié avec succès."
       updated_but_not_signed_in: "Votre compte a été modifié avec succès. Merci de vous reconnecter."
     sessions:
-      signed_in: "Bon retour parmi nous 👋"
-      signed_out: "À bientôt 👋"
+      signed_in: "Bon retour parmi nous 👋🏼"
+      signed_out: "À bientôt 👋🏼"
       already_signed_out: "Déconnecté."
     unlocks:
       send_instructions: "Vous allez recevoir les instructions nécessaires au déverrouillage de votre compte dans quelques instants."

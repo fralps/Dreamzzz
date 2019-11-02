@@ -34,8 +34,8 @@ class LucidsController < ApplicationController
 
 		if @lucid.user == current_user
 			if @lucid.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
-				redirect_to lucid_path(@lucid)
-				flash[:success] = "Votre rêve lucide a bien été modifié"
+				redirect_to dreams_path
+				flash[:success] = "Votre rêve lucide a bien été modifié 👍🏽"
 			else
 				flash[:alert] = "Vous n'avez pas rempli tous les champs, veuillez réessayez s'il vous plaît"
 				render edit
@@ -50,7 +50,7 @@ class LucidsController < ApplicationController
 
 		if @lucid.destroy
 			redirect_to dreams_path(current_user)
-			flash[:success] = "Votre rêve lucide a bien été supprimé"
+			flash[:success] = "Votre rêve lucide a bien été supprimé 👍🏽"
 		else
 			flash[:alert] = "Un problème est survenu"
 			render :edit
