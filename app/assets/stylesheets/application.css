@@ -677,4 +677,10 @@ body, html {
   transition: 0.5s;
 }
 
+#secion-blog {
+  
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+}
+
 /* -------------------- End Blog CSS -------------------*/

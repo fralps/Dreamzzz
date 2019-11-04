@@ -189,7 +189,7 @@ puts "------------------------"
 10.times do
   post = Post.create!(
     title: Faker::Movie.quote,
-    content: Faker::Lorem.paragraph_by_chars(number: 500, supplemental: false),
+    content: Faker::Lorem.paragraph_by_chars(number: 2000, supplemental: false),
     like: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sample,
     user_id: 11
   )
