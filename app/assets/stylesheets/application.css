@@ -225,6 +225,8 @@ body, html {
 
 .sign-btn:link,
 .sign-btn:visited {
+  width: 170px;
+  text-align: center;  
   margin-top: 10px;
   text-decoration: none;
   padding: 10px 20px;
@@ -675,12 +677,6 @@ body, html {
   text-decoration: none;
   color: #8b52ff;
   transition: 0.5s;
-}
-
-#secion-blog {
-  
-  /*Font family*/
-  font-family: 'Comfortaa', cursive;
 }
 
 /* -------------------- End Blog CSS -------------------*/

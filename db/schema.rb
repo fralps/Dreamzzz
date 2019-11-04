@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_02_173453) do
+ActiveRecord::Schema.define(version: 2019_11_04_150006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
-    t.decimal "like"
+    t.integer "like"
     t.bigint "user_id"
     t.bigint "post_id"
     t.datetime "created_at", null: false
@@ -62,10 +62,11 @@ ActiveRecord::Schema.define(version: 2019_11_02_173453) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.decimal "like"
+    t.integer "like"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
