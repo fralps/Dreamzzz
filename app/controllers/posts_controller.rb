@@ -14,11 +14,11 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(user_id: current_user.id, title: params[:title], content: params[:content])
+		@post = Post.new(user_id: current_user.id, title: params[:title], content: params[:content], image_url: params[:image_url])
 
 		if @post.save
 			redirect_to posts_path
-			flash[:success] = "Votre article a bien été crée 👍🏽"
+			flash[:success] = "Votre article a bien été publié 👍🏽"
 		else
 			render :new
 		end
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 
 		if @post.user == current_user
-			if @post.update(title: params[:title], content: params[:content])
+			if @post.update(title: params[:title], content: params[:content], image_url: params[:image_url])
 				redirect_to posts_path
 				flash[:success] = "Votre article a bien été modifié 👍🏽"
 			else

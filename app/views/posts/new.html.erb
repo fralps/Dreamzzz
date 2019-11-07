@@ -1,1 +1,29 @@
-<p>New</p>
+<section id="section-posts">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-6 mx-auto">
+				<div class="create-form shadow">
+					<div class="mt-3">
+						<h2 class="text-center"><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'icon icon-md mb-4 mr-2') %>Ajout d'article</h2>
+
+						<!-- Errors partial -->
+						<%= render 'posts/error_messages' %>
+
+						<!-- Zone du formulaire -->
+						<%= form_tag url_for(action: 'create'), method: "post", class: "mt-4" do %>
+
+						<%= text_field_tag 'title', @post.title, class: "form-control mb-3", placeholder: 'Titre..' %>
+
+						<%= text_area_tag 'content', @post.content, class: "form-control mb-3 test", placeholder: 'Contenu..' %>
+
+						<%= text_field_tag 'image_url', @post.image_url, class: "form-control mb-3", placeholder: 'Url d\'image d\'illustration..' %>
+
+						<%= submit_tag "Publier l'article", class: "edit-btn mb-3" %> 
+
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
