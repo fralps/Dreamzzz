@@ -22034,7 +22034,7 @@ body, html {
   font-family: 'Comfortaa', cursive;
 
   /* The image used */
-  background-image: url('/assets/index.gif');
+  background-image: url('https://media.giphy.com/media/7zebYfu1nq91u/giphy.gif');
 
   /* Full height */
   height: 100%;
@@ -22058,6 +22058,9 @@ body, html {
 	color: white;
   text-shadow: 2px 2px #ffbffa;
 }
+
+
+/*--------------- RESPONSIVE PART -----------------*/
 
 /* Small screens */
 @media all and (max-width: 420px) {
@@ -22088,6 +22091,48 @@ body, html {
     margin-right: 10px;
   }
 }
+
+/* Small screens */
+@media all and (max-width: 863px) {
+
+  #index-card {
+    min-width: 260px;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 414px) {
+
+  #index-card {
+    min-width: 260px;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 411px) {
+
+  #index-card {
+    min-width: 260px;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 375px) {
+
+  #index-card {
+    min-width: 300px;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 320px) {
+
+  #index-card {
+    min-width: 260px;
+  }
+}
+
+/*--------------- END RESPONSIVE PART -----------------*/
 
 /* ----------- SCROLL ME BUTTON -------------- */
 
@@ -22228,6 +22273,8 @@ body, html {
 
 .sign-btn:link,
 .sign-btn:visited {
+  width: 170px;
+  text-align: center;  
   margin-top: 10px;
   text-decoration: none;
   padding: 10px 20px;
@@ -22360,6 +22407,11 @@ body, html {
 
 .edit {
   color: #8b52ff;
+}
+
+.edit:hover {
+  text-decoration: none;
+  color: #a88beb;
 }
 
 #dream-card:hover {
@@ -22652,3 +22704,179 @@ body, html {
 }
 
  /*------------------ End show dreams CSS ---------------*/
+
+
+/* -------------------- Blog CSS -------------------*/
+
+
+#post-card {
+  border-radius: 20px;
+}
+
+#card-img {
+  border-radius: 20px 20px 0px 0px;
+}
+
+#blog-title {
+  /*Colors*/
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+
+
+   /*Font family*/
+  font-family: 'Comfortaa', cursive;
+}
+
+.post-title:hover {
+  text-decoration: none;
+  color: #8b52ff;
+  transition: 0.5s;
+}
+
+#section-posts {
+
+  /*Colors*/
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section-posts h2 {
+  color: #8b52ff;
+}
+
+.fn-comment {
+  border-radius: 10px;
+}
+
+.comment-icons {
+  margin-top: 4px;
+}
+
+/* -------------------- End Blog CSS -------------------*/
+
+/*-------------------- Hamburger menu CSS ---------------*/
+#sidebarMenu {
+    position: fixed;
+    width: 170px;
+    font-size: 15px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background-color: #f8ceec;
+    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/*-------------------- End Hamburger menu CSS ---------------*/
