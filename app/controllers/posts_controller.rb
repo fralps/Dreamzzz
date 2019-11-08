@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@comment = Comment.new
 	end
 
 	def new
@@ -14,10 +15,10 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(user_id: current_user.id, title: params[:title], content: params[:content], image_url: params[:image_url])
+		@post = Post.new(user_id: current_user.id, title: params[:title], introduction: params[:introduction], first_paragraph: params[:first_paragraph], second_paragraph: params[:second_paragraph], first_subtitle: params[:first_subtitle], third_paragraph: params[:third_paragraph], fourth_paragraph: params[:fourth_paragraph], fifth_paragraph: params[:fifth_paragraph], second_subtitle: params[:second_subtitle], sixth_paragraph: params[:sixth_paragraph], image_url: params[:image_url])
 
 		if @post.save
-			redirect_to posts_path
+			redirect_to post_path(@post.id)
 			flash[:success] = "Votre article a bien été publié 👍🏽"
 		else
 			render :new
@@ -33,8 +34,8 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 
 		if @post.user == current_user
-			if @post.update(title: params[:title], content: params[:content], image_url: params[:image_url])
-				redirect_to posts_path
+			if @post.update(title: params[:title], introduction: params[:introduction], first_paragraph: params[:first_paragraph], second_paragraph: params[:second_paragraph], first_subtitle: params[:first_subtitle], third_paragraph: params[:third_paragraph], fourth_paragraph: params[:fourth_paragraph], fifth_paragraph: params[:fifth_paragraph], second_subtitle: params[:second_subtitle], sixth_paragraph: params[:sixth_paragraph], image_url: params[:image_url])
+				redirect_to post_path(@post.id)
 				flash[:success] = "Votre article a bien été modifié 👍🏽"
 			else
 				flash[:alert] = "Vous n'avez pas rempli tous les champs, veuillez réessayez s'il vous plaît"

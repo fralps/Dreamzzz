@@ -116,10 +116,9 @@
 								<div class="text-small d-flex">
 									<span class="text-muted"><%= p.created_at.strftime("%d/%m/%y") %></span>
 								</div>
-								<span class="badge bg-primary-alt text-primary">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon icon-sm bg-primary" data-src="assets/img/icons/interface/heart.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-										<path d="M16.5 5C14.8905 5 13.0082 6.82463 12 8C10.9918 6.82463 9.1095 5 7.5 5C4.651 5 3 7.22218 3 10.0504C3 13.1835 6 16.5 12 20C18 16.5 21 13.25 21 10.25C21 7.42177 19.349 5 16.5 5Z" fill="#212529"></path>
-									</svg><%= p.like %>
+								<span class="badge" style="color: #8b52ff;">
+									<i class="far fa-comment mr-1" style="color: #8b52ff;"></i><%= p.comments.count %>
+									<i class="far fa-heart mr-1" style="color: #8b52ff;"></i><%= p.like %>
 								</span>
 							</div>
 
@@ -127,7 +126,7 @@
 							<h4 class="post-title"><%= p.title %></h4>
 							<% end %>
 							<p class="flex-grow-1">
-								<%= p.content.truncate(100) %>
+								<%= p.introduction.truncate(100) %>
 							</p>
 							<div class="d-flex align-items-center justify-content-between mt-3">
 								<div class="ml-1">

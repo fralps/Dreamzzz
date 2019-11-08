@@ -1,7 +1,7 @@
 class Comment < ApplicationRecord
 
 	# Validations
-	validates :content, presence: true, length: { minimum: 5 }
+	validates :content, presence: true
 
 	# Relations
 	belongs_to :user

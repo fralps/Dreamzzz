@@ -13,5 +13,9 @@ Rails.application.routes.draw do
   resources :dreams
   resources :nightmares
   resources :lucids
-  resources :posts
+
+  resources :posts do
+    resources :comments
+  end
+
 end

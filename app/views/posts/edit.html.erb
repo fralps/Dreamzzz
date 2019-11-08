@@ -1,29 +1,48 @@
 <section id="section-posts">
 	<div class="container">
-		<div class="row">
-			<div class="col col-md-6 mx-auto">
-				<div class="create-form shadow">
-					<div class="mt-3">
-						<h2 class="text-center"><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'icon icon-md mb-4 mr-2') %>Modifier un article</h2>
+		<div class="row create-form shadow">
 
-						<!-- Errors partial -->
-						<%= render 'posts/error_messages' %>
+			<div class="col col-lg-6 col-md-6 col-sm-12" id="test1">
 
-						<!-- Zone du formulaire -->
-						<%= form_tag url_for(action: 'update'), method: "patch", class: "mt-4" do %>
+				<h2 class="text-center">
+					<%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'icon icon-md mb-4 mr-2') %>Modifier cet article
+				</h2>
 
-						<%= text_field_tag 'title', @post.title, class: "form-control mb-3", placeholder: 'Titre..' %>
+				<!-- Zone du formulaire -->
+				<%= form_tag url_for(action: 'update'), method: "patch", class: "mt-4" do %>
 
-						<%= text_area_tag 'content', @post.content, class: "form-control mb-3 test", placeholder: 'Contenu..' %>
+				<%= text_field_tag 'title', @post.title, class: "form-control mb-3", placeholder: 'Titre..' %>
 
-						<%= text_field_tag 'image_url', @post.image_url, class: "form-control mb-3", placeholder: 'Url d\'image d\'illustration..' %>
+				<%= text_area_tag 'introduction', @post.introduction, class: "form-control mb-3", placeholder: 'Introduction..' %>
 
-						<%= submit_tag "💾 Enregistrer les modifications", class: "edit-btn mb-3" %> 
+				<%= text_area_tag 'first_paragraph', @post.first_paragraph, class: "form-control mb-3", placeholder: 'Premier paragraphe..' %>
 
-						<% end %>
-					</div>
-				</div>
+				<%= text_area_tag 'second_paragraph', @post.second_paragraph, class: "form-control mb-3", placeholder: 'Deuxième paragraphe..' %>
+
+				<%= text_field_tag 'first_subtitle', @post.first_subtitle, class: "form-control mb-3", placeholder: 'Premier sous-titre..' %>
 			</div>
+
+			<div class="col col-lg-6 col-md-6 col-sm-12 mt-2" id="test2">
+
+				<%= text_area_tag 'third_paragraph', @post.third_paragraph, class: "form-control mb-3", placeholder: 'Troisième paragraphe..' %>
+
+				<%= text_area_tag 'fourth_paragraph', @post.fourth_paragraph, class: "form-control mb-3", placeholder: 'Quatrième paragraphe..' %>
+
+				<%= text_area_tag 'fifth_paragraph', @post.fifth_paragraph, class: "form-control mb-3", placeholder: 'Cinquième paragraphe..' %>
+
+				<%= text_field_tag 'second_subtitle', @post.second_subtitle, class: "form-control mb-3", placeholder: 'Second sous-titre..' %>
+
+				<%= text_area_tag 'sixth_paragraph', @post.sixth_paragraph, class: "form-control mb-3", placeholder: 'Sixième paragraphe..' %>
+
+				<%= text_field_tag 'image_url', @post.image_url, class: "form-control mb-3", placeholder: 'Url d\'image d\'illustration..' %>
+			</div>	
+
+			<!-- Errors partial -->
+			<%= render 'posts/error_messages' %>
+
+			<%= submit_tag " 💾 Enregistrer les modifications l'article", class: "edit-btn mb-2" %> 
+
+			<% end %>
 		</div>
 	</div>
 </section>

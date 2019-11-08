@@ -56,6 +56,9 @@ body, html {
   text-shadow: 2px 2px #ffbffa;
 }
 
+
+/*--------------- RESPONSIVE PART -----------------*/
+
 /* Small screens */
 @media all and (max-width: 420px) {
   #main-title{
@@ -125,6 +128,8 @@ body, html {
     min-width: 260px;
   }
 }
+
+/*--------------- END RESPONSIVE PART -----------------*/
 
 /* ----------- SCROLL ME BUTTON -------------- */
 
@@ -399,6 +404,11 @@ body, html {
 
 .edit {
   color: #8b52ff;
+}
+
+.edit:hover {
+  text-decoration: none;
+  color: #a88beb;
 }
 
 #dream-card:hover {
@@ -743,8 +753,12 @@ body, html {
   color: #8b52ff;
 }
 
-#section-posts .test {
-  height: 200px;
+.fn-comment {
+  border-radius: 10px;
+}
+
+.comment-icons {
+  margin-top: 4px;
 }
 
 /* -------------------- End Blog CSS -------------------*/

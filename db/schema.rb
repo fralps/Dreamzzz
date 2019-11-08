@@ -61,7 +61,15 @@ ActiveRecord::Schema.define(version: 2019_11_04_150006) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.text "content"
+    t.text "introduction"
+    t.text "first_paragraph"
+    t.text "second_paragraph"
+    t.string "first_subtitle"
+    t.text "third_paragraph"
+    t.text "fourth_paragraph"
+    t.text "fifth_paragraph"
+    t.string "second_subtitle"
+    t.text "sixth_paragraph"
     t.integer "like"
     t.bigint "user_id"
     t.datetime "created_at", null: false
