@@ -10,6 +10,11 @@ class CommentsController < ApplicationController
 		@comment = Comment.new
 	end
 
+	def show
+		@post = Post.find(params[:post_id])
+		@comment = Comment.find(params[:id])
+	end
+
 	def create
 		@post = Post.find(params[:post_id])
 		@comment = Comment.new(user_id: current_user.id, content: params[:content], post: @post)
@@ -33,7 +38,7 @@ class CommentsController < ApplicationController
 
 		if @comment.user == current_user
 			if @comment.update(content: params[:content])
-				redirect_to posts_path
+				redirect_to post_path(@post.id)
 				flash[:success] = "Votre commentaire a bien été modifié 👍🏽"
 			else
 				flash[:alert] = "Vous n'avez pas rempli tous les champs, veuillez réessayez s'il vous plaît"
@@ -49,7 +54,7 @@ class CommentsController < ApplicationController
 		@comment = Comment.find(params[:id])
 
 		if @comment.destroy
-			redirect_to posts_path(current_user)
+			redirect_to post_path(@post.id)
 			flash[:success] = "Votre commentaire a bien été supprimé 👍🏽"
 		else
 			flash[:alert] = "Un problème est survenu"
