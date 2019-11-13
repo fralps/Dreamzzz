@@ -166,7 +166,7 @@
               <!-- On affiche les boutons d'édition et de suppression seulement 
               pour le créateur du commentaire -->
               <% if user_signed_in? %>
-                <% if @comment.user == current_user %>
+                <% if comment.user == current_user %>
                   <div class="comment-icons">
                     <%= link_to(edit_post_comment_path(@post.id, comment.id),class: 'edit') do %>
                     <i class="fas fa-pen"></i>

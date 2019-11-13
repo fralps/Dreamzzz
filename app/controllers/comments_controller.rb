@@ -42,7 +42,7 @@ class CommentsController < ApplicationController
 				flash[:success] = "Votre commentaire a bien été modifié 👍🏽"
 			else
 				flash[:alert] = "Vous n'avez pas rempli tous les champs, veuillez réessayez s'il vous plaît"
-				render edit
+				render :edit
 			end
 		else
 			redirect_to root_path, notice: "Vous ne pouvez pas éditer le commentaire d'une autre personne !"
