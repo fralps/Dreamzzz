@@ -198,7 +198,6 @@ puts "------------------------"
     fifth_paragraph: Faker::Lorem.paragraph_by_chars(number: 400, supplemental: false),
     second_subtitle: Faker::Lorem.paragraph_by_chars(number: 40, supplemental: false),
     sixth_paragraph: Faker::Lorem.paragraph_by_chars(number: 450, supplemental: false),
-    like: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].sample,
     image_url: ["https://images.unsplash.com/photo-1532426543559-9baa64fa767f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80", "https://images.unsplash.com/photo-1462835102497-22422116d230?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80", "https://images.unsplash.com/photo-1502481851512-e9e2529bfbf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", "https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-1.2.1&auto=format&fit=crop&w=1071&q=80", "https://images.unsplash.com/photo-1536602012356-86c345795580?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", "https://cdn.pixabay.com/photo/2016/10/12/02/56/girl-1733352_1280.jpg", "https://cdn.pixabay.com/photo/2017/10/13/14/15/fantasy-2847724_1280.jpg"].sample,
     user_id: 11
   )

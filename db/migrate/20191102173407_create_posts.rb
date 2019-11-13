@@ -11,7 +11,6 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.text :fifth_paragraph
       t.string :second_subtitle
       t.text :sixth_paragraph
-      t.integer :like
       t.belongs_to :user, index: true
 
       t.timestamps

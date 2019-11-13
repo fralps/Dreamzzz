@@ -1,62 +1,62 @@
 <section class="has-divider text-light jarallax" data-jarallax="" data-speed="0.5" data-overlay="" style="padding-top: 68.9271px !important;" id="blog-title">
 	<% if user_signed_in? %>
 
-		<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-		<label for="openSidebarMenu" class="sidebarIconToggle">
-			<div class="spinner diagonal part-1"></div>
-			<div class="spinner horizontal"></div>
-			<div class="spinner diagonal part-2"></div>
-		</label>
-		<div id="sidebarMenu">
-			<ul class="sidebarMenuInner">
-		
-				<li>
-					<%= link_to(root_path) do %>
-						<i class="fas fa-home mr-1"></i>Accueil
-					<% end %>
-					
-				</li>
-				<li>
-					<%= link_to(dreams_path) do %>
-						<i class="fas fa-bed mr-1"></i>Mon journal
-					<% end %>
-				</li>
-				<li>
-					<%= link_to(edit_user_registration_path) do %>
-						<i class="far fa-user mr-2"></i>Mon compte
-					<% end %>
-				</li>
-			</ul>
-		</div>
+	<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+	<label for="openSidebarMenu" class="sidebarIconToggle">
+		<div class="spinner diagonal part-1"></div>
+		<div class="spinner horizontal"></div>
+		<div class="spinner diagonal part-2"></div>
+	</label>
+	<div id="sidebarMenu">
+		<ul class="sidebarMenuInner">
+
+			<li>
+				<%= link_to(root_path) do %>
+				<i class="fas fa-home mr-1"></i>Accueil
+				<% end %>
+
+			</li>
+			<li>
+				<%= link_to(dreams_path) do %>
+				<i class="fas fa-bed mr-1"></i>Mon journal
+				<% end %>
+			</li>
+			<li>
+				<%= link_to(edit_user_registration_path) do %>
+				<i class="far fa-user mr-2"></i>Mon compte
+				<% end %>
+			</li>
+		</ul>
+	</div>
 
 	<% else %>
 
-		<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-		<label for="openSidebarMenu" class="sidebarIconToggle">
-			<div class="spinner diagonal part-1"></div>
-			<div class="spinner horizontal"></div>
-			<div class="spinner diagonal part-2"></div>
-		</label>
-		<div id="sidebarMenu">
-			<ul class="sidebarMenuInner">
+	<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+	<label for="openSidebarMenu" class="sidebarIconToggle">
+		<div class="spinner diagonal part-1"></div>
+		<div class="spinner horizontal"></div>
+		<div class="spinner diagonal part-2"></div>
+	</label>
+	<div id="sidebarMenu">
+		<ul class="sidebarMenuInner">
 
-				<li>
-					<%= link_to(root_path) do %>
-						<i class="fas fa-home mr-1"></i>Accueil
-					<% end %>
-				</li>		
-				<li>
-					<%= link_to('#sign-in-modal', 'data-toggle' => 'modal') do%>
-						<i class="fas fa-sign-in-alt mr-2"></i>Connexion
-					<% end %>
-				</li>
-				<li>
-					<%= link_to('#sign-up-modal', 'data-toggle' => 'modal') do %>
-						<i class="fas fa-user-plus mr-1"></i>Inscription
-					<% end %>
-				</li>
-			</ul>
-		</div>
+			<li>
+				<%= link_to(root_path) do %>
+				<i class="fas fa-home mr-1"></i>Accueil
+				<% end %>
+			</li>		
+			<li>
+				<%= link_to('#sign-in-modal', 'data-toggle' => 'modal') do%>
+				<i class="fas fa-sign-in-alt mr-2"></i>Connexion
+				<% end %>
+			</li>
+			<li>
+				<%= link_to('#sign-up-modal', 'data-toggle' => 'modal') do %>
+				<i class="fas fa-user-plus mr-1"></i>Inscription
+				<% end %>
+			</li>
+		</ul>
+	</div>
 
 	<% end %>
 
@@ -85,26 +85,26 @@
 	<section id="blog">
 		<div class="container">
 
-					<% if user_signed_in? %>
+			<% if user_signed_in? %>
 
-						<% if current_user.is_admin == true %>
-							<div class="mb-5 text-center">
-								<%= link_to(new_post_path, class: 'edit-btn') do %>
-									<i class="fas fa-plus mr-2"></i>Ajouter un article
-								<% end %>	
+			<% if current_user.is_admin == true %>
+			<div class="mb-5 text-center">
+				<%= link_to(new_post_path, class: 'edit-btn') do %>
+				<i class="fas fa-plus mr-2"></i>Ajouter un article
+				<% end %>	
 
-							</div>
-						<% else %>
-							<div class="mb-5 text-center">
-								<a href="mailto: submit.articles@dreamzzz.com" class="edit-btn "><i class="far fa-paper-plane"></i> Proposer votre article</a>
-							</div>
-						<% end %>
+			</div>
+			<% else %>
+			<div class="mb-5 text-center">
+				<a href="mailto: submit.articles@dreamzzz.com" class="edit-btn "><i class="far fa-paper-plane"></i> Proposer votre article</a>
+			</div>
+			<% end %>
 
-					<% else %>
-						<div class="mb-5 text-center">
-							<a href="mailto: submit.articles@dreamzzz.com" class="edit-btn "><i class="far fa-paper-plane"></i> Proposer votre article</a>
-						</div>
-					<% end %>
+			<% else %>
+			<div class="mb-5 text-center">
+				<a href="mailto: submit.articles@dreamzzz.com" class="edit-btn "><i class="far fa-paper-plane"></i> Proposer votre article</a>
+			</div>
+			<% end %>
 
 			<div class="row" id="articles">
 				<% @posts.each do |p| %>
@@ -118,7 +118,7 @@
 								</div>
 								<span class="badge" style="color: #8b52ff;">
 									<i class="far fa-comment mr-1" style="color: #8b52ff;"></i><%= p.comments.count %>
-									<i class="far fa-heart mr-1" style="color: #8b52ff;"></i><%= p.like %>
+									<i class="far fa-heart mr-1" style="color: #8b52ff;"></i><%= p.likes.count %>
 								</span>
 							</div>
 
@@ -134,19 +134,21 @@
 									<span class="text-small"><%= p.user.first_name %> <%= p.user.last_name %></span>
 								</div>
 								<% if user_signed_in? %>
+
 									<% if current_user.is_admin == true %>
 										<div>
+
 											<%= link_to(edit_post_path(p.id), class: 'mr-1', style: 'text-decoration: none;') do %>
-												<i class="fas fa-pencil-alt edit" id="edit"></i>
+											<i class="fas fa-pencil-alt edit" id="edit"></i>
 											<% end %> 
 
 											<%= link_to(post_path(p.id), method: :delete, data: { confirm: 'Vous allez supprimer cet article, voulez-vous continuer ?'}) do %>
-												<i class="far fa-trash-alt text-danger"></i>
+											<i class="far fa-trash-alt text-danger"></i>
 											<% end %> 
 										</div>
+									<% else %>
+										<div></div>
 									<% end %>
-								<% else %>
-									<div></div>
 								<% end %>
 							</div>
 						</div>
