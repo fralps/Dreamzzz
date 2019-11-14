@@ -14,7 +14,7 @@ class LucidsController < ApplicationController
 	end
 
 	def create
-		@lucid = Lucid.new(user_id: current_user.id, title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
+		@lucid = Lucid.new(user_id: current_user.id, title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion], is_online: params[:is_online])
 
 		if @lucid.save
 			redirect_to dreams_path
@@ -33,8 +33,8 @@ class LucidsController < ApplicationController
 		@lucid = Lucid.find(params[:id])
 
 		if @lucid.user == current_user
-			if @lucid.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
-				redirect_to dreams_path
+			if @lucid.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion], is_online: params[:is_online])
+				redirect_to lucid_path(@lucid.id)
 				flash[:success] = "Votre rêve lucide a bien été modifié 👍🏽"
 			else
 				flash[:alert] = "Vous n'avez pas rempli tous les champs, veuillez réessayez s'il vous plaît"

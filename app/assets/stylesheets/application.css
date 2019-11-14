@@ -663,7 +663,15 @@ body, html {
 
   display: flex;
   align-items: center;
+}
 
+#section-show .hover {
+  text-decoration: none;
+}
+
+#section-show .hover:hover {
+  text-decoration: none;
+  color: #8b52ff;
 }
 
 #section-show-nightmare {
@@ -683,6 +691,16 @@ body, html {
   align-items: center;
 }
 
+#section-show-nightmare .hover {
+  text-decoration: none;
+}
+
+#section-show-nightmare .hover:hover {
+  text-decoration: none;
+  color: #8b52ff;
+}
+
+
 #section-show-lucid {
 
   /*Colors*/
@@ -698,6 +716,15 @@ body, html {
 
   display: flex;
   align-items: center;
+}
+
+#section-show-lucid .hover {
+  text-decoration: none;
+}
+
+#section-show-lucid .hover:hover {
+  text-decoration: none;
+  color: #8b52ff;
 }
 
  /*------------------ End show dreams CSS ---------------*/
@@ -877,3 +904,21 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 /*-------------------- End Hamburger menu CSS ---------------*/
+
+#carousel {
+
+  /*Font family*/
+  font-family: 'Comfortaa', cursive;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -12,14 +12,21 @@
                     <%= form_tag url_for(action: 'create'), method: "post", class: "user" do %>
                     <div class="form-group">
 
-                        <%= text_field_tag 'title', @dream.title, placeholder: "Titre de mon rêve..", class: "form-control form-control-user mb-3" %>
+                        <%= text_field_tag 'title', @dream.title, autofocus: true, placeholder: "Titre de mon rêve..", class: "form-control form-control-user mb-3" %>
 
                         <span>Date de mon rêve :</span>
                         <%= date_field_tag 'date', @dream.date, class: "form-control" %>
 
                         <%= text_area_tag 'description', @dream.description, placeholder: "Description de mon rêve.. 💤", class: "form-control form-control-user mt-3" %>
 
-                        <%= text_field_tag 'emotion', @dream.emotion, placeholder: "Émotion(s) ressentie(s) lors du rêve..", class: "form-control form-control-user mt-3" %>
+                        <%= text_field_tag 'emotion', @dream.emotion, placeholder: "Émotion(s) ressentie(s) lors du rêve..", class: "form-control form-control-user mt-3 mb-3" %>
+
+                        <span>Proposer mon rêve aux interprétations des utilisateurs ?</span><br>
+                        <%= label_tag 'is_online_true', 'Oui' %>
+                        <%= radio_button_tag :is_online, true %><br>
+                        
+                        <%= label_tag 'is_online_false', 'Non' %>
+                        <%= radio_button_tag :is_online, false, autocomplete: "is_online" %>
 
 
                         <%= submit_tag "Ajouter", class: "create-btn mt-3" %>

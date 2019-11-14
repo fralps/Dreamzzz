@@ -7,20 +7,20 @@
 	</label>
 	<div id="sidebarMenu">
 		<ul class="sidebarMenuInner">
-	
+
 			<li>
 				<%= link_to(posts_path) do %>
-					<i class="far fa-newspaper mr-1"></i>Blog des rêves
+				<i class="far fa-newspaper mr-1"></i>Blog des rêves
 				<% end %>
 			</li>
 			<li>
 				<%= link_to(edit_user_registration_path) do %>
-					<i class="far fa-user mr-2"></i>Mon compte
+				<i class="far fa-user mr-2"></i>Mon compte
 				<% end %>
 			</li>
 			<li>
 				<%= link_to(destroy_user_session_path) do %>
-					<i class="fas fa-sign-out-alt mr-1"></i>Déconnexion
+				<i class="fas fa-sign-out-alt mr-1"></i>Déconnexion
 				<% end %>
 			</li>
 		</ul>
@@ -141,7 +141,44 @@
 					<% end %>
 				</div>
 			</div>
-
 		</div>
+		<section id="carousel">
+			<div class="container">
+				<div class="row">
+					<div class="col col-lg-12 col-md-12">
+						<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner" style="border-radius: 10px; height: 100%;">
+								<div class="carousel-item active">
+									<img src="https://images.unsplash.com/photo-1513436539083-9d2127e742f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1044&q=80" alt="Carousel image" height="550px" width="1600px">
+									<div class="carousel-caption d-none d-md-block text-light">
+										<h1>Interprétation des rêves</h1>
+										<p>Proposer votre interprétation de leurs rêves</p>
+									</div>
+								</div>
+								<% @dreams.each do |dream| %>
+									<% if dream.is_online == true %>
+										<div class="carousel-item">
+											<img src="https://images.unsplash.com/photo-1500754088824-ce0582cfe45f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80" alt="Carousel image" height="550px" width="1600px">
+											<div class="carousel-caption d-none d-md-block text-light">
+												<h1><%= dream.title %></h1>
+												<p><%= dream.description.truncate(50) %></p>
+											</div>
+										</div>
+									<% end %>
+								<% end %>
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Précédent</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Suivant</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 </section>

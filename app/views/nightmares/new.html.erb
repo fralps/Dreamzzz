@@ -19,7 +19,14 @@
 
                         <%= text_area_tag 'description', @nightmare.description, placeholder: "Description de mon cauchemar.. 😱", class: "form-control form-control-user mt-3" %>
 
-                        <%= text_field_tag 'emotion', @nightmare.emotion, placeholder: "Émotion(s) ressentie(s) lors du cauchemar..", class: "form-control form-control-user mt-3" %>
+                        <%= text_field_tag 'emotion', @nightmare.emotion, placeholder: "Émotion(s) ressentie(s) lors du cauchemar..", class: "form-control form-control-user mt-3 mb-3" %>
+
+                        <span>Proposer mon cauchemar aux interprétations des utilisateurs ?</span><br>
+                        <%= label_tag 'is_online_true', 'Oui' %>
+                        <%= radio_button_tag :is_online, true %><br>
+                        
+                        <%= label_tag 'is_online_false', 'Non' %>
+                        <%= radio_button_tag :is_online, false, autocomplete: "is_online" %>
 
 
                         <%= submit_tag "Ajouter", class: "create-btn mt-3" %>

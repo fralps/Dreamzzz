@@ -14,7 +14,7 @@ class NightmaresController < ApplicationController
 	end
 
 	def create
-		@nightmare = Nightmare.new(user_id: current_user.id, title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
+		@nightmare = Nightmare.new(user_id: current_user.id, title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion], is_online: params[:is_online])
 
 		if @nightmare.save
 			redirect_to dreams_path
@@ -33,8 +33,8 @@ class NightmaresController < ApplicationController
 		@nightmare = Nightmare.find(params[:id])
 
 		if @nightmare.user == current_user
-			if @nightmare.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
-				redirect_to dreams_path
+			if @nightmare.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion], is_online: params[:is_online])
+				redirect_to nightmare_path(@nightmare.id)
 				flash[:success] = "Votre cauchemar a bien été modifié 👍🏽"
 			else
 				flash[:alert] = "Vous n'avez pas rempli tous les champs, veuillez réessayez s'il vous plaît"
