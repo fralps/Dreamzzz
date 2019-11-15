@@ -904,21 +904,3 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 /*-------------------- End Hamburger menu CSS ---------------*/
-
-#carousel {
-
-  /*Font family*/
-  font-family: 'Comfortaa', cursive;
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
