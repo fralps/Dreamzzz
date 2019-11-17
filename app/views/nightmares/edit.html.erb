@@ -33,13 +33,6 @@
 
 						<%= text_field_tag 'emotion', @nightmare.emotion, class: "form-control mb-3" %>
 
-						<span>Proposer mon cauchemar aux interprétations des utilisateurs ?</span><br>
-                        <%= label_tag 'is_online_true', 'Oui' %>
-                        <%= radio_button_tag :is_online, true %><br>
-                        
-                        <%= label_tag 'is_online_false', 'Non' %>
-                        <%= radio_button_tag :is_online, false %>
-
 						<%= submit_tag "Enregistrer les modifications", class: "edit-btn mb-3" %> 
 
 						<% end %>

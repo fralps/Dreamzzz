@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2019_11_13_154244) do
     t.datetime "date"
     t.text "description"
     t.string "emotion"
-    t.boolean "is_online", default: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -51,7 +50,6 @@ ActiveRecord::Schema.define(version: 2019_11_13_154244) do
     t.datetime "date"
     t.text "description"
     t.string "emotion"
-    t.boolean "is_online", default: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -63,7 +61,6 @@ ActiveRecord::Schema.define(version: 2019_11_13_154244) do
     t.datetime "date"
     t.text "description"
     t.string "emotion"
-    t.boolean "is_online", default: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

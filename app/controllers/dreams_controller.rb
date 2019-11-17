@@ -14,7 +14,7 @@ class DreamsController < ApplicationController
 	end
 
 	def create
-		@dream = Dream.new(user_id: current_user.id, title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion], is_online: params[:is_online])
+		@dream = Dream.new(user_id: current_user.id, title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
 
 		if @dream.save
 			redirect_to dreams_path
@@ -33,7 +33,7 @@ class DreamsController < ApplicationController
 		@dream = Dream.find(params[:id])
 
 		if @dream.user == current_user
-			if @dream.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion], is_online: params[:is_online])
+			if @dream.update(title: params[:title], date: params[:date], description: params[:description], emotion: params[:emotion])
 				redirect_to dream_path(@dream.id)
 				flash[:success] = "Votre rêve a bien été modifié 👍🏽"
 			else

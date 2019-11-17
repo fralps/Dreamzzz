@@ -5,7 +5,6 @@ class CreateNightmares < ActiveRecord::Migration[5.2]
       t.datetime :date
       t.text :description
       t.string :emotion
-      t.boolean :is_online, default: false
       t.belongs_to :user, index: true
 
       t.timestamps
