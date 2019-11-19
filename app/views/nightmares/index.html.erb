@@ -1,5 +1,32 @@
 <section id="index">
-	<h2 id="sign-in" class="text-center mb-5 text-light">Mon journal 💤</h2>
+	<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+	<label for="openSidebarMenu" class="sidebarIconToggle">
+		<div class="spinner diagonal part-1"></div>
+		<div class="spinner horizontal"></div>
+		<div class="spinner diagonal part-2"></div>
+	</label>
+	<div id="sidebarMenu">
+		<ul class="sidebarMenuInner">
+			
+			<li>
+				<%= link_to(root_path) do %>
+				<i class="fas fa-home mr-1"></i>Accueil
+				<% end %>
+			</li>
+
+			<li>
+				<%= link_to(posts_path) do %>
+				<i class="far fa-newspaper mr-1"></i>Blog des rêves
+				<% end %>
+			</li>
+			<li>
+				<%= link_to(edit_user_registration_path) do %>
+				<i class="far fa-user mr-2"></i>Mon compte
+				<% end %>
+			</li>
+		</ul>
+	</div>
+	<h2 id="sign-in" class="text-center mb-5 text-light"><i class="fas fa-bed mr-2" style="color: #8B52FF;"></i>Mon journal</h2>
 	<hr class="custom mb-5">
 	<div class="box">
 		<div class="row">

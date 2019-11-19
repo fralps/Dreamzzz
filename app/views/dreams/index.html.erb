@@ -7,6 +7,12 @@
 	</label>
 	<div id="sidebarMenu">
 		<ul class="sidebarMenuInner">
+			
+			<li>
+				<%= link_to(root_path) do %>
+				<i class="fas fa-home mr-1"></i>Accueil
+				<% end %>
+			</li>
 
 			<li>
 				<%= link_to(posts_path) do %>
@@ -18,14 +24,9 @@
 				<i class="far fa-user mr-2"></i>Mon compte
 				<% end %>
 			</li>
-			<li>
-				<%= link_to(destroy_user_session_path) do %>
-				<i class="fas fa-sign-out-alt mr-1"></i>Déconnexion
-				<% end %>
-			</li>
 		</ul>
 	</div>
-	<h2 id="sign-in" class="text-center text-light mb-2">Mon journal 💤</h2>
+	<h2 id="sign-in" class="text-center text-light mb-2"><i class="fas fa-bed mr-2" style="color: #8B52FF;"></i>Mon journal</h2>
 	<!-- Retour à l'accueil < -->
 	<div class="text-center mb-4">
 		<%= link_to root_path do %> 
