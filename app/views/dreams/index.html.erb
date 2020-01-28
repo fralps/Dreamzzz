@@ -41,7 +41,17 @@
 
 					<%= image_tag("sleep.gif", alt: "Sleep GIF", class: 'card-img-top', id: 'index-img') %>
 
-					<p class="text-center mt-4">RÊVES</p>
+					<p class="text-center mt-4">RÊVES<br><br>
+						<!-- Dreams counter -->
+						<% if current_user.dreams.count <= 0 %>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêve</span>
+						<% elsif current_user.dreams.count == 1%>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêve est enregistré</span>
+						<% else %>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêves sont enregistrés</span>
+						<% end %>
+					</p>
+					
 					<div class="hr"></div>
 					<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
 					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
@@ -76,7 +86,16 @@
 			<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
 				<div class="card shadow" id="index-card">
 					<%= image_tag("wood.gif", alt: "Wood GIF", class: 'card-img-top', id: 'index-img') %>
-					<p class="text-center mt-4">CAUCHEMARS</p>
+					<p class="text-center mt-4">CAUCHEMARS<br><br>
+						<!-- Nightmares counter -->
+						<% if current_user.nightmares.count <= 0 %>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemar</span>
+						<% elsif current_user.nightmares.count == 1%>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemar est enregistré</span>
+						<% else %>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemars sont enregistrés</span>
+						<% end %>
+					</p>
 					<div class="hr"></div>
 					<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>
 					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
@@ -111,7 +130,16 @@
 			<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
 				<div class="card shadow" id="index-card">
 					<%= image_tag("cloud.gif", alt: "Cloud GIF", class: 'card-img-top', id: 'index-img') %>
-					<p class="text-center mt-4">RÊVES LUCIDES</p>
+					<p class="text-center mt-4">RÊVES LUCIDES<br><br>
+						<!-- Lucids counter -->
+						<% if current_user.lucids.count <= 0 %>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêve lucide</span>
+						<% elsif current_user.lucids.count == 1%>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêve lucide est enregistré</span>
+						<% else %>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêves lucides sont enregistrés</span>
+						<% end %>
+					</p>
 					<div class="hr"></div>
 					<%= link_to(new_lucid_path, class: "text-center mb-2 btn") do %>
 					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
