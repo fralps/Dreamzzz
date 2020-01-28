@@ -14,10 +14,10 @@
 									<i class="fas fa-chevron-circle-left mr-1 mb-3" style="color: #8b52ff;"></i>Retour
 								<% end %>
 
-								<h4 class=""><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'icon icon-md mb-4') %> <%= @dream.title %></h4>
-								<p class="text-muted text-sm mt-4"><%= @dream.date.strftime("%d/%m/%y") %></p>
+								<h4 class=""><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'icon icon-md mb-2') %> <%= @dream.title %><%= social_share_button_tag(@dream.title) %></h4>
+								<p class="text-muted text-sm mt-2"><%= @dream.date.strftime("%d/%m/%y") %></p>
 							</div>
-							<p><%= @dream.description %></p>
+							<p class="description"><%= @dream.description %></p>
 							<p> <span style="color: #8b52ff;">Émotion(s) ressentie(s) : </span><%= @dream.emotion %></p>
 						</div>
 						<div>

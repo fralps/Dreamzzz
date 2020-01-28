@@ -87,3 +87,6 @@ gem 'jquery-rails'
 
 # Authentification gem
 gem 'devise'
+
+# Social media buttons gem
+gem 'social-share-button'

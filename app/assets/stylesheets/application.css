@@ -13,9 +13,13 @@
 * ---------- TEMPLATE CSS ----------
 *= require scss/theme
 *= require assets/css/loaders/loader-typing.css
+
 * ---------- BASE CSS ----------
 *= require_tree .
 *= require_self
+
+* ----------- SOCIAL MEDIA BUTTONS ------------
+*= require social-share-button
 */
 
 /*------------ Personal CSS -----------*/
@@ -725,6 +729,10 @@ body, html {
 #section-show-lucid .hover:hover {
   text-decoration: none;
   color: #8b52ff;
+}
+
+.description {
+  font-size: 12px;
 }
 
  /*------------------ End show dreams CSS ---------------*/

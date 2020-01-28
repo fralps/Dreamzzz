@@ -43,6 +43,9 @@
 //= require activestorage
 //= require_tree .
 
+// ---------- Social media buttons ------------
+//= require social-share-button
+
 // ---------- THEME SCRIPTS ----------
 
 // Removes page load animation when window is finished loading -->
