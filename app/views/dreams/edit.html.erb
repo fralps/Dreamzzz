@@ -27,7 +27,7 @@
 						<%= text_field_tag 'title', @dream.title, class: "form-control mb-3" %>
 						
 						<span class="link"><%= label_tag 'Date du rêve :' %></span>
-						<%= date_field_tag 'date', @dream.date, class: "form-control mb-3"  %>
+						<%= date_field_tag 'date', @dream.date, class: "form-control mb-3", required: true  %>
 
 						<%= text_area_tag 'description', @dream.description, class: "form-control mb-3" %>
 

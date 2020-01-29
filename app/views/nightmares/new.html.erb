@@ -15,7 +15,7 @@
                         <%= text_field_tag 'title', @nightmare.title, placeholder: "Titre de mon cauchemar..", class: "form-control form-control-user mb-3" %>
 
                         <span>Date de mon cauchemar :</span>
-                        <%= date_field_tag 'date', @nightmare.date, class: "form-control" %>
+                        <%= date_field_tag 'date', @nightmare.date, class: "form-control", required: true %>
 
                         <%= text_area_tag 'description', @nightmare.description, placeholder: "Description de mon cauchemar.. 😱", class: "form-control form-control-user mt-3" %>
 

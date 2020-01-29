@@ -15,7 +15,7 @@
                         <%= text_field_tag 'title', @dream.title, autofocus: true, placeholder: "Titre de mon rêve..", class: "form-control form-control-user mb-3" %>
 
                         <span>Date de mon rêve :</span>
-                        <%= date_field_tag 'date', @dream.date, class: "form-control" %>
+                        <%= date_field_tag 'date', @dream.date, class: "form-control", required: true %>
 
                         <%= text_area_tag 'description', @dream.description, placeholder: "Description de mon rêve.. 💤", class: "form-control form-control-user mt-3" %>
 
