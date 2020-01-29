@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # Home page
   root to: 'static_pages#home'
 
+  # Charts route
+  get '/statistics', to: 'static_pages#statistics'
+
   # Devise routes
   devise_for :users
 

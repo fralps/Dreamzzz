@@ -1,0 +1,43 @@
+<section class="chart">
+    <h1 class="text-center mb-5"><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'logo') %>Mes statistiques</h1>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col col-8 mx-auto">
+                <div class="pie-chart shadow">
+                    <h4 class="text-center">GÉNÉRAL</h4>
+                    <hr>
+                    <%= pie_chart({"Rêves" => current_user.dreams.count, "Cauchemars" => current_user.nightmares.count, "Rêves lucides" => current_user.lucids.count}) %>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col col-8 mx-auto">
+                <div class="pie-chart shadow">
+                    <h4 class="text-center">RÊVES</h4>
+                    <hr>
+                    <%= column_chart current_user.dreams.group_by_month(:created_at).count, colors: ["pink", "#666"] %>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col col-8 mx-auto">
+                <div class="pie-chart shadow">
+                    <h4 class="text-center">CAUCHEMARS</h4>
+                    <hr>
+                    <%= column_chart current_user.nightmares.group_by_month(:created_at).count, colors: ["#999", "#666"] %>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col col-8 mx-auto">
+                <div class="pie-chart shadow">
+                    <h4 class="text-center">RÊVES LUCIDES</h4>
+                    <hr>
+                    <%= column_chart current_user.nightmares.group_by_month(:created_at).count, colors: ["#8CD4F4", "#666"] %>
+                </div>
+            </div>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
+    </div>
+</section>

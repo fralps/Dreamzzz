@@ -87,3 +87,7 @@ gem 'jquery-rails'
 
 # Authentification gem
 gem 'devise'
+
+# Chart gems
+gem 'chartkick'
+gem 'groupdate'

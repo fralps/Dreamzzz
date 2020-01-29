@@ -29,8 +29,13 @@
 	<h2 id="sign-in" class="text-center text-light mb-2"><i class="fas fa-bed mr-2" style="color: #8B52FF;"></i>Mon journal</h2>
 	<!-- Retour à l'accueil < -->
 	<div class="text-center mb-4">
+
 		<%= link_to root_path do %> 
-		<span class="text-small link">Accueil</span>
+		<span class="text-small link mr-2">Accueil</span>
+		<% end %>
+		/
+		<%= link_to statistics_path do %> 
+		<span class="text-small link ml-2">Statistiques</span>
 		<% end %>
 	</div>
 	<hr class="custom mb-5">
