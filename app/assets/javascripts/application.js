@@ -61,22 +61,17 @@ $(document).ready(function() {
 	$('.delay_fadeout').delay(2750).fadeOut(400);
 });
 
-// Get the button
-mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+// Scroll to top btn
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 400) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
