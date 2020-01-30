@@ -1,147 +1,173 @@
-<section id="index">
-	<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-	<label for="openSidebarMenu" class="sidebarIconToggle">
-		<div class="spinner diagonal part-1"></div>
-		<div class="spinner horizontal"></div>
-		<div class="spinner diagonal part-2"></div>
-	</label>
-	<div id="sidebarMenu">
-		<ul class="sidebarMenuInner">
-			
-			<li>
-				<%= link_to(root_path) do %>
-				<i class="fas fa-home mr-1"></i>Accueil
-				<% end %>
-			</li>
-
-			<li>
-				<%= link_to(posts_path) do %>
-				<i class="far fa-newspaper mr-1"></i>Blog des rêves
-				<% end %>
-			</li>
-			<li>
-				<%= link_to(edit_user_registration_path) do %>
-				<i class="far fa-user mr-2"></i>Mon compte
-				<% end %>
-			</li>
-		</ul>
-	</div>
-	<h2 id="sign-in" class="text-center text-light mb-2"><i class="fas fa-bed mr-2" style="color: #8B52FF;"></i>Mon journal</h2>
-	<!-- Retour à l'accueil < -->
-	<div class="text-center mb-4">
-		<%= link_to root_path do %> 
-		<span class="text-small link">Accueil</span>
-		<% end %>
-	</div>
-	<hr class="custom mb-5">
-	<div class="box">
-		<div class="row">
-			<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
-				<div class="card shadow" id="index-card">
-
-					<%= image_tag("sleep.gif", alt: "Sleep GIF", class: 'card-img-top', id: 'index-img') %>
-
-					<p class="text-center mt-4">RÊVES</p>
-					<div class="hr"></div>
-					<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
-					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
+<div id="vue-app">
+	<section id="index">
+		<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+		<label for="openSidebarMenu" class="sidebarIconToggle">
+			<div class="spinner diagonal part-1"></div>
+			<div class="spinner horizontal"></div>
+			<div class="spinner diagonal part-2"></div>
+		</label>
+		<div id="sidebarMenu">
+			<ul class="sidebarMenuInner">
+				
+				<li>
+					<%= link_to(root_path) do %>
+					<i class="fas fa-home mr-1"></i>Accueil
 					<% end %>
+				</li>
 
-					<% current_user.dreams.reverse.each do |d| %>
-					<%= link_to(dream_path(d.id), style: 'text-decoration: none; color: black;') do %>
-					<div class="card-body align-items-start" style=" padding: 10px;">
-						<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding: 15px;">
-							<div>
-								<%= d.title.truncate(22) %> <br>
-								<span class="text-muted" style="font-size: 12px;"><%= d.date.strftime("%d/%m/%y") %></span>
-							</div>
-							<div>
+				<li>
+					<%= link_to(posts_path) do %>
+					<i class="far fa-newspaper mr-1"></i>Blog des rêves
+					<% end %>
+				</li>
+				<li>
+					<%= link_to(edit_user_registration_path) do %>
+					<i class="far fa-user mr-2"></i>Mon compte
+					<% end %>
+				</li>
+			</ul>
+		</div>
+		<h2 id="sign-in" class="text-center text-light mb-2"><i class="fas fa-bed mr-2" style="color: #8B52FF;"></i>Mon journal</h2>
+		<!-- Retour à l'accueil < -->
+		<div class="text-center mb-4">
+			<%= link_to root_path do %> 
+			<span class="text-small link">Accueil</span>
+			<% end %>
+		</div>
+		<hr class="custom mb-5">
+		<div class="box">
+			<div class="row">
+				<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
+					<div class="card shadow" id="index-card">
 
-								<%= link_to(edit_dream_path(d.id), class: 'mr-1', style: 'text-decoration: none;') do %>
-								<i class="fas fa-pencil-alt edit" id="edit"></i>
-								<% end %> 
+						<%= image_tag("sleep.gif", alt: "Sleep GIF", class: 'card-img-top', id: 'index-img') %>
 
-								<%= link_to(dream_path(d.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve, voulez-vous continuer ?'}) do %>
-								<i class="far fa-trash-alt text-danger"></i>
-								<% end %> 
+						<p class="text-center mt-4">RÊVES</p>
+						<div class="hr"></div>
+						<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
+						<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
+						<% end %>
 
-							</div>
-						</div>
+						<!-- Dream card (Vue.js) -->
+						<dream-component></dream-component>
+
 					</div>
-					<% end %>
-					<% end %>
 				</div>
-			</div>
 
-			<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
-				<div class="card shadow" id="index-card">
-					<%= image_tag("wood.gif", alt: "Wood GIF", class: 'card-img-top', id: 'index-img') %>
-					<p class="text-center mt-4">CAUCHEMARS</p>
-					<div class="hr"></div>
-					<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>
-					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
-					<% end %>
+				<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
+					<div class="card shadow" id="index-card">
+						<%= image_tag("wood.gif", alt: "Wood GIF", class: 'card-img-top', id: 'index-img') %>
+						<p class="text-center mt-4">CAUCHEMARS</p>
+						<div class="hr"></div>
+						<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>
+						<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
+						<% end %>
+						
+						<!-- Nightmare card (Vue.js) -->
+						<nightmare-component></nightmare-component>
 
-					<% current_user.nightmares.reverse.each do |n| %>
-					<%= link_to(nightmare_path(n.id), style: 'text-decoration: none; color: black;') do %>
-					<div class="card-body align-items-start" style=" padding: 10px;">
-						<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="nightmare-card" style="margin-bottom: 0; padding: 15px;">
-							<div>
-								<%= n.title.truncate(22) %> <br>
-								<span class="text-muted" style="font-size: 12px;"><%= n.date.strftime("%d/%m/%y") %></span>
-							</div>
-							<div>
-
-								<%= link_to(edit_nightmare_path(n.id), class: 'mr-1', style: 'text-decoration: none;') do %>
-								<i class="fas fa-pencil-alt edit"></i>
-								<% end %> 
-
-								<%= link_to(nightmare_path(n.id), method: :delete, data: { confirm: 'Vous allez supprimer votre cauchemar, voulez-vous continuer ?'}) do %>
-								<i class="far fa-trash-alt text-danger"></i>
-								<% end %> 
-
-							</div>
-						</div>
 					</div>
-					<% end %>
-					<% end %>
 				</div>
-			</div>
 
-			<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
-				<div class="card shadow" id="index-card">
-					<%= image_tag("cloud.gif", alt: "Cloud GIF", class: 'card-img-top', id: 'index-img') %>
-					<p class="text-center mt-4">RÊVES LUCIDES</p>
-					<div class="hr"></div>
-					<%= link_to(new_lucid_path, class: "text-center mb-2 btn") do %>
-					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
-					<% end %>
+				<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
+					<div class="card shadow" id="index-card">
+						<%= image_tag("cloud.gif", alt: "Cloud GIF", class: 'card-img-top', id: 'index-img') %>
+						<p class="text-center mt-4">RÊVES LUCIDES</p>
+						<div class="hr"></div>
+						<%= link_to(new_lucid_path, class: "text-center mb-2 btn") do %>
+						<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
+						<% end %>
 
-					<% current_user.lucids.reverse.each do |l| %>
-					<%= link_to(lucid_path(l.id), style: 'text-decoration: none; color: black;') do %>
-					<div class="card-body align-items-start" style=" padding: 10px;">
-						<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="lucid-card" style="margin-bottom: 0; padding: 15px;">
-							<div>
-								<%= l.title.truncate(22) %> <br>
-								<span class="text-muted" style="font-size: 12px;"><%= l.date.strftime("%d/%m/%y") %></span>
-							</div>
-							<div>
+						<!-- Lucid card (Vue.js) -->
+						<lucid-component></lucid-component>
 
-								<%= link_to(edit_lucid_path(l.id), class: 'mr-1', style: 'text-decoration: none;') do %>
-								<i class="fas fa-pencil-alt edit"></i>
-								<% end %> 
-
-								<%= link_to(lucid_path(l.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve lucide, voulez-vous continuer ?'}) do %>
-								<i class="far fa-trash-alt text-danger"></i>
-								<% end %> 
-
-							</div>
-						</div>
 					</div>
-					<% end %>
-					<% end %>
 				</div>
 			</div>
 		</div>
+	</section>
+</div>
+
+<script type="x-template" id="dream-component">
+	<div>
+		<% current_user.dreams.reverse.each do |d| %>
+		<%= link_to(dream_path(d.id), style: 'text-decoration: none; color: black;') do %>
+		<div class="card-body align-items-start" style=" padding: 10px;">
+			<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="dream-card" style="margin-bottom: 0; padding: 15px;">
+				<div>
+					<%= d.title.truncate(22) %> <br>
+					<span class="text-muted" style="font-size: 12px;"><%= d.date.strftime("%d/%m/%y") %></span>
+				</div>
+				<div>
+
+					<%= link_to(edit_dream_path(d.id), class: 'mr-1', style: 'text-decoration: none;') do %>
+					<i class="fas fa-pencil-alt edit" id="edit"></i>
+					<% end %> 
+
+					<%= link_to(dream_path(d.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve, voulez-vous continuer ?'}) do %>
+					<i class="far fa-trash-alt text-danger"></i>
+					<% end %> 
+
+				</div>
+			</div>
+		</div>
+		<% end %>
+		<% end %>
 	</div>
-</section>
+</script>
+
+<script type="x-template" id="nightmare-component">
+	<div>
+		<% current_user.nightmares.reverse.each do |n| %>
+		<%= link_to(nightmare_path(n.id), style: 'text-decoration: none; color: black;') do %>
+		<div class="card-body align-items-start" style=" padding: 10px;">
+			<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="nightmare-card" style="margin-bottom: 0; padding: 15px;">
+				<div>
+					<%= n.title.truncate(22) %> <br>
+					<span class="text-muted" style="font-size: 12px;"><%= n.date.strftime("%d/%m/%y") %></span>
+				</div>
+				<div>
+
+					<%= link_to(edit_nightmare_path(n.id), class: 'mr-1', style: 'text-decoration: none;') do %>
+					<i class="fas fa-pencil-alt edit"></i>
+					<% end %> 
+
+					<%= link_to(nightmare_path(n.id), method: :delete, data: { confirm: 'Vous allez supprimer votre cauchemar, voulez-vous continuer ?'}) do %>
+					<i class="far fa-trash-alt text-danger"></i>
+					<% end %> 
+
+				</div>
+			</div>
+		</div>
+		<% end %>
+		<% end %>
+	</div>
+</script>
+
+<script type="x-template" id="lucid-component">
+	<div>
+		<% current_user.lucids.reverse.each do |l| %>
+		<%= link_to(lucid_path(l.id), style: 'text-decoration: none; color: black;') do %>
+		<div class="card-body align-items-start" style=" padding: 10px;">
+			<div class="card card-sm card-body flex-row align-items-center hover-shadow-3d shadow" id="lucid-card" style="margin-bottom: 0; padding: 15px;">
+				<div>
+					<%= l.title.truncate(22) %> <br>
+					<span class="text-muted" style="font-size: 12px;"><%= l.date.strftime("%d/%m/%y") %></span>
+				</div>
+				<div>
+
+					<%= link_to(edit_lucid_path(l.id), class: 'mr-1', style: 'text-decoration: none;') do %>
+					<i class="fas fa-pencil-alt edit"></i>
+					<% end %> 
+
+					<%= link_to(lucid_path(l.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve lucide, voulez-vous continuer ?'}) do %>
+					<i class="far fa-trash-alt text-danger"></i>
+					<% end %> 
+
+				</div>
+			</div>
+		</div>
+		<% end %>
+		<% end %>
+	</div>
+</script>

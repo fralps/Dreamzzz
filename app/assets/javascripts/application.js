@@ -56,3 +56,23 @@ $(document).ready(function() {
 	// Make an element disappear after a short time
 	$('.delay_fadeout').delay(2750).fadeOut(400);
 });
+
+// --------------- Vue.js implementation --------------
+
+// Components declarations
+Vue.component('dream-component', {
+    template: '#dream-component',
+});
+
+Vue.component('nightmare-component', {
+    template: '#nightmare-component',
+});
+
+Vue.component('lucid-component', {
+    template: '#lucid-component',
+});
+
+// Vue instance
+var app = new Vue({
+    el: '#vue-app'
+});
