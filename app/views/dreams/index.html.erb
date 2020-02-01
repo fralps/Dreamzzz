@@ -44,11 +44,11 @@
 					<p class="text-center mt-4">RÊVES<br><br>
 						<!-- Dreams counter -->
 						<% if current_user.dreams.count <= 0 %>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêve</span>
+							<span class="text-muted"><i class="far fa-save"></i> Aucun rêve enregistré</span>
 						<% elsif current_user.dreams.count == 1%>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêve est enregistré</span>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêve enregistré</span>
 						<% else %>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêves sont enregistrés</span>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêves enregistrés</span>
 						<% end %>
 					</p>
 					
@@ -89,11 +89,11 @@
 					<p class="text-center mt-4">CAUCHEMARS<br><br>
 						<!-- Nightmares counter -->
 						<% if current_user.nightmares.count <= 0 %>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemar</span>
+							<span class="text-muted"><i class="far fa-save"></i> Aucun cauchemar enregistré</span>
 						<% elsif current_user.nightmares.count == 1%>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemar est enregistré</span>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemar enregistré</span>
 						<% else %>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemars sont enregistrés</span>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemars enregistrés</span>
 						<% end %>
 					</p>
 					<div class="hr"></div>
@@ -133,11 +133,11 @@
 					<p class="text-center mt-4">RÊVES LUCIDES<br><br>
 						<!-- Lucids counter -->
 						<% if current_user.lucids.count <= 0 %>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêve lucide</span>
+							<span class="text-muted"><i class="far fa-save"></i> Aucun rêve lucide enregistré</span>
 						<% elsif current_user.lucids.count == 1%>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêve lucide est enregistré</span>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêve lucide enregistré</span>
 						<% else %>
-							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêves lucides sont enregistrés</span>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêves lucides enregistrés</span>
 						<% end %>
 					</p>
 					<div class="hr"></div>
