@@ -14,24 +14,30 @@
 									<i class="fas fa-chevron-circle-left mr-1 mb-3" style="color: #8b52ff;"></i>Retour
 								<% end %>
 
-								<h4 class=""><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'icon icon-md mb-2') %> <%= @nightmare.title %><%= social_share_button_tag(@nightmare.title) %></h4>
+								<h4 class=""><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'icon icon-md mb-2') %> <%= @nightmare.title %>
+								</h4>
 								<p class="text-muted text-sm mt-2"><%= @nightmare.date.strftime("%d/%m/%y") %></p>
 							</div>
 							<p class="description"><%= @nightmare.description %></p>
 							<p> <span style="color: #8b52ff;">Émotion(s) ressentie(s) : </span><%= @nightmare.emotion %></p>
 						</div>
-						<div>
+						<div class="d-inline-flex justify-content-between align-items-center">
+							<div>
+								<%= link_to(edit_nightmare_path(@nightmare.id), class: 'mr-1 injected-svg icon edit-btn', style: 'text-decoration: none;') do %>
+								<i class="fas fa-pencil-alt edit text-white" id="edit"></i>
+								<span>Éditer</span>
+								<% end %> 
 
-							<%= link_to(edit_nightmare_path(@nightmare.id), class: 'mr-1 injected-svg icon edit-btn', style: 'text-decoration: none;') do %>
-							<i class="fas fa-pencil-alt edit text-white" id="edit"></i>
-							<span>Éditer</span>
-							<% end %> 
+								<%= link_to(nightmare_path(@nightmare.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve, voulez-vous continuer ?'}, class: 'delete-btn injected-svg icon') do %>
+								<i class="far fa-trash-alt"></i>
+								<span>Supprimer</span>
+								<% end %> 
+							</div>
 
-							<%= link_to(nightmare_path(@nightmare.id), method: :delete, data: { confirm: 'Vous allez supprimer votre rêve, voulez-vous continuer ?'}, class: 'delete-btn injected-svg icon') do %>
-							<i class="far fa-trash-alt"></i>
-							<span>Supprimer</span>
-							<% end %> 
-
+							<!-- Social share btn -->
+							<div class="text-muted" style="font-size: 12px;">Partager mon cauchemar
+									<span class="text-center"><%= social_share_button_tag(@nightmare.title) %></span>
+							</div>
 						</div>
 					</div>
 				</div>
