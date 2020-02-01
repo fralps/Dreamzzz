@@ -69,7 +69,7 @@
                 <div class="pie-chart shadow">
                     <h4 class="text-center">RÊVES LUCIDES <span class="text-muted text-small">(par mois)</span></h4>
                     <hr>
-                    <%= column_chart current_user.nightmares.group_by_month(:created_at).count, colors: ["#8CD4F4", "#666"], xtitle: "Mois", ytitle: "Nombre de rêves lucides", messages: {empty: "Vous n'avez pas encore enregistré de rêves lucides"} %>
+                    <%= column_chart current_user.nightmares.group_by_month(:created_at).count, colors: ["#8B52FF", "#666"], xtitle: "Mois", ytitle: "Nombre de rêves lucides", messages: {empty: "Vous n'avez pas encore enregistré de rêves lucides"} %>
                 </div>
             </div>
         </div>
