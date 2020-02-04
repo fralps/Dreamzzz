@@ -37,11 +37,18 @@
 //= require typed.min
 //= require theme
 
+// ----------- Charts ----------
+//= require Chart.bundle
+//= require chartkick
+
 // ---------- Base JS -----------
 //= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+
+// ---------- Social media buttons ------------
+//= require social-share-button
 
 // ---------- THEME SCRIPTS ----------
 
@@ -76,3 +83,21 @@ Vue.component('lucid-component', {
 var app = new Vue({
     el: '#vue-app'
 });
+
+// --------------- End Vue.js implementation --------------
+
+// Scroll to top btn
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 400) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    });
+});
+

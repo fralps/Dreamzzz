@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/thethanghn/custom-err-msg.git
+  revision: b913309360995472507ea444c6f1a80315b99d28
+  specs:
+    custom_error_message (1.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,6 +74,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    chartkick (3.3.1)
     childprocess (3.0.0)
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
@@ -105,6 +112,8 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (4.3.0)
+      activesupport (>= 5)
     guard (2.15.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -252,6 +261,8 @@ GEM
     shellany (0.0.1)
     shoulda-matchers (4.1.2)
       activesupport (>= 4.2.0)
+    social-share-button (1.2.1)
+      coffee-rails
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -294,13 +305,16 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15)
+  chartkick
   chromedriver-helper
   coffee-rails (~> 4.2)
   colorize (~> 0.8.1)
+  custom_error_message!
   devise
   dotenv-rails
   faker
   friendly_id (~> 5.2.4)
+  groupdate
   guard-rspec
   jbuilder (~> 2.5)
   jquery-rails
@@ -314,6 +328,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   shoulda-matchers
+  social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)
   table_print
@@ -323,3 +338,6 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 2.5.1p57
+
+BUNDLED WITH
+   2.0.2

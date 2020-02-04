@@ -36,11 +36,21 @@
 
 						<%= image_tag("sleep.gif", alt: "Sleep GIF", class: 'card-img-top', id: 'index-img') %>
 
-						<p class="text-center mt-4">RÊVES</p>
-						<div class="hr"></div>
-						<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
-							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
+					<p class="text-center mt-4">RÊVES<br><br>
+						<!-- Dreams counter -->
+						<% if current_user.dreams.count <= 0 %>
+							<span class="text-muted"><i class="far fa-save"></i> Aucun rêve enregistré</span>
+						<% elsif current_user.dreams.count == 1%>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêve enregistré</span>
+						<% else %>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêves enregistrés</span>
 						<% end %>
+					</p>
+					
+					<div class="hr"></div>
+					<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
+					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
+					<% end %>
 
 						<!-- Dream card (Vue.js) -->
 						<dream-component></dream-component>
@@ -56,6 +66,11 @@
 						<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>
 							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
 						<% end %>
+					</p>
+					<div class="hr"></div>
+					<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>
+					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
+					<% end %>
 
 						<!-- Nightmare card (Vue.js) -->
 						<nightmare-component></nightmare-component>
@@ -71,6 +86,11 @@
 						<%= link_to(new_lucid_path, class: "text-center mb-2 btn") do %>
 							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
 						<% end %>
+					</p>
+					<div class="hr"></div>
+					<%= link_to(new_lucid_path, class: "text-center mb-2 btn") do %>
+					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
+					<% end %>
 
 						<!-- Lucid card (Vue.js) -->
 						<lucid-component></lucid-component>

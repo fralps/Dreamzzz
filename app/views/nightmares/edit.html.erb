@@ -27,7 +27,7 @@
 						<%= text_field_tag 'title', @nightmare.title, class: "form-control mb-3" %>
 						
 						<span class="link"><%= label_tag 'Date du cauchemar :' %></span>
-						<%= date_field_tag 'date', @nightmare.date, class: "form-control mb-3"  %>
+						<%= date_field_tag 'date', @nightmare.date, class: "form-control mb-3", required: true  %>
 
 						<%= text_area_tag 'description', @nightmare.description, class: "form-control mb-3" %>
 

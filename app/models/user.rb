@@ -15,7 +15,7 @@ class User < ApplicationRecord
   validates :email,
   presence: true,
   uniqueness: true,
-  format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: ' : Veuillez utiliser une adresse email valide' }
+  format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: ' : veuillez utiliser une adresse email valide' }
 
   # Relations
   has_many :dreams

@@ -1,0 +1,77 @@
+<section class="chart">
+    <!-- Hamburger menu -->
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            
+            <li>
+                <%= link_to(dreams_path) do %>
+                <i class="fas fa-bed mr-1"></i>Mon journal
+                <% end %>
+            </li>
+
+            <li>
+                <%= link_to(posts_path) do %>
+                <i class="far fa-newspaper mr-1"></i>Blog des rêves
+                <% end %>
+            </li>
+            <li>
+                <%= link_to(edit_user_registration_path) do %>
+                <i class="far fa-user mr-2"></i>Mon compte
+                <% end %>
+            </li>
+        </ul>
+    </div>
+    <!-- End hamburger menu -->
+    <h1 class="text-center mb-1 text-light"><%= image_tag("favicon.png", alt: "Dreamzzz Logo", class: 'logo') %>Mes statistiques</h1>
+    <div class="text-center mb-4">
+        <!-- Retour à l'accueil -->
+        <%= link_to root_path do %> 
+        <span class="text-small link mr-2">Accueil</span>
+        <% end %>
+    </div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col col-8 mx-auto">
+                <div class="pie-chart shadow">
+                    <h4 class="text-center">GÉNÉRAL</h4>
+                    <hr>
+                    <%= pie_chart({"Rêves" => current_user.dreams.count, "Cauchemars" => current_user.nightmares.count, "Rêves lucides" => current_user.lucids.count}) %>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col col-8 mx-auto">
+                <div class="pie-chart shadow">
+                    <h4 class="text-center">RÊVES <span class="text-muted text-small">(par mois)</span></h4>
+                    <hr>
+                    <%= column_chart current_user.dreams.group_by_month(:created_at).count, colors: ["pink", "#666"], xtitle: "Mois", ytitle: "Nombre de rêves", messages: {empty: "Vous n'avez pas encore enregistré de rêves"} %>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col col-8 mx-auto">
+                <div class="pie-chart shadow">
+                    <h4 class="text-center">CAUCHEMARS <span class="text-muted text-small">(par mois)</span></h4>
+                    <hr>
+                    <%= column_chart current_user.nightmares.group_by_month(:created_at).count, colors: ["#999", "#666"], xtitle: "Mois", ytitle: "Nombre de cauchemars", messages: {empty: "Vous n'avez pas encore enregistré de cauchemars"} %>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col col-8 mx-auto">
+                <div class="pie-chart shadow">
+                    <h4 class="text-center">RÊVES LUCIDES <span class="text-muted text-small">(par mois)</span></h4>
+                    <hr>
+                    <%= column_chart current_user.nightmares.group_by_month(:created_at).count, colors: ["#8B52FF", "#666"], xtitle: "Mois", ytitle: "Nombre de rêves lucides", messages: {empty: "Vous n'avez pas encore enregistré de rêves lucides"} %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

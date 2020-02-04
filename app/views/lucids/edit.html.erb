@@ -27,7 +27,7 @@
 						<%= text_field_tag 'title', @lucid.title, class: "form-control mb-3" %>
 						
 						<span class="link"><%= label_tag 'Date du rêve :' %></span>
-						<%= date_field_tag 'date', @lucid.date, class: "form-control mb-3"  %>
+						<%= date_field_tag 'date', @lucid.date, class: "form-control mb-3", required: true  %>
 
 						<%= text_area_tag 'description', @lucid.description, class: "form-control mb-3" %>
 
