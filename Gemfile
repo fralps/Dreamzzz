@@ -88,5 +88,10 @@ gem 'jquery-rails'
 # Authentification gem
 gem 'devise'
 
+
 # Social media buttons gem
 gem 'social-share-button'
+
+# Display only error message
+gem 'custom_error_message', git: 'https://github.com/thethanghn/custom-err-msg.git'
+

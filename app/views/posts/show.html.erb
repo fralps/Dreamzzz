@@ -209,7 +209,7 @@
             </div>
 
             <% end %>
-
+            
             <% if user_signed_in? %>
             <!-- Zone du formulaire de commentaire -->
             <%= form_tag post_comments_path(controller: :comments, action: :create, post_id: @post.id), method: "post" do %>
