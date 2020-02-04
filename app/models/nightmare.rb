@@ -9,7 +9,7 @@ class Nightmare < ApplicationRecord
 
   def date_cannot_be_in_the_future
     if date > Date.today
-      errors.add(:date, "Vous ne pouvez pas faire de cauchemars dans le futur... 🤔")
+      errors.add(:date, ": vous ne pouvez pas faire de cauchemars dans le futur... 🤔")
     end
   end    
 
