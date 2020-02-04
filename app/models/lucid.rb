@@ -9,7 +9,7 @@ class Lucid < ApplicationRecord
 
   def date_cannot_be_in_the_future
     if date > Date.today
-      errors.add(:date, "Vous ne pouvez pas rêver dans le futur... 🤔")
+      errors.add(:date, ": vous ne pouvez pas rêver dans le futur... 🤔")
     end
   end    
 
