@@ -47,6 +47,9 @@
 //= require activestorage
 //= require_tree .
 
+// ---------- Social media buttons ------------
+//= require social-share-button
+
 // ---------- THEME SCRIPTS ----------
 
 // Removes page load animation when window is finished loading -->
@@ -73,5 +76,5 @@ $(document).ready(function(){
     $('#scroll').click(function(){ 
         $("html, body").animate({ scrollTop: 0 }, 600); 
         return false; 
-    }); 
+    });
 });

@@ -1,0 +1,82 @@
+# Errors messages translations in French
+fr:  
+  activerecord:
+    models: 
+      dream: "Rêves"
+    errors:
+      models:
+        # -------------------------------------------
+        # -------------- USER PART -----------------
+        # -------------------------------------------
+        user:
+          attributes:
+            first_name:
+              blank: "^Veuillez entrer votre prénom."
+            last_name:
+              blank: "^Veuillez entrer votre nom."
+            email:
+              blank: "^Veuillez entrer votre email"
+            password:
+              blank: "^Veuillez entre un mot de passe d'au moins 6 caractères."
+        # -------------------------------------------
+        # -------------- DIARY PART -----------------
+        # -------------------------------------------
+        dream:
+          attributes:
+            title:
+              blank: "^Vous devez entrer un titre."
+              too_short: "^ Titre : 5 caractères minimum."
+            date:
+              blank: "^Vous devez rentrer une date."
+            description:
+              blank: "^Vous devez entrer une description."
+              too_short: "^Description : 20 caractères minimum."
+            emotion:
+              blank: "^Vous devez entrer une émotion."
+              too_short: "^Émotion : 2 caractères minimum."
+        nightmare:
+          attributes:
+            title:
+              blank: "^Vous devez entrer un titre."
+              too_short: "^ Titre : 5 caractères minimum."
+            date:
+              blank: "^Vous devez rentrer une date."
+            description:
+              blank: "^Vous devez entrer une description."
+              too_short: "^Description : 20 caractères minimum."
+            emotion:
+              blank: "^Vous devez entrer une émotion."
+              too_short: "^Émotion : 2 caractères minimum."
+        lucid:
+          attributes:
+            title:
+              blank: "^Vous devez entrer un titre."
+              too_short: "^ Titre : 5 caractères minimum."
+            date:
+              blank: "^Vous devez rentrer une date."
+            description:
+              blank: "^Vous devez entrer une description."
+              too_short: "^Description : 20 caractères minimum."
+            emotion:
+              blank: "^Vous devez entrer une émotion."
+              too_short: "^Émotion : 2 caractères minimum."
+        # -------------------------------------------
+        # -------------- BLOG PART -----------------
+        # -------------------------------------------
+        post:
+          attributes:
+            title:
+              blank: "^Vous devez entrer un titre."
+              too_short: "^Titre : 5 caractères minimum."
+            introduction:
+              blank: "^Vous devez entrer une introduction."
+            first_paragraph:
+              blank: "^Vous devez entrer un premier paragraphe."
+            second_paragraph:
+              blank: "^Vous devez entrer un second paragraphe."
+            image_url:
+              blank: "^Vous devez entrer une url d'image pour illustrer votre article."
+        comment:
+          attributes:
+            content:
+              blank: "^Vous devez entrer un commentaire."
