@@ -27,26 +27,36 @@
 				</li>
 			</ul>
 		</div>
-		<h2 id="sign-in" class="text-center text-light mb-2"><i class="fas fa-bed mr-2" style="color: #8B52FF;"></i>Mon journal</h2>
-		<!-- Retour à l'accueil < -->
+		<h2 id="sign-in" class="text-center mb-5 text-light"><i class="fas fa-bed mr-2" style="color: #8B52FF;"></i>Mon journal</h2>
+		<!-- Partie statistiques -->
 		<div class="text-center mb-4">
-			<%= link_to root_path do %> 
-			<span class="text-small link">Accueil</span>
+			<%= link_to statistics_path do %> 
+			<span class="text-small link">Voir mes statistiques</span>
 			<% end %>
 		</div>
 		<hr class="custom mb-5">
 		<div class="box">
 			<div class="row">
-				<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
+				<div class="col col-lg-4 col-md-12 col-sm-12">
 					<div class="card shadow" id="index-card">
 
 						<%= image_tag("sleep.gif", alt: "Sleep GIF", class: 'card-img-top', id: 'index-img') %>
 
-						<p class="text-center mt-4">RÊVES</p>
-						<div class="hr"></div>
-						<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
-						<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
+					<p class="text-center mt-4">RÊVES<br><br>
+						<!-- Dreams counter -->
+						<% if current_user.dreams.count <= 0 %>
+							<span class="text-muted"><i class="far fa-save"></i> Aucun rêve enregistré</span>
+						<% elsif current_user.dreams.count == 1%>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêve enregistré</span>
+						<% else %>
+							<span class="text-muted"><i class="far fa-save"></i> <%= current_user.dreams.count %> rêves enregistrés</span>
 						<% end %>
+					</p>
+					
+					<div class="hr"></div>
+					<%= link_to(new_dream_path, class: "text-center mb-2 btn") do %>
+					<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve</span>
+					<% end %>
 
 						<!-- Dream card (Vue.js) -->
 						<dream-component></dream-component>
@@ -54,35 +64,54 @@
 					</div>
 				</div>
 
-				<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
+				<div class="col col-lg-4 col-md-12 col-sm-12">
 					<div class="card shadow" id="index-card">
 						<%= image_tag("wood.gif", alt: "Wood GIF", class: 'card-img-top', id: 'index-img') %>
-						<p class="text-center mt-4">CAUCHEMARS</p>
+						<p class="text-center mt-4">CAUCHEMARS <br><br>
+							<!-- Nightmares counter -->
+							<% if current_user.nightmares.count <= 0 %>
+								<span class="text-muted"><i class="far fa-save"></i> Aucun cauchemar enregistré</span>
+							<% elsif current_user.nightmares.count == 1%>
+								<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemar enregistré</span>
+							<% else %>
+								<span class="text-muted"><i class="far fa-save"></i> <%= current_user.nightmares.count %> cauchemars enregistrés</span>
+							<% end %>
+						</p>
 						<div class="hr"></div>
 						<%= link_to(new_nightmare_path, class: "text-center mb-2 btn") do %>
-						<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
+							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un cauchemar</span>
 						<% end %>
-						
+
 						<!-- Nightmare card (Vue.js) -->
 						<nightmare-component></nightmare-component>
 
 					</div>
 				</div>
 
-				<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" id="test">
+				<div class="col col-lg-4 col-md-12 col-sm-12">
 					<div class="card shadow" id="index-card">
 						<%= image_tag("cloud.gif", alt: "Cloud GIF", class: 'card-img-top', id: 'index-img') %>
-						<p class="text-center mt-4">RÊVES LUCIDES</p>
+						<p class="text-center mt-4">RÊVES LUCIDES <br><br>
+							<!-- Lucids counter -->
+							<% if current_user.lucids.count <= 0 %>
+								<span class="text-muted"><i class="far fa-save"></i> Aucun rêve lucide enregistré</span>
+							<% elsif current_user.lucids.count == 1%>
+								<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêve lucide enregistré</span>
+							<% else %>
+								<span class="text-muted"><i class="far fa-save"></i> <%= current_user.lucids.count %> rêves lucides enregistrés</span>
+							<% end %>
+						</p>
 						<div class="hr"></div>
 						<%= link_to(new_lucid_path, class: "text-center mb-2 btn") do %>
-						<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
+							<i class="far fa-plus-square mr-2" id="add-dream-icon"></i><span class="add-btn">Ajouter un rêve lucide</span>
 						<% end %>
 
 						<!-- Lucid card (Vue.js) -->
 						<lucid-component></lucid-component>
-
+						
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>
