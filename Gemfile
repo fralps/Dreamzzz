@@ -89,7 +89,7 @@ gem 'jquery-rails'
 gem 'devise'
 
 # Chart gems
-gem 'chartkick'
+gem 'chartkick', '~> 2.2.0'
 gem 'groupdate'
 
 # Social media buttons gem
