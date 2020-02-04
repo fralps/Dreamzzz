@@ -87,3 +87,6 @@ gem 'jquery-rails'
 
 # Authentification gem
 gem 'devise'
+
+# Display only error message
+gem 'custom_error_message', git: 'https://github.com/thethanghn/custom-err-msg.git'
