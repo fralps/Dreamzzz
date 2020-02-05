@@ -39,7 +39,6 @@
 
 // ----------- Charts ----------
 //= require Chart.bundle
-//= require chartkick
 
 // ---------- Base JS -----------
 //= require jquery
