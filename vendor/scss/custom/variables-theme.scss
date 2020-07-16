@@ -36,8 +36,8 @@ $theme-color-scheme: map-merge(
   @return $string;
 }
 
-$primary-escaped: str-replace(#{$primary}, '#', '%23');
-$body-color-escaped: str-replace(#{$body-color},'#','%23');
+$primary-escaped: str-replace("#{$primary}", '#', '%23');
+$body-color-escaped: str-replace("#{$body-color}",'#','%23');
 
 // Shadows
 
